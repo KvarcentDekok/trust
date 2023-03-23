@@ -1,0 +1,11 @@
+.social {
+    display: block;
+    width: 26px;
+    height: 26px;
+
+    color: #7E7E7E;
+}
+
+.social:hover {
+    color: var(--red-color);
+}

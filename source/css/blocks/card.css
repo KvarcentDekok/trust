@@ -1,0 +1,83 @@
+.card {
+    display: block;
+    margin-right: 20px;
+    padding: 22px 32px;
+
+    text-decoration: none;
+    color: var(--white-color);
+
+    border-radius: 4px;
+    background-color: var(--white-color);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    transition: background-size 200ms linear;
+}
+
+.card:hover .card__arrow {
+    transform: translateX(16px);
+}
+
+.card:last-of-type {
+    margin-right: 0;
+}
+
+.card--red {
+    background-color: #C71E1E;
+}
+
+.card--grey {
+    background-color: #3E3E3E;
+}
+
+.card--blue {
+    background-color: #416494;
+}
+
+.card--icon-check {
+    background-image: url("/img/card-check.png");
+    background-size: 191px;
+}
+
+.card--icon-check:hover {
+    background-size: 201px;
+}
+
+.card--icon-reverse {
+    background-image: url("/img/card-reverse.png");
+    background-size: 174px;
+}
+
+.card--icon-reverse:hover {
+    background-size: 184px;
+}
+
+.card--icon-display{
+    background-image: url("/img/card-display.png");
+    background-size: 170px;
+}
+
+.card--icon-display:hover {
+    background-size: 180px;
+}
+
+.card__title {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 600;
+}
+
+.card__arrow {
+    margin-top: 40px;
+
+    color: var(--white-color);
+
+    transition: all 200ms linear;
+}
+
+@media (min-width: 1400px) {
+    .card {
+        padding-right: 168px;
+    }
+}

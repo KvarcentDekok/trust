@@ -1,0 +1,36 @@
+.link-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+
+    color: var(--black-color);
+
+    list-style: none;
+}
+
+.link-list--bold {
+    font-weight: 600;
+}
+
+.link-list--dark {
+    color: var(--dark-color);
+}
+
+.link-list__item {
+    margin-bottom: 24px;
+}
+
+.link-list__link {
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.link-list__link:hover {
+    text-decoration: underline;
+}
+
+.link-list__link:active {
+    opacity: 0.6;
+}

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Траст</title>
+</head>
+<body>
+<header class="header">
+    <div class="container header__container">
+        <svg width="230" height="22" viewBox="0 0 230 22" class="logo header__logo"
+             aria-label="Траст | Служба недвижимости">
+            <use xlink:href="/img/sprite.svg#logo"></use>
+        </svg>
+
+        <nav class="header__nav">
+            <ul class="navigation header__navigation">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link" data-call="dropdown" data-on="hover" aria-haspopup="true"
+                       aria-controls="real-estate-dropdown">
+                        Каталог недвижимости
+                    </a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Ипотека</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Карьера</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Отзывы</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Вакансии</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Прочее</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#" class="button header__button button--outline button--small">Офисы и контакты</a>
+
+        <div id="real-estate-dropdown" class="dropdown header__dropdown">
+            <div class="container dropdown__container">
+                <ul class="link-list header__link-list link-list--bold">
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Все квартиры</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в новостройке</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры во вторичке</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Акции и скидки</a>
+                    </li>
+                </ul>
+
+                <ul class="link-list header__link-list link-list--dark">
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры студии</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">1-комнатные квартиры</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">2-комнатные квартиры</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">3-комнатные квартиры</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">4-комнатные квартиры</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в Воронеже</a>
+                    </li>
+                </ul>
+
+                <ul class="link-list">
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры на правом берегу</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры на левом берегу</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в Железнодорожном р-не</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в Советском р-не</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в Ленинском р-не</a>
+                    </li>
+
+                    <li class="link-list__item">
+                        <a href="#" class="link-list__link">Квартиры в Коминтерновском р-не</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <h1 class="visually-hidden">Траст | Служба недвижимости</h1>
+
+    <section class="home">
+        <h2 class="visually-hidden">Поиск недвижимости</h2>
+
+        <div class="container">
+            <div class="home__wrapper">
+                <p class="home__tagline">Сотрудничество <br> начинается с доверия</p>
+
+                <p class="paragraph home__paragraph">
+                    «Траст» входит в состав Российской Гильдии Риэлторов.
+                    Стандарты качества услуг компании сертифицированы, деятельность застрахована.
+                </p>
+            </div>
+
+            <form class="filter">
+                <h3 class="visually-hidden">Фильтр</h3>
+
+                <ul class="filter__list">
+                    <li class="filter__item">
+                        <button type="button" class="filter__dropdown-control filter__dropdown-control--apartment"
+                                aria-label="Выбрать тип квариры" data-call="dropdown" data-on="click"
+                                aria-haspopup="true" aria-controls="apartment-dropdown">
+                            Квартира в новостройке
+
+                            <svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
+                                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                        <fieldset id="apartment-dropdown" class="dropdown filter__dropdown">
+                            <legend class="visually-hidden">Тип квартиры</legend>
+
+                            <div class="button-group dropdown__button-group">
+                                <input type="radio" id="residential" class="visually-hidden button-group__input"
+                                       name="apartment-purpose">
+                                <label for="residential" class="button-group__button">Жилая</label>
+
+                                <input type="radio" id="commercial" class="visually-hidden button-group__input"
+                                       name="apartment-purpose">
+                                <label for="commercial" class="button-group__button">Коммерческая</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="new-building" class="visually-hidden checkbox__input"
+                                       name="apartment-novelty">
+                                <label for="new-building" class="checkbox__label">Квартира в новостройке</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox checkbox--divider">
+                                <input type="checkbox" id="resale" class="visually-hidden checkbox__input"
+                                       name="apartment-novelty">
+                                <label for="resale" class="checkbox__label">Квартира во вторичке</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="room" class="visually-hidden checkbox__input"
+                                       name="apartment-ownership">
+                                <label for="room" class="checkbox__label">Комната</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox checkbox--divider">
+                                <input type="checkbox" id="share" class="visually-hidden checkbox__input"
+                                       name="apartment-ownership">
+                                <label for="share" class="checkbox__label">Доля</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="house" class="visually-hidden checkbox__input"
+                                       name="apartment-type">
+                                <label for="house" class="checkbox__label">Дом или дача</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="part" class="visually-hidden checkbox__input"
+                                       name="apartment-type">
+                                <label for="part" class="checkbox__label">Часть дома</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="townhouse" class="visually-hidden checkbox__input"
+                                       name="apartment-type">
+                                <label for="townhouse" class="checkbox__label">Таунхаус</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="plot" class="visually-hidden checkbox__input"
+                                       name="apartment-type">
+                                <label for="plot" class="checkbox__label">Участок</label>
+                            </div>
+                        </fieldset>
+                    </li>
+
+                    <li class="filter__item">
+                        <button type="button" class="filter__dropdown-control filter__dropdown-control--roominess"
+                                data-call="dropdown" data-on="click" aria-haspopup="true"
+                                aria-controls="roominess-dropdown">
+                            Комнатность
+
+                            <svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
+                                <use xlink:href="/img/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </button>
+
+                        <fieldset id="roominess-dropdown" class="dropdown filter__dropdown">
+                            <legend class="visually-hidden">Комнатность</legend>
+
+                            <div class="button-group button-group--divided dropdown__button-group">
+                                <input type="radio" id="number-of-rooms-1" class="visually-hidden button-group__input"
+                                       name="number-of-rooms">
+                                <label for="number-of-rooms-1"
+                                       class="button-group__button button-group__button--fix-size">
+                                    1
+                                </label>
+
+                                <input type="radio" id="number-of-rooms-2" class="visually-hidden button-group__input"
+                                       name="number-of-rooms">
+                                <label for="number-of-rooms-2"
+                                       class="button-group__button button-group__button--fix-size">
+                                    2
+                                </label>
+
+                                <input type="radio" id="number-of-rooms-3" class="visually-hidden button-group__input"
+                                       name="number-of-rooms">
+                                <label for="number-of-rooms-3"
+                                       class="button-group__button button-group__button--fix-size">
+                                    3
+                                </label>
+
+                                <input type="radio" id="number-of-rooms-4" class="visually-hidden button-group__input"
+                                       name="number-of-rooms">
+                                <label for="number-of-rooms-4"
+                                       class="button-group__button button-group__button--fix-size">
+                                    4
+                                </label>
+
+                                <input type="radio" id="number-of-rooms-5" class="visually-hidden button-group__input"
+                                       name="number-of-rooms">
+                                <label for="number-of-rooms-5"
+                                       class="button-group__button button-group__button--fix-size">
+                                    5+
+                                </label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="studio" class="visually-hidden checkbox__input"
+                                       name="apartment-roominess">
+                                <label for="studio" class="checkbox__label">Студия</label>
+                            </div>
+
+                            <div class="checkbox dropdown__checkbox">
+                                <input type="checkbox" id="free-layout" class="visually-hidden checkbox__input"
+                                       name="apartment-roominess">
+                                <label for="free-layout" class="checkbox__label">Свободная планировка</label>
+                            </div>
+                        </fieldset>
+                    </li>
+
+                    <li class="filter__item">
+                        <button type="button" class="filter__dropdown-control filter__dropdown-control--price"
+                                data-call="dropdown" data-on="click" aria-haspopup="true"
+                                aria-controls="price-dropdown" aria-label="Указать диапазон стоимости">
+                            2,3 — 4,7 млн
+                        </button>
+
+                        <fieldset id="price-dropdown" class="dropdown filter__dropdown">
+                            <legend class="visually-hidden">Стоимость</legend>
+
+                            <label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
+                                <input type="number" class="text-input" name="price-from" placeholder="от" min="0"
+                                       step="100000">
+                                <span class="visually-hidden">От</span>
+                            </label>
+
+                            <label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
+                                <input type="number" class="text-input" name="price-to" placeholder="до" min="0"
+                                       step="100000">
+                                <span class="visually-hidden">До</span>
+                            </label>
+                        </fieldset>
+                    </li>
+
+                    <li class="filter__item">
+                        <input type="text" class="filter__dropdown-control filter__dropdown-control--address"
+                               name="address" placeholder="Район, улица, дом или ЖК"
+                               aria-label="Район, улица, дом или ЖК" data-call="dropdown" data-on="click"
+                               aria-haspopup="true" aria-controls="address-dropdown">
+
+                        <ul id="address-dropdown"
+                            class="dropdown filter__dropdown filter__dropdown--scroll filter__dropdown--large">
+                            <li>
+                                <h4 class="filter__subtitle">Адрес</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 7, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожная 21, Винзили
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 3, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 4, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 6, Картымский
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4 class="filter__subtitle">Район</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожный
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4 class="filter__subtitle">Жилой комплекс</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Жужа
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4 class="filter__subtitle">Адрес</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 7, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожная 21, Винзили
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 3, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 4, Картымский
+                                        </button>
+                                    </li>
+
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожников 6, Картымский
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4 class="filter__subtitle">Район</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Железнодорожный
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <h4 class="filter__subtitle">Жилой комплекс</h4>
+
+                                <ul class="suggestion-list">
+                                    <li class="suggestion-list__item">
+                                        <button type="button" class="suggestion-list__suggestion">
+                                            Жужа
+                                        </button>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <button type="submit" class="button filter__button button--fill">Поиск</button>
+            </form>
+
+            <ul class="cards-wrapper home__cards-wrapper">
+                <li class="cards-wrapper__item">
+                    <a href="#" class="card card--red card--icon-check">
+                        <h3 class="card__title">Ипотека онлайн</h3>
+
+                        <p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
+
+                        <svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
+                            <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="cards-wrapper__item">
+                    <a href="#" class="card card--grey card--icon-reverse">
+                        <h3 class="card__title">Поменяем на новую</h3>
+
+                        <p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
+
+                        <svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
+                            <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="cards-wrapper__item">
+                    <a href="#" class="card card--blue card--icon-display">
+                        <h3 class="card__title">Оценка стоимости</h3>
+
+                        <p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
+
+                        <svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
+                            <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="exclusive">
+        <div class="container">
+            <header class="exclusive__header">
+                <h2 class="exclusive__title">Эксклюзивные варианты</h2>
+
+                <p class="paragraph exclusive__paragraph">
+                    В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь, <br>
+                    войти придётся самостоятельно.
+                </p>
+
+                <a href="#" class="button exclusive__button button--outline">Все эксклюзивы</a>
+            </header>
+
+            <div class="slider">
+                <ul class="slider__list">
+                    <li class="apartment slider__slide">
+                        <div class="apartment__info">
+                            <h3 class="apartment__title">3-к квартира, 57м2, 12/15 эт.</h3>
+
+                            <p class="apartment__price">13 750 000 ₽</p>
+
+                            <p class="apartment__address">Коминтерновский район, Московский проспект, 114</p>
+                        </div>
+
+                        <div class="apartment__buttons">
+                            <button type="button" class="apartment__like">
+                                <svg width="21" height="21" viewBox="0 0 21 21">
+                                    <use xlink:href="/img/sprite.svg#like"></use>
+                                </svg>
+
+                                <span class="visually-hidden">Нравится</span>
+                            </button>
+
+                            <a href="#" class="button apartment__button button--fill">Показать номер</a>
+                        </div>
+
+                        <picture class="apartment__illustration">
+                            <source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
+                            <source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+
+                            <img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
+                                 width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+                        </picture>
+
+                        <p class="apartment__special">Кухня в подарок</p>
+                    </li>
+
+                    <li class="apartment slider__slide">
+                        <div class="apartment__info">
+                            <h3 class="apartment__title">3-к квартира, 57м2, 12/15 эт.</h3>
+
+                            <p class="apartment__price">13 750 000 ₽</p>
+
+                            <p class="apartment__address">Коминтерновский район, Московский проспект, 114</p>
+                        </div>
+
+                        <div class="apartment__buttons">
+                            <button type="button" class="apartment__like">
+                                <svg width="21" height="21" viewBox="0 0 21 21">
+                                    <use xlink:href="/img/sprite.svg#like"></use>
+                                </svg>
+
+                                <span class="visually-hidden">Нравится</span>
+                            </button>
+
+                            <a href="#" class="button apartment__button button--fill">Показать номер</a>
+                        </div>
+
+                        <picture class="apartment__illustration">
+                            <source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
+                            <source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+
+                            <img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
+                                 width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+                        </picture>
+
+                        <p class="apartment__special">Кухня в подарок</p>
+                    </li>
+
+                    <li class="apartment slider__slide">
+                        <div class="apartment__info">
+                            <h3 class="apartment__title">3-к квартира, 57м2, 12/15 эт.</h3>
+
+                            <p class="apartment__price">13 750 000 ₽</p>
+
+                            <p class="apartment__address">Коминтерновский район, Московский проспект, 114</p>
+                        </div>
+
+                        <div class="apartment__buttons">
+                            <button type="button" class="apartment__like">
+                                <svg width="21" height="21" viewBox="0 0 21 21">
+                                    <use xlink:href="/img/sprite.svg#like"></use>
+                                </svg>
+
+                                <span class="visually-hidden">Нравится</span>
+                            </button>
+
+                            <a href="#" class="button apartment__button button--fill">Показать номер</a>
+                        </div>
+
+                        <picture class="apartment__illustration">
+                            <source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
+                            <source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+
+                            <img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
+                                 width="1055" height="686"
+                                 alt="3-к квартира, 57м2, 12/15 эт.">
+                        </picture>
+
+                        <p class="apartment__special">Кухня в подарок</p>
+                    </li>
+                </ul>
+
+                <button type="button" class="slider__control slider__control--left">
+                    <svg width="13" height="12" viewBox="0 0 13 12">
+                        <use xlink:href="/img/sprite.svg#arrow-left"></use>
+                    </svg>
+
+                    <span class="visually-hidden">Прокрутить влево</span>
+                </button>
+
+                <button type="button" class="slider__control slider__control--right">
+                    <svg width="13" height="12" viewBox="0 0 13 12">
+                        <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                    </svg>
+
+                    <span class="visually-hidden">Прокрутить вправо</span>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <section class="footer__top">
+        <h2 class="visually-hidden">Навигация</h2>
+
+        <div class="container footer__container">
+            <svg x="0" y="0" width="230" height="22" viewBox="0 0 230 22" class="logo footer__logo"
+                 aria-label="Траст | Служба недвижимости">
+                <use xlink:href="/img/sprite.svg#logo"></use>
+            </svg>
+
+            <ul class="navigation footer__navigation">
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Каталог недвижимости</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Ипотека</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">О нас</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Карьера</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Отзывы</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Вакансии</a>
+                </li>
+
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Прочее</a>
+                </li>
+            </ul>
+
+            <a href="#" class="button button--fill button--small">Офисы и контакты</a>
+        </div>
+    </section>
+
+    <section class="footer__bottom">
+        <h2 class="visually-hidden">Копирайт</h2>
+
+        <div class="container footer__container">
+            <p class="paragraph footer__paragraph">
+                ©2000-2022 Компания «Траст». Все права защищены. При использовании материалов гиперссылка обязательна.
+            </p>
+
+            <a href="#" class="social footer__social social--vk">
+                <svg width="26" height="26" viewBox="0 0 26 26">
+                    <use xlink:href="/img/sprite.svg#vk"></use>
+                </svg>
+
+                <span class="visually-hidden">Наша группа в ВК</span>
+            </a>
+        </div>
+    </section>
+</footer>
+
+<script src="/js/bundle.js"></script>
+</body>
+</html>

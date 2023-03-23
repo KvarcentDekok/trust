@@ -1,0 +1,28 @@
+.text-input {
+    padding: 20px 26px;
+    border: 1px solid #D8D8D8;
+    width: 100%;
+    min-width: 200px;
+
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--filter-dark-text);
+
+    border-radius: 4px;
+}
+
+.text-input:hover {
+    border-color: var(--red-color);
+}
+
+.text-input:disabled {
+    opacity: 0.4;
+}
+
+.text-input::placeholder {
+    color: #959595;
+}
+
+.input-wrapper--rouble .text-input {
+    padding-right: 43px;
+}

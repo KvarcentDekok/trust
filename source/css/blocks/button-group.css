@@ -1,0 +1,70 @@
+.button-group {
+    display: flex;
+}
+
+.button-group--divided {
+    margin-top: 17px;
+}
+
+.button-group--divided .button-group__button {
+    margin: 0 9px 0 0;
+    border-left-color: var(--border-grey-color);
+}
+
+.button-group--divided .button-group__button,
+.button-group--divided .button-group__button:first-of-type,
+.button-group--divided .button-group__button:last-of-type {
+    border-radius: 4px;
+}
+
+.button-group__button {
+    display: block;
+    padding: 18px 15px;
+    margin-left: -1px;
+    border: 1px solid var(--border-grey-color);
+    border-left-color: transparent;
+
+    color: var(--filter-dark-text);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+.button-group__button--fix-size {
+    padding: 0;
+    width: 42px;
+    height: 41px;
+
+    line-height: 41px;
+    text-align: center;
+}
+
+.button-group__button:first-of-type {
+    margin-left: 0;
+    border-left-color: var(--border-grey-color);
+
+    border-radius: 4px 0 0 4px;
+}
+
+.button-group__button:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.button-group__button:hover {
+    border-color: var(--red-color);
+}
+
+.button-group__input:checked + .button-group__button {
+    color: var(--white-color);
+
+    background-color: var(--red-color);
+}
+
+.button-group__input:focus + .button-group__button {
+    outline: none;
+    box-shadow: var(--focus-box-shadow)
+}
+
+.button-group__input:disabled + .button-group__button {
+    opacity: 0.4;
+}

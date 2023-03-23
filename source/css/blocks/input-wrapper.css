@@ -1,0 +1,21 @@
+.input-wrapper {
+    display: block;
+
+    position: relative;
+}
+
+.input-wrapper--rouble::after {
+    position: absolute;
+    top: 50%;
+    right: 17px;
+
+    content: "₽";
+    font-size: 14px;
+    color: var(--filter-dark-text);
+
+    transform: translateY(-50%);
+}
+
+.input-wrapper--rouble:has(.text-input:hover)::after {
+    color: var(--red-color);
+}

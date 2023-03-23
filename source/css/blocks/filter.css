@@ -1,0 +1,215 @@
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    background-color: var(--white-color);
+    border-radius: 4px;
+}
+
+.filter__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.filter__item {
+    width: 100%;
+
+    position: relative;
+}
+
+.filter__item:last-of-type {
+    flex-grow: 1;
+}
+
+.filter__dropdown-control {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-right: 1px solid var(--border-grey-color);
+    padding: 16px;
+
+    position: relative;
+
+    font-size: 14px;
+    text-align: left;
+
+    background-color: var(--white-color);
+    cursor: pointer;
+}
+
+.filter__dropdown-control:hover {
+    box-shadow: inset 0 -2px var(--red-color);
+}
+
+.filter__dropdown-control--apartment {
+    padding-right: 32px;
+    color: var(--filter-dark-text);
+
+    border-radius: 4px 4px 0 0;
+}
+
+.filter__dropdown-control--apartment .filter__dropdown-icon {
+    right: 8px;
+}
+
+.filter__dropdown-control--roominess {
+    padding-right: 32px;
+
+    color: var(--filter-grey-text);
+}
+
+.filter__dropdown-control--roominess .filter__dropdown-icon {
+    right: 8px;
+}
+
+.filter__dropdown-control--price {
+    color: var(--filter-dark-text);
+}
+
+.filter__dropdown-control--address {
+    border-right: none;
+
+    color: var(--filter-grey-text);
+
+    cursor: auto;
+}
+
+.filter__dropdown-icon {
+    position: absolute;
+    top: 50%;
+
+    color: #B7B7B7;
+
+    transform: translateY(-50%);
+}
+
+.filter__dropdown-control:hover .filter__dropdown-icon {
+    color: var(--red-color);
+}
+
+.filter__button {
+    width: 100%;
+    margin: 10px;
+    padding: 18px;
+}
+
+.filter__dropdown {
+    border: none;
+    margin: 0;
+    padding: 4px 22px 21px;
+    min-width: 100%;
+
+    background-color: var(--white-color);
+    border-radius: 0 0 4px 4px;
+    list-style: none;
+}
+
+.filter__dropdown--large {
+    width: auto;
+}
+
+.filter__dropdown--scroll {
+    max-height: 376px;
+
+    overflow-y: scroll;
+    scrollbar-color: #D9D9D9 transparent;
+    scrollbar-width: thin;
+}
+
+.filter__dropdown--scroll::-webkit-scrollbar,
+.filter__dropdown--scroll::-webkit-scrollbar-thumb {
+    width: 30px;
+    background-clip: padding-box;
+    border: 13px solid transparent;
+}
+
+.filter__dropdown--scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.filter__dropdown--scroll::-webkit-scrollbar-thumb {
+    background-color: #D9D9D9;
+}
+
+.filter__dropdown--scroll::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-color);
+}
+
+.filter__subtitle {
+    margin-top: 27px;
+    margin-bottom: 3px;
+
+    font-size: 14px;
+    color: var(--filter-grey-text);
+    font-weight: normal;
+}
+
+@media (min-width: 900px) {
+    .filter {
+        height: 70px;
+    }
+
+    .filter__item {
+        width: auto;
+    }
+
+    .filter__dropdown-control {
+        padding: 0 16px;
+    }
+
+    .filter__dropdown-control--apartment {
+        padding-right: 32px;
+
+        border-radius: 4px 0 0 4px;
+    }
+
+    .filter__dropdown-control--roominess {
+        padding-right: 32px;
+    }
+
+    .filter__button {
+        width: auto;
+        margin: 10px 11px 11px 10px;
+        padding: 0 45px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .filter__dropdown-control--apartment {
+        padding-right: 80px;
+        padding-left: 22px;
+    }
+
+    .filter__dropdown-control--apartment .filter__dropdown-icon {
+        right: 22px;
+    }
+
+    .filter__dropdown-control--roominess {
+        padding-right: 55px;
+        padding-left: 27px;
+    }
+
+    .filter__dropdown-control--roominess .filter__dropdown-icon {
+        right: 15px;
+    }
+
+    .filter__dropdown-control--price {
+        padding-right: 233px;
+        padding-left: 27px;
+    }
+
+    .filter__dropdown-control--address {
+        padding-left: 24px;
+    }
+
+    .filter__dropdown--large {
+        width: 503px;
+    }
+}

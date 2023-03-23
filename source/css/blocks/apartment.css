@@ -1,0 +1,158 @@
+.apartment {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+
+    position: relative;
+    z-index: 0;
+
+    background-color: #696565;
+    border-radius: 4px;
+}
+
+.apartment__info {
+    margin-top: 64px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.apartment__title {
+    order: 2;
+    margin: 0;
+
+    font-size: 21px;
+    line-height: 23px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+
+.apartment__price {
+    order: 1;
+    margin: 0 0 11px;
+
+    font-size: 35px;
+    line-height: 39px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.apartment__address {
+    order: 3;
+    margin: 15px 0 0;
+
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.apartment__buttons {
+    margin: 0;
+    display: flex;
+    width: 100%;
+}
+
+.apartment__like {
+    width: 59px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white-color);
+    margin-right: 13px;
+
+    color: #EFEFEF;
+
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 200ms linear;
+}
+
+.apartment__like:hover {
+    color: var(--red-color);
+
+    border-color: var(--red-color);
+}
+
+.apartment__button {
+    padding: 18px;
+    flex-grow: 1;
+}
+
+.apartment__illustration {
+    width: 100%;
+    order: -1;
+
+    overflow: hidden;
+}
+
+.apartment__image {
+    width: 100%;
+}
+
+.apartment__special {
+    padding: 13px 20px;
+    margin: 0;
+
+    position: absolute;
+    top: 35px;
+    left: 45px;
+
+    font-size: 13px;
+    color: #F5F5F5;
+
+    border-radius: 4px;
+    background-color: rgba(30, 30, 30, 0.7);
+}
+
+@media (min-width: 900px) {
+    .apartment {
+        height: 50vw;
+        padding: 50px 62px 50px 42px;
+    }
+
+    .apartment__info {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    .apartment__illustration {
+        height: 100%;
+        order: initial;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    .apartment__image {
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .apartment__buttons {
+        margin: auto 0 0 auto;
+        width: auto;
+    }
+
+    .apartment__button {
+        padding: 18px 90px 23px;
+        flex-grow: initial;
+    }
+}
+
+@media (min-width: 1400px) {
+    .apartment {
+        width: 1055px;
+        height: 686px;
+    }
+}

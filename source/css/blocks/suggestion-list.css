@@ -1,0 +1,26 @@
+.suggestion-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.suggestion-list__suggestion {
+    padding: 0;
+    border: 0;
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 30px;
+    color: #323232;
+    text-align: left;
+
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.suggestion-list__suggestion:hover {
+    color: var(--black-color);
+
+    background-color: var(--border-grey-color);
+}
