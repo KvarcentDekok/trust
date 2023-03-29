@@ -1,0 +1,33 @@
+.like__input:checked ~ .like__label {
+    color: var(--red-color);
+
+    border-color: var(--red-color);
+}
+
+.like__input:focus ~ .like__label {
+    box-shadow: var(--focus-box-shadow);
+}
+
+.like__input:disabled ~ .like__label {
+    opacity: 0.4;
+}
+
+.like__label {
+    width: 59px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--white-color);
+
+    color: #EFEFEF;
+
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.like__label:hover {
+    border-color: var(--red-color);
+}

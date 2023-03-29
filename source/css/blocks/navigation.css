@@ -7,13 +7,10 @@
     list-style: none;
 }
 
-.navigation__item {
-    margin-right: 45px;
-}
-
 .navigation__link {
     display: block;
     padding: 22px 0 28px;
+    margin-right: 45px;
 
     position: relative;
     z-index: 2;

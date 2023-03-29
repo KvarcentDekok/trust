@@ -1,32 +1,21 @@
-const sliderControlLeft = document.querySelector('.slider__control--left');
-const sliderControlRight = document.querySelector('.slider__control--right');
-const sliderList = document.querySelector('.slider__list');
+import Swiper, { Navigation, Scrollbar } from 'swiper';
 
 function slider() {
-    sliderControlLeft.addEventListener('click', () => {
-        const slides = sliderList.querySelectorAll('.slider__slide');
-        const slideWidth = slides[0].offsetWidth;
-
-        let slideIndex = ~~(sliderList.scrollLeft / slideWidth) - 1;
-
-        if (slideIndex < 0) {
-            slideIndex = 0;
-        }
-
-        slides[slideIndex].scrollIntoView({inline: "start", behavior: "smooth"});
-    });
-
-    sliderControlRight.addEventListener('click', () => {
-        const slides = sliderList.querySelectorAll('.slider__slide');
-        const slideWidth = slides[0].offsetWidth;
-
-        let slideIndex = ~~(sliderList.scrollLeft / slideWidth) + 1;
-
-        if (slideIndex >= slides.length) {
-            slideIndex = slides.length - 1;
-        }
-
-        slides[slideIndex].scrollIntoView({inline: "start", behavior: "smooth"});
+    const swiperMain = new Swiper('.slider__init', {
+        modules: [Navigation, Scrollbar],
+        spaceBetween: 30,
+        slidesPerView: "auto",
+        slidesOffsetAfter: 225,
+        navigation: {
+            nextEl: '.slider__control.slider__control--right',
+            prevEl: '.slider__control.slider__control--left',
+            disabledClass: 'slider__control--disabled'
+        },
+        scrollbar: {
+            el: '.slider__scrollbar',
+            draggable: true,
+            dragClass: 'slider__scrollbar-drag'
+        },
     });
 }
 

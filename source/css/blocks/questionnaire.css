@@ -1,0 +1,128 @@
+.questionnaire {
+    padding: 53px 0;
+
+    background-color: #F5F5F5;
+}
+
+.questionnaire__list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    background-color: var(--white-color);
+}
+
+.questionnaire__step {
+    display: grid;
+    grid-template-columns: 476px 629px;
+    grid-template-rows: 144px 58px;
+    row-gap: 55px;
+    column-gap: 100px;
+    padding: 32px 40px 45px 34px;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms linear;
+}
+
+.questionnaire__step--active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.questionnaire__question {
+    margin: 0 0 24px;
+
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    color: #1A1A1A;
+}
+
+.questionnaire__paragraph {
+    color: #1A1A1A;
+}
+
+.questionnaire__answer-wrapper {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    row-gap: 28px;
+    column-gap: 25px;
+}
+
+.questionnaire__input:checked ~ .questionnaire__label {
+    color: var(--red-color);
+
+    border-color: var(--red-color);
+}
+
+.questionnaire__input:focus ~ .questionnaire__label {
+    box-shadow: var(--focus-box-shadow);
+}
+
+.questionnaire__input:disabled ~ .questionnaire__label {
+    opacity: 0.4;
+}
+
+.questionnaire__label {
+    display: block;
+    border: 1px solid #A5A5A5;
+
+    font-size: 14px;
+    line-height: 58px;
+    text-align: center;
+    color: #A5A5A5;
+
+    border-radius: 4px;
+    transition: all 200ms linear;
+}
+
+.questionnaire__label:hover {
+    border-color: var(--red-color);
+}
+
+.questionnaire__step-point {
+    margin: auto auto 0 0;
+
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    color: #B9B9B9;
+}
+
+.questionnaire__controls {
+    display: flex;
+    margin-left: auto;
+}
+
+.questionnaire__back {
+    width: 59px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C1C1C1;
+    margin-right: 26px;
+
+    color: #C1C1C1;
+
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.questionnaire__back:hover {
+    color: var(--red-color);
+
+    border-color: var(--red-color);
+}
+
+.questionnaire__back:disabled {
+    opacity: 0.4;
+}
+
+.questionnaire__button {
+    width: 302px;
+    padding: 20px 0;
+}

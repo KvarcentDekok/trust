@@ -13,6 +13,12 @@ const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const importCss = require('gulp-import-css');
+const concat = require('gulp-concat');
+
+const plugins = [
+    'node_modules/swiper/swiper.min.css',
+    'node_modules/swiper/modules/scrollbar/scrollbar.min.css'
+];
 
 gulp.task("css", () => {
     return gulp.src("source/css/style.css")
@@ -26,6 +32,14 @@ gulp.task("css", () => {
         .pipe(sourcemap.write("."))
         .pipe(gulp.dest("build/css"))
         .pipe(server.stream());
+});
+
+gulp.task("css:libs", () => {
+    if (plugins.length > 0) {
+        return gulp.src(plugins)
+            .pipe(concat('libs.min.css'))
+            .pipe(gulp.dest('build/css/'))
+    }
 });
 
 gulp.task("html", () => {
@@ -75,5 +89,5 @@ gulp.task("refresh", (done) => {
 });
 
 
-gulp.task("build", gulp.series("clean", "copy", "html", "css", "js"));
+gulp.task("build", gulp.series("clean", "copy", "html", "css", "css:libs", "js"));
 gulp.task("start", gulp.series("build", "server"));

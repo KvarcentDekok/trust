@@ -10,6 +10,7 @@
 
     background-color: #696565;
     border-radius: 4px;
+    overflow: hidden;
 }
 
 .apartment__info {
@@ -56,25 +57,7 @@
 }
 
 .apartment__like {
-    width: 59px;
-    height: 57px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--white-color);
     margin-right: 13px;
-
-    color: #EFEFEF;
-
-    border-radius: 4px;
-    background-color: transparent;
-    transition: all 200ms linear;
-}
-
-.apartment__like:hover {
-    color: var(--red-color);
-
-    border-color: var(--red-color);
 }
 
 .apartment__button {
@@ -145,7 +128,7 @@
     }
 
     .apartment__button {
-        padding: 18px 90px 23px;
+        padding: 20px 87px 20px;
         flex-grow: initial;
     }
 }

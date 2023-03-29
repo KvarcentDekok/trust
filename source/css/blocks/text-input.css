@@ -12,7 +12,12 @@
 }
 
 .text-input:hover {
-    border-color: var(--red-color);
+    border-color: var(--blue-color);
+}
+
+.text-input:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-box-shadow);
 }
 
 .text-input:disabled {

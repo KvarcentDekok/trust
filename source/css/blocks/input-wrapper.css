@@ -17,5 +17,5 @@
 }
 
 .input-wrapper--rouble:has(.text-input:hover)::after {
-    color: var(--red-color);
+    color: var(--blue-color);
 }

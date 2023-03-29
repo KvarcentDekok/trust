@@ -3,8 +3,9 @@
     --red-color: #DC1919;
     --dark-color: #171717;
     --black-color: #000000;
+    --blue-color: #416494;
     --filter-dark-text: #2D2D2D;
     --filter-grey-text: #808080;
     --border-grey-color: #DEDEDE;
-    --focus-box-shadow: 0 0 0 3px rgba(220, 25, 25, 0.25);
+    --focus-box-shadow: 0 0 0 3px rgba(65, 100, 148, 0.4);
 }

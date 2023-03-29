@@ -44,9 +44,22 @@
     cursor: pointer;
 }
 
-.filter__dropdown-control:hover {
+.filter__dropdown-control[data-filters-count]::after {
+    content: "(" attr(data-filters-count) ")";
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+.filter__dropdown-control[data-filters-count="0"]::after {
+    content: none;
+}
+
+.filter__dropdown-control:hover,
+.filter__dropdown-control:focus-visible {
+    outline: none;
     box-shadow: inset 0 -2px var(--red-color);
 }
+
 
 .filter__dropdown-control--apartment {
     padding-right: 32px;
@@ -76,9 +89,13 @@
 .filter__dropdown-control--address {
     border-right: none;
 
-    color: var(--filter-grey-text);
+    color: var(--black-color);
 
     cursor: auto;
+}
+
+.filter__dropdown-control--address::placeholder {
+    color: var(--filter-grey-text);
 }
 
 .filter__dropdown-icon {
@@ -109,10 +126,6 @@
     background-color: var(--white-color);
     border-radius: 0 0 4px 4px;
     list-style: none;
-}
-
-.filter__dropdown--large {
-    width: auto;
 }
 
 .filter__dropdown--scroll {
@@ -207,9 +220,5 @@
 
     .filter__dropdown-control--address {
         padding-left: 24px;
-    }
-
-    .filter__dropdown--large {
-        width: 503px;
     }
 }

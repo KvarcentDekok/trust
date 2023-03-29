@@ -1,12 +1,16 @@
+import debounce from "./debounce";
+
 const SHOW_DROPDOWN_CLASSNAME = 'dropdown--show';
 const Action = {
     Click: 'click',
-    Hover: 'hover'
+    Hover: 'hover',
+    Input: 'input'
 };
 
 const dropdownControls = document.querySelectorAll('[data-call="dropdown"]');
 
 let activeDropdown;
+let focusableElement;
 
 function controlClickHandler(evt, control) {
     const dropdownTargetId = control.getAttribute('aria-controls');
@@ -75,6 +79,27 @@ function targetMouseOutHandler(evt) {
     closeDropdownHover(dropdownTarget);
 }
 
+function targetFocusOutHandler(evt) {
+    let relatedTarget = evt.relatedTarget;
+    let dropdownTarget = evt.target;
+
+    while (!dropdownTarget.classList.contains('dropdown')) {
+        dropdownTarget = dropdownTarget.parentNode;
+    }
+
+    const dropdownControl = document.querySelector(`[aria-controls="${dropdownTarget.id}"]`);
+
+    while (relatedTarget !== document.body) {
+        if (relatedTarget === dropdownControl || relatedTarget === dropdownTarget || !relatedTarget) {
+            return;
+        }
+
+        relatedTarget = relatedTarget.parentNode;
+    }
+
+    closeDropdownHover(dropdownTarget);
+}
+
 function showDropdownClick(dropdownTarget) {
     dropdownTarget.classList.add(SHOW_DROPDOWN_CLASSNAME);
 
@@ -97,14 +122,19 @@ function closeDropdownClick() {
 
 function showDropdownHover(dropdownTarget) {
     dropdownTarget.classList.add(SHOW_DROPDOWN_CLASSNAME);
+    focusableElement = dropdownTarget.querySelector('a, button, input, select, textarea');
 
     dropdownTarget.addEventListener('mouseout', targetMouseOutHandler);
+    dropdownTarget.addEventListener('focusout', targetFocusOutHandler);
+    document.addEventListener('keydown', downPressHandler);
 }
 
 function closeDropdownHover(dropdownTarget) {
     dropdownTarget.classList.remove(SHOW_DROPDOWN_CLASSNAME);
 
     dropdownTarget.removeEventListener('mouseout', targetMouseOutHandler);
+    dropdownTarget.removeEventListener('focusout', targetFocusOutHandler);
+    document.removeEventListener('keydown', downPressHandler);
 }
 
 function documentClickHandler(evt) {
@@ -129,6 +159,34 @@ function escPressHandler(evt) {
     }
 }
 
+function downPressHandler(evt) {
+    if (evt.key === 'ArrowDown') {
+        evt.preventDefault();
+
+        focusableElement.focus();
+    }
+}
+
+function controlInputHandler(evt) {
+    const target = evt.target;
+
+    if (target.value) {
+        const dropdownTargetId = target.getAttribute('aria-controls');
+
+        if (activeDropdown && activeDropdown.id !== dropdownTargetId) {
+            closeDropdownClick();
+        }
+
+        if (dropdownTargetId) {
+            const dropdownTarget = document.querySelector(`#${dropdownTargetId}`);
+
+            debounce(showDropdownClick)(dropdownTarget);
+        }
+    } else {
+        debounce(closeDropdownClick)();
+    }
+}
+
 function dropdown() {
     for (let i = 0; i < dropdownControls.length; i++) {
         if (dropdownControls[i].dataset.on === Action.Click) {
@@ -144,6 +202,20 @@ function dropdown() {
 
             dropdownControls[i].addEventListener('mouseout', (evt) => {
                 controlMouseOutHandler(evt, dropdownControls[i]);
+            });
+
+            dropdownControls[i].addEventListener('focus', (evt) => {
+                controlMouseOverHandler(evt, dropdownControls[i]);
+            });
+
+            dropdownControls[i].addEventListener('blur', (evt) => {
+                controlMouseOutHandler(evt, dropdownControls[i]);
+            });
+        }
+
+        if (dropdownControls[i].dataset.on === Action.Input) {
+            dropdownControls[i].addEventListener('input', (evt) => {
+                controlInputHandler(evt);
             });
         }
     }
