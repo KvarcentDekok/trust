@@ -17,7 +17,8 @@ const concat = require('gulp-concat');
 
 const plugins = [
     'node_modules/swiper/swiper.min.css',
-    'node_modules/swiper/modules/scrollbar/scrollbar.min.css'
+    'node_modules/swiper/modules/scrollbar/scrollbar.min.css',
+    'node_modules/accordion-js/dist/accordion.min.css'
 ];
 
 gulp.task("css", () => {

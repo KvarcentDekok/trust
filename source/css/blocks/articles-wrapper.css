@@ -1,0 +1,12 @@
+.articles-wrapper {
+    --articles-gap: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--articles-gap);
+    padding: 55px 0 24px;
+}
+
+.articles-wrapper__article {
+    width: calc(50% - var(--articles-gap) / 2);
+}

@@ -1,12 +1,16 @@
 .questionnaire {
     padding: 53px 0;
 
+    position: relative;
+
     background-color: #F5F5F5;
+    overflow: hidden;
 }
 
 .questionnaire__list {
     margin: 0;
     padding: 0;
+    display: flex;
 
     list-style: none;
     background-color: var(--white-color);
@@ -14,20 +18,31 @@
 
 .questionnaire__step {
     display: grid;
-    grid-template-columns: 476px 629px;
-    grid-template-rows: 144px 58px;
-    row-gap: 55px;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr 1fr 57px;
+    row-gap: 16px;
     column-gap: 100px;
     padding: 32px 40px 45px 34px;
+
+    position: absolute;
 
     visibility: hidden;
     opacity: 0;
     transition: all 200ms linear;
+    transform: translateX(-100%);
 }
 
 .questionnaire__step--active {
+    position: initial;
+
     visibility: visible;
     opacity: 1;
+    transform: translateX(0);
+}
+
+.questionnaire__step--active ~ .questionnaire__step {
+    transform: translateX(100%);
 }
 
 .questionnaire__question {
@@ -45,9 +60,9 @@
 
 .questionnaire__answer-wrapper {
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    row-gap: 28px;
-    column-gap: 25px;
+    grid-template-rows: 60px 60px 60px 60px;
+    row-gap: 16px;
+    column-gap: 16px;
 }
 
 .questionnaire__input:checked ~ .questionnaire__label {
@@ -91,6 +106,7 @@
 }
 
 .questionnaire__controls {
+    width: 100%;
     display: flex;
     margin-left: auto;
 }
@@ -112,7 +128,7 @@
     cursor: pointer;
 }
 
-.questionnaire__back:hover {
+.questionnaire__back:hover:not(:disabled) {
     color: var(--red-color);
 
     border-color: var(--red-color);
@@ -120,9 +136,34 @@
 
 .questionnaire__back:disabled {
     opacity: 0.4;
+    cursor: initial;
 }
 
 .questionnaire__button {
     width: 302px;
     padding: 20px 0;
+    flex-grow: 1;
+}
+
+@media (min-width: 900px) {
+    .questionnaire__answer-wrapper {
+        grid-template: 60px 60px / 1fr 1fr;
+    }
+
+    .questionnaire__controls {
+        width: auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .questionnaire__step {
+        grid-template-columns: 476px 629px;
+        grid-template-rows: 144px 58px;
+        row-gap: 55px;
+    }
+
+    .questionnaire__answer-wrapper {
+        row-gap: 28px;
+        column-gap: 25px;
+    }
 }

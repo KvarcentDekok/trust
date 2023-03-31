@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/KvarcentDekok/trust#readme",
   "dependencies": {
+    "accordion-js": "^3.3.4",
     "cleave.js": "^1.6.0",
     "swiper": "^9.1.1"
   }

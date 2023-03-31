@@ -20,14 +20,19 @@
     box-shadow: var(--focus-box-shadow);
 }
 
+.button:disabled {
+    opacity: 0.4;
+    cursor: initial;
+}
+
 .button--outline,
-.button--fill:hover {
+.button--fill:hover:not(:disabled) {
     color: var(--red-color);
 
     background-color: var(--white-color);
 }
 
-.button--outline:hover,
+.button--outline:hover:not(:disabled),
 .button--fill {
     color: var(--white-color);
 

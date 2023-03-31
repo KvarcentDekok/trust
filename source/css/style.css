@@ -18,10 +18,15 @@
 @import url("blocks/input-wrapper.css");
 @import url("blocks/suggestion-list.css");
 @import url("blocks/cards-wrapper.css");
-@import url("blocks/exclusive.css");
+@import url("blocks/section.css");
 @import url("blocks/slider.css");
 @import url("blocks/apartment.css");
 @import url("blocks/footer.css");
 @import url("blocks/social.css");
 @import url("blocks/like.css");
 @import url("blocks/questionnaire.css");
+@import url("blocks/features-list.css");
+@import url("blocks/feature.css");
+@import url("blocks/accordion.css");
+@import url("blocks/articles-wrapper.css");
+@import url("blocks/article.css");

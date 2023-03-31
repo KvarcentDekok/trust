@@ -1,0 +1,44 @@
+.article {
+    display: flex;
+    flex-direction: column;
+    padding: 27px 37px 50px;
+
+    background-color: #F5F5F5;
+    border-radius: 5px;
+}
+
+.article--agent {
+    background-image: url("/img/agent.webp");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+.article__description {
+    margin: 0 0 13px;
+
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 23px;
+    color: #C4C4C4;
+}
+
+.article__title {
+    margin: 0 0 22px;
+
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 39px;
+
+    color: #1A1A1A;
+}
+
+.article__paragraph {
+    margin-bottom: 37px;
+
+    color: #414141;
+}
+
+.article__button {
+    padding: 20px 80px;
+    margin: auto auto 0 0;
+}

@@ -486,7 +486,7 @@
 		</div>
 	</section>
 
-	<section class="questionnaire">
+	<form class="questionnaire">
 		<h2 class="visually-hidden">Анкета</h2>
 
 		<div class="container">
@@ -537,7 +537,7 @@
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="1">
+						<button type="button" class="button questionnaire__button button--fill" data-set-step="1" disabled>
 							Далее
 						</button>
 					</div>
@@ -555,25 +555,25 @@
 					<div class="questionnaire__answer-wrapper">
 						<div class="questionnaire__answer">
 							<input type="radio" id="answer_2_1" class="visually-hidden questionnaire__input"
-							       name="answer_1">
+							       name="answer_2">
 							<label for="answer_2_1" class="questionnaire__label">Купить недвижимость</label>
 						</div>
 
 						<div class="questionnaire__answer">
 							<input type="radio" id="answer_2_2" class="visually-hidden questionnaire__input"
-							       name="answer_1">
+							       name="answer_2">
 							<label for="answer_2_2" class="questionnaire__label">Обменять недвижимость</label>
 						</div>
 
 						<div class="questionnaire__answer">
 							<input type="radio" id="answer_2_3" class="visually-hidden questionnaire__input"
-							       name="answer_1">
+							       name="answer_2">
 							<label for="answer_2_3" class="questionnaire__label">Продать недвижимость</label>
 						</div>
 
 						<div class="questionnaire__answer">
 							<input type="radio" id="answer_2_4" class="visually-hidden questionnaire__input"
-							       name="answer_1">
+							       name="answer_2">
 							<label for="answer_2_4" class="questionnaire__label">Ещё что-то сделать</label>
 						</div>
 					</div>
@@ -589,26 +589,182 @@
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="2">
+						<button type="button" class="button questionnaire__button button--fill" data-set-step="2" disabled>
 							Далее
+						</button>
+					</div>
+				</li>
+
+				<li class="questionnaire__step" data-index="2">
+					<div class="questionnaire__question-wrapper">
+						<p class="questionnaire__question">Что вы хотите сделать?</p>
+						<p class="paragraph questionnaire__paragraph">
+							«Траст» входит в состав Российской Гильдии Риэлторов.
+							Стандарты качества услуг компании сертифицированы, деятельность застрахована.
+						</p>
+					</div>
+
+					<div class="questionnaire__answer-wrapper">
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_3_1" class="visually-hidden questionnaire__input"
+							       name="answer_3">
+							<label for="answer_3_1" class="questionnaire__label">Купить недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_3_2" class="visually-hidden questionnaire__input"
+							       name="answer_3">
+							<label for="answer_3_2" class="questionnaire__label">Обменять недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_3_3" class="visually-hidden questionnaire__input"
+							       name="answer_3">
+							<label for="answer_3_3" class="questionnaire__label">Продать недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_3_4" class="visually-hidden questionnaire__input"
+							       name="answer_3">
+							<label for="answer_3_4" class="questionnaire__label">Ещё что-то сделать</label>
+						</div>
+					</div>
+
+					<p class="questionnaire__step-point">Вопрос 3 из 5</p>
+
+					<div class="questionnaire__controls">
+						<button type="button" class="questionnaire__back" data-set-step="1">
+							<svg width="13" height="12" viewBox="0 0 13 12">
+								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+							</svg>
+
+							<span class="visually-hidden">Назад</span>
+						</button>
+
+						<button type="button" class="button questionnaire__button button--fill" data-set-step="3" disabled>
+							Далее
+						</button>
+					</div>
+				</li>
+
+				<li class="questionnaire__step" data-index="3">
+					<div class="questionnaire__question-wrapper">
+						<p class="questionnaire__question">Что вы хотите сделать?</p>
+						<p class="paragraph questionnaire__paragraph">
+							«Траст» входит в состав Российской Гильдии Риэлторов.
+							Стандарты качества услуг компании сертифицированы, деятельность застрахована.
+						</p>
+					</div>
+
+					<div class="questionnaire__answer-wrapper">
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_4_1" class="visually-hidden questionnaire__input"
+							       name="answer_4">
+							<label for="answer_4_1" class="questionnaire__label">Купить недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_4_2" class="visually-hidden questionnaire__input"
+							       name="answer_4">
+							<label for="answer_4_2" class="questionnaire__label">Обменять недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_4_3" class="visually-hidden questionnaire__input"
+							       name="answer_4">
+							<label for="answer_4_3" class="questionnaire__label">Продать недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_4_4" class="visually-hidden questionnaire__input"
+							       name="answer_4">
+							<label for="answer_4_4" class="questionnaire__label">Ещё что-то сделать</label>
+						</div>
+					</div>
+
+					<p class="questionnaire__step-point">Вопрос 4 из 5</p>
+
+					<div class="questionnaire__controls">
+						<button type="button" class="questionnaire__back" data-set-step="2">
+							<svg width="13" height="12" viewBox="0 0 13 12">
+								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+							</svg>
+
+							<span class="visually-hidden">Назад</span>
+						</button>
+
+						<button type="button" class="button questionnaire__button button--fill" data-set-step="4" disabled>
+							Далее
+						</button>
+					</div>
+				</li>
+
+				<li class="questionnaire__step" data-index="4">
+					<div class="questionnaire__question-wrapper">
+						<p class="questionnaire__question">Что вы хотите сделать?</p>
+						<p class="paragraph questionnaire__paragraph">
+							«Траст» входит в состав Российской Гильдии Риэлторов.
+							Стандарты качества услуг компании сертифицированы, деятельность застрахована.
+						</p>
+					</div>
+
+					<div class="questionnaire__answer-wrapper">
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_5_1" class="visually-hidden questionnaire__input"
+							       name="answer_5">
+							<label for="answer_5_1" class="questionnaire__label">Купить недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_5_2" class="visually-hidden questionnaire__input"
+							       name="answer_5">
+							<label for="answer_5_2" class="questionnaire__label">Обменять недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_5_3" class="visually-hidden questionnaire__input"
+							       name="answer_5">
+							<label for="answer_5_3" class="questionnaire__label">Продать недвижимость</label>
+						</div>
+
+						<div class="questionnaire__answer">
+							<input type="radio" id="answer_5_4" class="visually-hidden questionnaire__input"
+							       name="answer_5">
+							<label for="answer_5_4" class="questionnaire__label">Ещё что-то сделать</label>
+						</div>
+					</div>
+
+					<p class="questionnaire__step-point">Вопрос 5 из 5</p>
+
+					<div class="questionnaire__controls">
+						<button type="button" class="questionnaire__back" data-set-step="3">
+							<svg width="13" height="12" viewBox="0 0 13 12">
+								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+							</svg>
+
+							<span class="visually-hidden">Назад</span>
+						</button>
+
+						<button type="submit" class="button questionnaire__button button--fill" disabled>
+							Готово
 						</button>
 					</div>
 				</li>
 			</ul>
 		</div>
-	</section>
+	</form>
 
-	<section class="exclusive">
+	<section class="section">
 		<div class="container">
-			<header class="exclusive__header">
-				<h2 class="exclusive__title">Эксклюзивные варианты</h2>
+			<header class="section__header">
+				<h2 class="section__title">Эксклюзивные варианты</h2>
 
-				<p class="paragraph exclusive__paragraph">
+				<p class="paragraph section__paragraph">
 					В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь, <br>
 					войти придётся самостоятельно.
 				</p>
 
-				<a href="#" class="button exclusive__button button--outline">Все эксклюзивы</a>
+				<a href="#" class="button section__button button--outline">Все эксклюзивы</a>
 			</header>
 
 			<div class="slider">
@@ -744,6 +900,186 @@
 				<div class="swiper-scrollbar slider__scrollbar">
 					<div class="swiper-scrollbar-drag slider__scrollbar-drag"></div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<header class="section__header">
+				<h2 class="section__title">Наши преимущества</h2>
+
+				<p class="paragraph section__paragraph">
+					В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь, <br>
+					войти придётся самостоятельно.
+				</p>
+			</header>
+
+			<ul class="features-list">
+				<li class="feature features-list__item feature--search">
+					<h3 class="feature__title">Быстрый поиск</h3>
+
+					<p class="paragraph feature__paragraph">
+						В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь
+					</p>
+				</li>
+
+				<li class="feature features-list__item feature--shield">
+					<h3 class="feature__title">Безопасная сделка</h3>
+
+					<p class="paragraph feature__paragraph">
+						В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь
+					</p>
+				</li>
+
+				<li class="feature features-list__item feature--trend">
+					<h3 class="feature__title">Продажа на 15% дороже</h3>
+
+					<p class="paragraph feature__paragraph">
+						В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь
+					</p>
+				</li>
+
+				<li class="feature features-list__item feature--agent">
+					<h3 class="feature__title">Опытные агенты</h3>
+
+					<p class="paragraph feature__paragraph">
+						В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь
+					</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<header class="section__header">
+				<h2 class="section__title">У нас есть ответы</h2>
+
+				<p class="paragraph section__paragraph">
+					В данном случае я выступаю в роли Морфеуса — лишь указываю на дверь, <br>
+					войти придётся самостоятельно.
+				</p>
+			</header>
+
+			<ul class="accordion">
+				<li class="ac accordion__item">
+					<h2 class="ac-header accordion__title">
+						<button type="button" class="ac-trigger accordion__trigger">
+							Какие услуги будут оказаны и сколько это стоит для покупателя или продавца?
+
+							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
+								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							</svg>
+						</button>
+					</h2>
+
+					<div class="ac-panel accordion__panel">
+						<p class="paragraph accordion__paragraph">
+							Если вы поручаете риэлтору продать или купить объект недвижимости,
+							у вас есть собственные ожидания по цене. Они могут быть адекватными,
+							заниженными или завышенными, потому что вы не являетесь специалистом в этой области.
+							Когда риэлтор называет вам цену, он должен ее обосновать с позиции рынка.
+							Профессионал хорошо знает состояние и динамику рынка недвижимости вашего региона,
+							владеет аналитическими и статистическими данными.
+						</p>
+					</div>
+				</li>
+
+				<li class="ac accordion__item">
+					<h2 class="ac-header accordion__title">
+						<button type="button" class="ac-trigger accordion__trigger">
+							Какие риски могут возникнуть при сделке?
+
+							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
+								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							</svg>
+						</button>
+					</h2>
+
+					<div class="ac-panel accordion__panel">
+						<p class="paragraph accordion__paragraph">
+							Если вы поручаете риэлтору продать или купить объект недвижимости,
+							у вас есть собственные ожидания по цене. Они могут быть адекватными,
+							заниженными или завышенными, потому что вы не являетесь специалистом в этой области.
+							Когда риэлтор называет вам цену, он должен ее обосновать с позиции рынка.
+							Профессионал хорошо знает состояние и динамику рынка недвижимости вашего региона,
+							владеет аналитическими и статистическими данными.
+						</p>
+					</div>
+				</li>
+
+				<li class="ac accordion__item">
+					<h2 class="ac-header accordion__title">
+						<button type="button" class="ac-trigger accordion__trigger">
+							Какие действия будут предприняты в случае возникновения непредвиденных обстоятельств?
+
+							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
+								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							</svg>
+						</button>
+					</h2>
+
+					<div class="ac-panel accordion__panel">
+						<p class="paragraph accordion__paragraph">
+							Если вы поручаете риэлтору продать или купить объект недвижимости,
+							у вас есть собственные ожидания по цене. Они могут быть адекватными,
+							заниженными или завышенными, потому что вы не являетесь специалистом в этой области.
+							Когда риэлтор называет вам цену, он должен ее обосновать с позиции рынка.
+							Профессионал хорошо знает состояние и динамику рынка недвижимости вашего региона,
+							владеет аналитическими и статистическими данными.
+						</p>
+					</div>
+				</li>
+
+				<li class="ac accordion__item">
+					<h2 class="ac-header accordion__title">
+						<button type="button" class="ac-trigger accordion__trigger">
+							Какие услуги будут оказаны и сколько это стоит для покупателя или продавца?
+
+							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
+								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							</svg>
+						</button>
+					</h2>
+
+					<div class="ac-panel accordion__panel">
+						<p class="paragraph accordion__paragraph">
+							Если вы поручаете риэлтору продать или купить объект недвижимости,
+							у вас есть собственные ожидания по цене. Они могут быть адекватными,
+							заниженными или завышенными, потому что вы не являетесь специалистом в этой области.
+							Когда риэлтор называет вам цену, он должен ее обосновать с позиции рынка.
+							Профессионал хорошо знает состояние и динамику рынка недвижимости вашего региона,
+							владеет аналитическими и статистическими данными.
+						</p>
+					</div>
+				</li>
+			</ul>
+
+			<div class="articles-wrapper">
+				<article class="article articles-wrapper__article">
+					<p class="article__description">Рассказываем о полезном и интересном</p>
+
+					<h3 class="article__title">Новости и акции рынка недвижимости</h3>
+
+					<p class="paragraph article__paragraph">
+						В данном случае я выступаю в роли Морфеуса — лишь <br> указываю на дверь
+					</p>
+
+					<a href="#" class="button button--fill article__button">Все эксклюзивы</a>
+				</article>
+
+				<article class="article articles-wrapper__article article--agent">
+					<p class="article__description">Объясним и покажем</p>
+
+					<h3 class="article__title">Проконсультируем <br> бесплатно</h3>
+
+					<p class="paragraph article__paragraph">
+						В данном случае я выступаю в роли Морфеуса <br> — лишь указываю на дверь
+					</p>
+
+					<a href="#" class="button button--fill article__button">Все эксклюзивы</a>
+				</article>
 			</div>
 		</div>
 	</section>

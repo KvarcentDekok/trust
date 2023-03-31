@@ -1,0 +1,21 @@
+.features-list {
+    --features-gap: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 45px 0;
+    gap: var(--features-gap);
+
+    list-style: none;
+}
+
+.features-list__item {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .features-list__item {
+        width: calc(25% - (var(--features-gap) - var(--features-gap) / 4));
+    }
+}
