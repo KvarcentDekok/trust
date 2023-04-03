@@ -30,8 +30,329 @@
 			</ol>
 
 			<h1 class="section__title">2-комн. квартиры в Воронеже до 4 700 000 млн руб.</h1>
+
+			<form class="filter section__filter filter--shadow">
+				<h3 class="visually-hidden">Фильтр</h3>
+
+				<ul class="filter__list">
+					<li class="filter__item">
+						<button type="button" id="apartment-filter"
+						        class="filter__dropdown-control filter__dropdown-control--apartment"
+						        aria-label="Выбрать тип квартиры" data-call="dropdown" data-on="click"
+						        aria-haspopup="true" aria-controls="apartment-dropdown">
+							Квартира в новостройке
+
+							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
+								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+							</svg>
+						</button>
+
+						<fieldset id="apartment-dropdown" class="dropdown filter__dropdown">
+							<legend class="visually-hidden">Тип квартиры</legend>
+
+							<div class="button-group dropdown__button-group">
+								<input type="radio" id="residential" class="visually-hidden button-group__input"
+								       name="apartment-purpose" data-filter="apartment-filter">
+								<label for="residential" class="button-group__button">Жилая</label>
+
+								<input type="radio" id="commercial" class="visually-hidden button-group__input"
+								       name="apartment-purpose" data-filter="apartment-filter">
+								<label for="commercial" class="button-group__button">Коммерческая</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="new-building" class="visually-hidden checkbox__input"
+								       name="apartment-novelty" data-filter="apartment-filter">
+								<label for="new-building" class="checkbox__label">Квартира в новостройке</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox checkbox--divider">
+								<input type="checkbox" id="resale" class="visually-hidden checkbox__input"
+								       name="apartment-novelty" data-filter="apartment-filter">
+								<label for="resale" class="checkbox__label">Квартира во вторичке</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="room" class="visually-hidden checkbox__input"
+								       name="apartment-ownership" data-filter="apartment-filter">
+								<label for="room" class="checkbox__label">Комната</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox checkbox--divider">
+								<input type="checkbox" id="share" class="visually-hidden checkbox__input"
+								       name="apartment-ownership" data-filter="apartment-filter">
+								<label for="share" class="checkbox__label">Доля</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="house" class="visually-hidden checkbox__input"
+								       name="apartment-type" data-filter="apartment-filter">
+								<label for="house" class="checkbox__label">Дом или дача</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="part" class="visually-hidden checkbox__input"
+								       name="apartment-type" data-filter="apartment-filter">
+								<label for="part" class="checkbox__label">Часть дома</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="townhouse" class="visually-hidden checkbox__input"
+								       name="apartment-type" data-filter="apartment-filter">
+								<label for="townhouse" class="checkbox__label">Таунхаус</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="plot" class="visually-hidden checkbox__input"
+								       name="apartment-type" data-filter="apartment-filter">
+								<label for="plot" class="checkbox__label">Участок</label>
+							</div>
+						</fieldset>
+					</li>
+
+					<li class="filter__item">
+						<button type="button" id="roominess-filter"
+						        class="filter__dropdown-control filter__dropdown-control--roominess"
+						        data-call="dropdown" data-on="click" aria-haspopup="true"
+						        aria-controls="roominess-dropdown">
+							Комнатность
+
+							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
+								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+							</svg>
+						</button>
+
+						<fieldset id="roominess-dropdown" class="dropdown filter__dropdown">
+							<legend class="visually-hidden">Комнатность</legend>
+
+							<div class="button-group button-group--divided dropdown__button-group">
+								<input type="checkbox" id="number-of-rooms-1" class="visually-hidden button-group__input"
+								       name="number-of-rooms" data-filter="roominess-filter">
+								<label for="number-of-rooms-1"
+								       class="button-group__button button-group__button--fix-size">
+									1
+								</label>
+
+								<input type="checkbox" id="number-of-rooms-2" class="visually-hidden button-group__input"
+								       name="number-of-rooms" data-filter="roominess-filter">
+								<label for="number-of-rooms-2"
+								       class="button-group__button button-group__button--fix-size">
+									2
+								</label>
+
+								<input type="checkbox" id="number-of-rooms-3" class="visually-hidden button-group__input"
+								       name="number-of-rooms" data-filter="roominess-filter">
+								<label for="number-of-rooms-3"
+								       class="button-group__button button-group__button--fix-size">
+									3
+								</label>
+
+								<input type="checkbox" id="number-of-rooms-4" class="visually-hidden button-group__input"
+								       name="number-of-rooms" data-filter="roominess-filter">
+								<label for="number-of-rooms-4"
+								       class="button-group__button button-group__button--fix-size">
+									4
+								</label>
+
+								<input type="checkbox" id="number-of-rooms-5" class="visually-hidden button-group__input"
+								       name="number-of-rooms" data-filter="roominess-filter">
+								<label for="number-of-rooms-5"
+								       class="button-group__button button-group__button--fix-size">
+									5+
+								</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="studio" class="visually-hidden checkbox__input"
+								       name="apartment-roominess" data-filter="roominess-filter">
+								<label for="studio" class="checkbox__label">Студия</label>
+							</div>
+
+							<div class="checkbox dropdown__checkbox">
+								<input type="checkbox" id="free-layout" class="visually-hidden checkbox__input"
+								       name="apartment-roominess" data-filter="roominess-filter">
+								<label for="free-layout" class="checkbox__label">Свободная планировка</label>
+							</div>
+						</fieldset>
+					</li>
+
+					<li class="filter__item">
+						<button type="button" id="price-filter"
+						        class="filter__dropdown-control filter__dropdown-control--price"
+						        data-call="dropdown" data-on="click" aria-haspopup="true"
+						        aria-controls="price-dropdown" aria-label="Указать диапазон стоимости">
+							0 — 0 млн
+						</button>
+
+						<fieldset id="price-dropdown" class="dropdown filter__dropdown">
+							<legend class="visually-hidden">Стоимость</legend>
+
+							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
+								<input type="number" id="price-from" class="text-input" name="price-from"
+								       placeholder="от" min="0" step="100000">
+								<span class="visually-hidden">От</span>
+							</label>
+
+							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
+								<input type="number" id="price-to" class="text-input" name="price-to" placeholder="до"
+								       min="0" step="100000">
+								<span class="visually-hidden">До</span>
+							</label>
+						</fieldset>
+					</li>
+
+					<li class="filter__item">
+						<input type="text" class="filter__dropdown-control filter__dropdown-control--address"
+						       name="address" placeholder="Район, улица, дом или ЖК"
+						       aria-label="Район, улица, дом или ЖК" data-call="dropdown" data-on="input"
+						       aria-haspopup="true" aria-controls="address-dropdown">
+
+						<ul id="address-dropdown"
+						    class="dropdown filter__dropdown filter__dropdown--scroll">
+							<li>
+								<h4 class="filter__subtitle">Адрес</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 7, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожная 21, Винзили
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 3, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 4, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 6, Картымский
+										</button>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h4 class="filter__subtitle">Район</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожный
+										</button>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h4 class="filter__subtitle">Жилой комплекс</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Жужа
+										</button>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h4 class="filter__subtitle">Адрес</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 7, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожная 21, Винзили
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 3, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 4, Картымский
+										</button>
+									</li>
+
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожников 6, Картымский
+										</button>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h4 class="filter__subtitle">Район</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Железнодорожный
+										</button>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<h4 class="filter__subtitle">Жилой комплекс</h4>
+
+								<ul class="suggestion-list">
+									<li class="suggestion-list__item">
+										<button type="button" class="suggestion-list__suggestion">
+											Жужа
+										</button>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+				<button type="submit" class="button filter__button button--fill">Показать (45)</button>
+				<button type="button" class="button button--linear" data-call="modal" aria-controls="more-filters"
+				        aria-haspopup="dialog">
+					Ещё фильтры
+				</button>
+			</form>
 		</div>
 	</section>
+
+	<div class="modal" role="dialog" id="more-filters" tabindex="-1" data-call="close" aria-modal="true"
+	     aria-labelledby="more-filters-label">
+		<div class="modal__content">
+			<h2 class="visually-hidden" id="more-filters-label">Дополнительные фильтры</h2>
+
+			<form>
+				<h3 class="modal__subtitle">Дополнительные параметры</h3>
+
+
+			</form>
+		</div>
+	</div>
 </main>
 
 @@include('fragments/footer.html')
