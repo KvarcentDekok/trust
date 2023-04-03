@@ -3,9 +3,9 @@
 @import url("global.css");
 @import url("blocks/card.css");
 @import url("blocks/paragraph.css");
+@import url("blocks/navigation.css");
 @import url("blocks/header.css");
 @import url("blocks/container.css");
-@import url("blocks/navigation.css");
 @import url("blocks/dropdown.css");
 @import url("blocks/button.css");
 @import url("blocks/link-list.css");
@@ -30,3 +30,5 @@
 @import url("blocks/accordion.css");
 @import url("blocks/articles-wrapper.css");
 @import url("blocks/article.css");
+@import url("blocks/no-scroll.css");
+@import url("blocks/logo.css");

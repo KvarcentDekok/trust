@@ -10,121 +10,7 @@
 	<title>Траст</title>
 </head>
 <body>
-<header class="header">
-	<div class="container header__container">
-		<a href="#" class="logo header__logo">
-			<span class="visually-hidden">Траст | Служба недвижимости</span>
-			<svg width="230" height="22" viewBox="0 0 230 22">
-				<use xlink:href="/img/sprite.svg#logo"></use>
-			</svg>
-		</a>
-
-		<nav class="navigation header__navigation">
-			<a href="#" class="navigation__link" data-call="dropdown" data-on="hover" aria-haspopup="true"
-			   aria-controls="real-estate-dropdown">
-				Каталог недвижимости
-			</a>
-
-			<a href="#" class="navigation__link">Ипотека</a>
-
-			<a href="#" class="navigation__link">О нас</a>
-
-			<a href="#" class="navigation__link">Карьера</a>
-
-			<a href="#" class="navigation__link">Отзывы</a>
-
-			<a href="#" class="navigation__link">Вакансии</a>
-
-			<a href="#" class="navigation__link">Прочее</a>
-		</nav>
-
-		<a href="#" class="button header__button button--outline button--small">Офисы и контакты</a>
-
-		<div id="real-estate-dropdown" class="dropdown header__dropdown">
-			<div class="container dropdown__container">
-				<ul class="link-list header__link-list link-list--bold">
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Все квартиры</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в новостройке</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры во вторичке</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Акции и скидки</a>
-					</li>
-				</ul>
-
-				<ul class="link-list header__link-list link-list--dark">
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры студии</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">1-комнатные квартиры</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">2-комнатные квартиры</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">3-комнатные квартиры</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">4-комнатные квартиры</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в Воронеже</a>
-					</li>
-				</ul>
-
-				<ul class="link-list">
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры на правом берегу</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры на левом берегу</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в Железнодорожном р-не</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в Советском р-не</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в Ленинском р-не</a>
-					</li>
-
-					<li class="link-list__item">
-						<a href="#" class="link-list__link">Квартиры в Коминтерновском р-не</a>
-					</li>
-				</ul>
-
-				<a href="#" class="card header__card card--white card--icon-bonus">
-					<h3 class="card__title">Программа лояльности</h3>
-
-					<p class="paragraph header__paragraph">Вступайте в клуб, <br> получайте бонусы <br>и скидки</p>
-
-					<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow card__arrow--red">
-						<use xlink:href="/img/sprite.svg#arrow-right"></use>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</div>
-</header>
+@@include('fragments/header.html')
 
 <main class="main">
 	<h1 class="visually-hidden">Траст | Служба недвижимости</h1>
@@ -792,7 +678,10 @@
 									</label>
 								</div>
 
-								<a href="#" class="button apartment__button button--fill">Показать номер</a>
+								<button type="button" class="button apartment__button button--fill"
+								        data-call="phone-number">
+									Показать номер
+								</button>
 							</div>
 
 							<picture class="apartment__illustration">
@@ -828,7 +717,10 @@
 									</label>
 								</div>
 
-								<a href="#" class="button apartment__button button--fill">Показать номер</a>
+								<button type="button" class="button apartment__button button--fill"
+								        data-call="phone-number">
+									Показать номер
+								</button>
 							</div>
 
 							<picture class="apartment__illustration">
@@ -864,7 +756,10 @@
 									</label>
 								</div>
 
-								<a href="#" class="button apartment__button button--fill">Показать номер</a>
+								<button type="button" class="button apartment__button button--fill"
+								        data-call="phone-number">
+									Показать номер
+								</button>
 							</div>
 
 							<picture class="apartment__illustration">
@@ -1066,7 +961,7 @@
 						В данном случае я выступаю в роли Морфеуса — лишь <br> указываю на дверь
 					</p>
 
-					<a href="#" class="button button--fill article__button">Все эксклюзивы</a>
+					<a href="#" class="button button--fill article__button">Смотреть новости</a>
 				</article>
 
 				<article class="article articles-wrapper__article article--agent">
@@ -1078,76 +973,15 @@
 						В данном случае я выступаю в роли Морфеуса <br> — лишь указываю на дверь
 					</p>
 
-					<a href="#" class="button button--fill article__button">Все эксклюзивы</a>
+					<a href="#" class="button button--fill article__button">Мне нужна консультация</a>
 				</article>
 			</div>
 		</div>
 	</section>
 </main>
 
-<footer class="footer">
-	<section class="footer__top">
-		<h2 class="visually-hidden">Навигация</h2>
+@@include('fragments/footer.html')
 
-		<div class="container footer__container">
-			<svg x="0" y="0" width="230" height="22" viewBox="0 0 230 22" class="logo footer__logo"
-			     aria-label="Траст | Служба недвижимости">
-				<use xlink:href="/img/sprite.svg#logo"></use>
-			</svg>
-
-			<ul class="navigation footer__navigation">
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Каталог недвижимости</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Ипотека</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">О нас</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Карьера</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Отзывы</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Вакансии</a>
-				</li>
-
-				<li class="navigation__item">
-					<a href="#" class="navigation__link">Прочее</a>
-				</li>
-			</ul>
-
-			<a href="#" class="button button--fill button--small">Офисы и контакты</a>
-		</div>
-	</section>
-
-	<section class="footer__bottom">
-		<h2 class="visually-hidden">Копирайт</h2>
-
-		<div class="container footer__container">
-			<p class="paragraph footer__paragraph">
-				©2000-2022 Компания «Траст». Все права защищены. При использовании материалов гиперссылка обязательна.
-			</p>
-
-			<a href="#" class="social footer__social social--vk">
-				<svg width="26" height="26" viewBox="0 0 26 26">
-					<use xlink:href="/img/sprite.svg#vk"></use>
-				</svg>
-
-				<span class="visually-hidden">Наша группа в ВК</span>
-			</a>
-		</div>
-	</section>
-</footer>
-
-<script src="/js/bundle.js"></script>
+<script src="/js/index.js"></script>
 </body>
 </html>

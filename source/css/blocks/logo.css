@@ -1,0 +1,9 @@
+.logo__extend {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .logo__extend {
+        display: initial;
+    }
+}

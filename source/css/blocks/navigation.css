@@ -9,7 +9,7 @@
 
 .navigation__link {
     display: block;
-    padding: 22px 0 28px;
+    padding: 14px 0;
     margin-right: 45px;
 
     position: relative;
@@ -43,4 +43,10 @@
 
 .navigation__link:active {
     opacity: 0.6;
+}
+
+@media (min-width: 900px) {
+    .navigation__link {
+        padding: 22px 0 28px;
+    }
 }

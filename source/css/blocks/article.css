@@ -8,7 +8,7 @@
 }
 
 .article--agent {
-    background-image: url("/img/agent.webp");
+    background-image: none;
     background-repeat: no-repeat;
     background-position: bottom right;
 }
@@ -17,8 +17,8 @@
     margin: 0 0 13px;
 
     font-weight: 600;
-    font-size: 21px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 15px;
     color: #C4C4C4;
 }
 
@@ -26,8 +26,8 @@
     margin: 0 0 22px;
 
     font-weight: 600;
-    font-size: 35px;
-    line-height: 39px;
+    font-size: 21px;
+    line-height: 25px;
 
     color: #1A1A1A;
 }
@@ -39,6 +39,27 @@
 }
 
 .article__button {
+    width: 100%;
     padding: 20px 80px;
     margin: auto auto 0 0;
+}
+
+@media (min-width: 900px) {
+    .article--agent {
+        background-image: url("/img/agent.webp");
+    }
+
+    .article__description {
+        font-size: 21px;
+        line-height: 23px;
+    }
+
+    .article__title {
+        font-size: 35px;
+        line-height: 39px;
+    }
+
+    .article__button {
+        width: auto;
+    }
 }

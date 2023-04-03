@@ -8,5 +8,11 @@
 }
 
 .articles-wrapper__article {
-    width: calc(50% - var(--articles-gap) / 2);
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .articles-wrapper__article {
+        width: calc(50% - var(--articles-gap) / 2);
+    }
 }

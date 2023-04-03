@@ -14,16 +14,17 @@
 }
 
 .slider__control {
+    display: none;
     width: 37px;
     height: 38px;
     border: none;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
 
     position: absolute;
     top: 50%;
+    z-index: 1;
 
     color: var(--white-color);
 
@@ -62,8 +63,10 @@
     --swiper-scrollbar-size: 6px;
 }
 
-.slider__scrollbar-drag {
-
+@media (min-width: 900px) {
+    .slider__control {
+        display: flex;
+    }
 }
 
 @media (min-width: 1400px) {

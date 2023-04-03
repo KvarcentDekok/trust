@@ -5,23 +5,26 @@
 
 .section__header {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr;
 }
 
 .section__title {
     margin: 0 0 15px;
 
-    font-size: 35px;
-    line-height: 39px;
+    font-size: 27px;
+    line-height: 30px;
     font-weight: 600;
 }
 
 .section__paragraph {
+    display: none;
+
     color: #838383;
 }
 
 .section__button {
+    display: none;
     padding: 20px 80px 20px;
     width: fit-content;
     height: fit-content;
@@ -34,11 +37,18 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    .section__title {
+        font-size: 35px;
+        line-height: 39px;
+    }
+
     .section__paragraph {
+        display: block;
         grid-row: 2 / 3;
     }
 
     .section__button {
+        display: block;
         grid-row: 1 / 3;
         grid-column: 2 / 3;
         margin: auto 0 auto auto;

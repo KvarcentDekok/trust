@@ -9,11 +9,12 @@ const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
-const webpack = require("webpack");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const importCss = require('gulp-import-css');
 const concat = require('gulp-concat');
+const include = require('gulp-file-include');
+const named = require('vinyl-named');
 
 const plugins = [
     'node_modules/swiper/swiper.min.css',
@@ -45,13 +46,15 @@ gulp.task("css:libs", () => {
 
 gulp.task("html", () => {
     return gulp.src("source/*.html")
+        .pipe(include())
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("build"));
 });
 
 gulp.task("js", () => {
-    return gulp.src("./source/js/index.js")
-        .pipe(webpackStream(webpackConfig), webpack)
+    return gulp.src(['./source/js/index.js', './source/js/catalog.js'])
+        .pipe(named())
+        .pipe(webpackStream(webpackConfig))
         .pipe(gulp.dest("./build/js"));
 });
 
