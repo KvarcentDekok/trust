@@ -2,13 +2,13 @@ const InputType = {
     Radio: 'radio',
     Text: 'text'
 }
-const PRICE_DENOMINATOR = 1000000;
 
 const filtersToCount = document.querySelectorAll('[data-filter]');
 const priceFromInput = document.querySelector('#price-from');
 const priceToInput = document.querySelector('#price-to');
 const priceFilter = document.querySelector('#price-filter');
 const checkedRadios = new Set();
+const pricePostfix = document.querySelector('.js-price-postfix').textContent;
 
 function onChangeFilter(filter) {
     const filterControl = document.querySelector(`#${filter.dataset.filter}`);
@@ -42,11 +42,11 @@ function onInputPrice() {
     const priceFrom = getPrice(priceFromInput.value);
     const priceTo = getPrice(priceToInput.value);
 
-    priceFilter.textContent = `${priceFrom} — ${priceTo} млн`;
+    priceFilter.textContent = `${priceFrom} — ${priceTo} ${pricePostfix}`;
 }
 
 function getPrice(value) {
-    return value ? (value / PRICE_DENOMINATOR).toFixed(1) : 0;
+    return value ? value.replace('.', ',') : 0;
 }
 
 function filter() {

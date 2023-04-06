@@ -101,7 +101,10 @@ function targetFocusOutHandler(evt) {
 }
 
 function showDropdownClick(dropdownTarget) {
+    const control = document.querySelector(`[aria-controls="${dropdownTarget.id}"]`);
+
     dropdownTarget.classList.add(SHOW_DROPDOWN_CLASSNAME);
+    control.setAttribute('aria-expanded', 'true');
 
     activeDropdown = dropdownTarget;
 
@@ -111,7 +114,10 @@ function showDropdownClick(dropdownTarget) {
 
 function closeDropdownClick() {
     if (activeDropdown) {
+        const control = document.querySelector(`[aria-controls="${activeDropdown.id}"]`);
+
         activeDropdown.classList.remove(SHOW_DROPDOWN_CLASSNAME);
+        control.setAttribute('aria-expanded', 'false');
 
         activeDropdown = undefined;
 
@@ -121,8 +127,11 @@ function closeDropdownClick() {
 }
 
 function showDropdownHover(dropdownTarget) {
+    const control = document.querySelector(`[aria-controls="${dropdownTarget.id}"]`);
+
     dropdownTarget.classList.add(SHOW_DROPDOWN_CLASSNAME);
     focusableElement = dropdownTarget.querySelector('a, button, input, select, textarea');
+    control.setAttribute('aria-expanded', 'true');
 
     dropdownTarget.addEventListener('mouseout', targetMouseOutHandler);
     dropdownTarget.addEventListener('focusout', targetFocusOutHandler);
@@ -130,7 +139,10 @@ function showDropdownHover(dropdownTarget) {
 }
 
 function closeDropdownHover(dropdownTarget) {
+    const control = document.querySelector(`[aria-controls="${dropdownTarget.id}"]`);
+
     dropdownTarget.classList.remove(SHOW_DROPDOWN_CLASSNAME);
+    control.setAttribute('aria-expanded', 'true');
 
     dropdownTarget.removeEventListener('mouseout', targetMouseOutHandler);
     dropdownTarget.removeEventListener('focusout', targetFocusOutHandler);

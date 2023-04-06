@@ -11,24 +11,29 @@ const del = require("del");
 const htmlmin = require("gulp-htmlmin");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
-const importCss = require('gulp-import-css');
 const concat = require('gulp-concat');
 const include = require('gulp-file-include');
 const named = require('vinyl-named');
+const atImport = require('postcss-import');
 
 const plugins = [
     'node_modules/swiper/swiper.min.css',
     'node_modules/swiper/modules/scrollbar/scrollbar.min.css',
-    'node_modules/accordion-js/dist/accordion.min.css'
+    'node_modules/accordion-js/dist/accordion.min.css',
+    'node_modules/custom-select/src/css/custom-select.css'
 ];
+
+const config = (file) => ({
+    plugins: [
+        atImport({root: file.dirname}),
+        autoprefixer()
+    ]
+})
 
 gulp.task("css", () => {
     return gulp.src("source/css/style.css")
         .pipe(sourcemap.init())
-        .pipe(importCss())
-        .pipe(postcss([
-            autoprefixer()
-        ]))
+        .pipe(postcss(config))
         .pipe(csso())
         .pipe(rename("style.min.css"))
         .pipe(sourcemap.write("."))
@@ -52,7 +57,7 @@ gulp.task("html", () => {
 });
 
 gulp.task("js", () => {
-    return gulp.src(['./source/js/index.js', './source/js/catalog.js'])
+    return gulp.src(['./source/js/general.js', './source/js/index.js', './source/js/catalog.js'])
         .pipe(named())
         .pipe(webpackStream(webpackConfig))
         .pipe(gulp.dest("./build/js"));
@@ -70,7 +75,7 @@ gulp.task("server", () => {
     gulp.watch("source/css/**/*.css", gulp.series("css"));
     gulp.watch("source/img/*.svg", gulp.series("build", "refresh"));
     gulp.watch("source/js/**/*.js", gulp.series("build", "refresh"));
-    gulp.watch("source/*.html", gulp.series("build", "refresh"));
+    gulp.watch("source/**/*.html", gulp.series("build", "refresh"));
 });
 
 gulp.task("copy", () => {

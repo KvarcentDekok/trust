@@ -1,5 +1,5 @@
 .home {
-    padding-top: 55px;
+    padding-top: 122px;
     padding-bottom: 71px;
 
     background-color: rgb(105, 101, 101);
@@ -40,8 +40,8 @@
 @media (min-width: 900px) {
     .home {
         background-image: image-set(
-                url("/img/home@2x.jpg") 2x,
-                url("/img/home@1x.jpg") 1x
+                url("../img/home@2x.webp") 2x,
+                url("../img/home@1x.webp") 1x
         );
     }
 

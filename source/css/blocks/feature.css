@@ -19,28 +19,28 @@
     width: 31px;
     height: 31px;
 
-    background: url("/img/icon-search.svg") no-repeat center;
+    background: url("../img/icon-search.svg") no-repeat center;
 }
 
 .feature--shield::before {
     width: 26px;
     height: 32px;
 
-    background: url("/img/icon-shield.svg") no-repeat center;
+    background: url("../img/icon-shield.svg") no-repeat center;
 }
 
 .feature--trend::before {
     width: 40px;
     height: 24px;
 
-    background: url("/img/icon-trend.svg") no-repeat center;
+    background: url("../img/icon-trend.svg") no-repeat center;
 }
 
 .feature--agent::before {
     width: 27px;
     height: 30px;
 
-    background: url("/img/icon-agent.svg") no-repeat center;
+    background: url("../img/icon-agent.svg") no-repeat center;
 }
 
 .feature__title {

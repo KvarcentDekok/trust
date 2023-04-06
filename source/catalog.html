@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="/css/libs.min.css">
-	<link rel="stylesheet" href="/css/style.min.css">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 
 	<title>Каталог | Траст</title>
 </head>
@@ -17,7 +17,7 @@
 		<div class="container">
 			<ol class="breadcrumbs">
 				<li class="breadcrumbs__item">
-					<a href="/index.html" class="breadcrumbs__link">Главная</a>
+					<a href="index.html" class="breadcrumbs__link">Главная</a>
 				</li>
 
 				<li class="breadcrumbs__item">
@@ -43,7 +43,7 @@
 							Квартира в новостройке
 
 							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
-								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
 							</svg>
 						</button>
 
@@ -118,7 +118,7 @@
 							Комнатность
 
 							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
-								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
 							</svg>
 						</button>
 
@@ -181,7 +181,7 @@
 						        class="filter__dropdown-control filter__dropdown-control--price"
 						        data-call="dropdown" data-on="click" aria-haspopup="true"
 						        aria-controls="price-dropdown" aria-label="Указать диапазон стоимости">
-							0 — 0 млн
+							0 — 0 <span class="js-price-postfix">млн ₽</span>
 						</button>
 
 						<fieldset id="price-dropdown" class="dropdown filter__dropdown">
@@ -333,8 +333,8 @@
 				</ul>
 
 				<button type="submit" class="button filter__button button--fill">Показать (45)</button>
-				<button type="button" class="button button--linear" data-call="modal" aria-controls="more-filters"
-				        aria-haspopup="dialog">
+				<button type="button" class="button filter__external-button button--linear button--filter"
+				        data-call="modal" aria-controls="more-filters" aria-haspopup="dialog">
 					Ещё фильтры
 				</button>
 			</form>
@@ -346,10 +346,238 @@
 		<div class="modal__content">
 			<h2 class="visually-hidden" id="more-filters-label">Дополнительные фильтры</h2>
 
+			<button type="button" class="modal__close" data-call="close">
+				<svg width="33" height="32" viewBox="0 0 33 32">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+
 			<form>
-				<h3 class="modal__subtitle">Дополнительные параметры</h3>
+				<section class="modal__section">
+					<h3 class="modal__title">Дополнительные параметры</h3>
 
+					<div class="row">
+						<div class="row__col-12 row__col-md-4">
+							<fieldset class="form-control">
+								<legend class="form-control__label">Общая площадь, м<sup>2</sup></legend>
 
+								<div class="form-control__group">
+									<input type="number" class="text-input" placeholder="от" aria-label="от">
+									<input type="number" class="text-input" placeholder="до" aria-label="до">
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="row__col-12 row__col-md-4">
+							<fieldset class="form-control">
+								<legend class="form-control__label">Площадь кухни, м<sup>2</sup></legend>
+
+								<div class="form-control__group">
+									<input type="number" class="text-input" placeholder="от" aria-label="от">
+									<input type="number" class="text-input" placeholder="до" aria-label="до">
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="row__col-12 row__col-md-4">
+							<fieldset class="form-control">
+								<legend class="form-control__label">Жилая площадь, м<sup>2</sup></legend>
+
+								<div class="form-control__group">
+									<input type="number" class="text-input" placeholder="от" aria-label="от">
+									<input type="number" class="text-input" placeholder="до" aria-label="до">
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="row__col-12 row__col-md-8">
+							<fieldset class="form-control">
+								<legend class="form-control__label">Этаж</legend>
+
+								<div class="row">
+									<div class="row__col-12 row__col-md-6">
+										<div class="form-control__group">
+											<input type="number" class="text-input" placeholder="от" aria-label="от">
+											<input type="number" class="text-input" placeholder="до" aria-label="до">
+										</div>
+									</div>
+
+									<div class="row__col-12 row__col-md-6">
+										<div class="checkbox-wrapper">
+											<div class="checkbox">
+												<input type="checkbox" id="not-first" class="visually-hidden checkbox__input">
+												<label for="not-first" class="checkbox__label">не первый</label>
+											</div>
+
+											<div class="checkbox">
+												<input type="checkbox" id="not-last" class="visually-hidden checkbox__input">
+												<label for="not-last" class="checkbox__label">не последний</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+
+					<div class="row row--mt">
+						<div class="row__col-12">
+							<div class="checkbox-wrapper">
+								<div class="checkbox">
+									<input type="checkbox" id="design-renovation" class="visually-hidden checkbox__input">
+									<label for="design-renovation" class="checkbox__label">дизайнерский ремонт</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="good-condition" class="visually-hidden checkbox__input">
+									<label for="good-condition" class="checkbox__label">хорошее состояние</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="living-condition" class="visually-hidden checkbox__input">
+									<label for="living-condition" class="checkbox__label">жилое состояние</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="redecorating" class="visually-hidden checkbox__input">
+									<label for="redecorating" class="checkbox__label">косметический ремонт</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="renovation" class="visually-hidden checkbox__input">
+									<label for="renovation" class="checkbox__label">евроремонт</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="needs-renovation" class="visually-hidden checkbox__input">
+									<label for="needs-renovation" class="checkbox__label">требует ремонта</label>
+								</div>
+
+								<div class="checkbox">
+									<input type="checkbox" id="without-finishing" class="visually-hidden checkbox__input">
+									<label for="without-finishing" class="checkbox__label">без отделки</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="modal__section">
+					<h3 class="modal__title">Удобства</h3>
+
+					<div class="row">
+						<div class="row__col-12 row__col-md-4">
+							<div class="form-control">
+								<label for="bathroom" class="form-control__label">Санузел</label>
+
+								<select id="bathroom" class="form-control__select">
+									<option value="">Неважно</option>
+									<option value="combined">Совмещённый</option>
+									<option value="separate">Раздельный</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row__col-12 row__col-md-4">
+							<div class="form-control">
+								<label for="number-of-bathrooms" class="form-control__label">Количество санузлов</label>
+
+								<select id="number-of-bathrooms" class="form-control__select">
+									<option value="">Неважно</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3+</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="checkbox">
+							<input type="checkbox" id="balcony" class="visually-hidden checkbox__input">
+							<label for="balcony" class="checkbox__label">есть балкон</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="loggia" class="visually-hidden checkbox__input">
+							<label for="loggia" class="checkbox__label">есть лоджия</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="ground-parking" class="visually-hidden checkbox__input">
+							<label for="ground-parking" class="checkbox__label">наземная парковка</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="underground-parking" class="visually-hidden checkbox__input">
+							<label for="underground-parking" class="checkbox__label">подземная парковка</label>
+						</div>
+					</div>
+				</section>
+
+				<section class="modal__section">
+					<h3 class="modal__title">О доме</h3>
+
+					<div class="row">
+						<div class="row__col-12 row__col-md-4">
+							<fieldset class="form-control">
+								<legend class="form-control__label">Этажей в доме</legend>
+
+								<div class="form-control__group">
+									<input type="number" class="text-input" placeholder="от" aria-label="от">
+									<input type="number" class="text-input" placeholder="до" aria-label="до">
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="row__col-12 row__col-md-4">
+							<div class="form-control">
+								<label for="residential-complex" class="form-control__label">Жилой комплекс</label>
+
+								<select id="residential-complex" class="form-control__select">
+									<option value="">Неважно</option>
+									<option value="1">ЖК “Спутник”</option>
+									<option value="2">ЖК “Планета”</option>
+									<option value="3">ЖК “Звезда”</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="checkbox">
+							<input type="checkbox" id="brick" class="visually-hidden checkbox__input">
+							<label for="brick" class="checkbox__label">кирпич</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="blocks" class="visually-hidden checkbox__input">
+							<label for="blocks" class="checkbox__label">блоки</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="monolith" class="visually-hidden checkbox__input">
+							<label for="monolith" class="checkbox__label">монолит</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="panel" class="visually-hidden checkbox__input">
+							<label for="panel" class="checkbox__label">панель</label>
+						</div>
+
+						<div class="checkbox">
+							<input type="checkbox" id="brick-monolithic" class="visually-hidden checkbox__input">
+							<label for="brick-monolithic" class="checkbox__label">кирпично-монолитный</label>
+						</div>
+					</div>
+				</section>
+
+				<div class="modal__buttons">
+					<button type="reset" class="button button--linear">Сбросить фильтры</button>
+					<button type="submit" class="button button--fill">Показать 1778 предложений</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -357,6 +585,7 @@
 
 @@include('fragments/footer.html')
 
-<script src="/js/catalog.js"></script>
+<script src="js/general.js"></script>
+<script src="js/catalog.js"></script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+@keyframes delay-overflow {
+    from {
+        overflow-y: hidden;
+    }
+
+    to {
+        overflow-y: auto;
+    }
+}
+
+.form-control {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.form-control__label {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 17px;
+    color: #838383;
+}
+
+.form-control__group {
+    display: flex;
+}
+
+.form-control__select-container {
+    position: relative;
+}
+
+.form-control__select {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-control__select-opener {
+    display: block;
+    padding: 20px 36px 20px 26px;
+    border: 1px solid #C1C1C1;
+    width: 100%;
+
+    position: relative;
+
+    font-size: 14px;
+    line-height: 15px;
+    color: var(--black-color);
+
+    border-radius: 4px;
+}
+
+.form-control__select-opener::after {
+    width: 14px;
+    height: 14px;
+
+    position: absolute;
+    top: 50%;
+    right: 22px;
+
+    content: "";
+
+    transform: translateY(-50%);
+    background: url("../img/sprite.svg#arrow-down-view") no-repeat center;
+}
+
+.form-control__select-opener:hover,
+.form-control__select-opener:focus-visible {
+    border-color: var(--blue-color);
+}
+
+.form-control__select-opener:focus-visible {
+    outline: none;
+}
+
+.form-control__select-panel {
+    max-height: 0;
+    width: 100%;
+
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+
+    transition: max-height 200ms linear;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+.form-control__select-container--open .form-control__select-panel {
+    max-height: 10.7em;
+
+    animation: 1s delay-overflow forwards;
+    outline: 1px solid var(--border-grey-color);
+}
+
+.form-control__select-option {
+    padding: 0.5em;
+}
+
+.form-control__select-option--focus {
+    background-color: rgba(220, 25, 25, 0.4);
+}

@@ -3,8 +3,8 @@
 		<a href="#" class="logo header__logo">
 			<span class="visually-hidden">Траст | Служба недвижимости</span>
 			<svg width="230" height="22" viewBox="0 0 230 22">
-				<use xlink:href="/img/sprite.svg#logo-trust"></use>
-				<use xlink:href="/img/sprite.svg#logo-extend" class="logo__extend"></use>
+				<use xlink:href="img/sprite.svg#logo-trust"></use>
+				<use xlink:href="img/sprite.svg#logo-extend" class="logo__extend"></use>
 			</svg>
 		</a>
 
@@ -19,9 +19,9 @@
 		</button>
 
 		<nav id="main-navigation" class="navigation header__navigation">
-			<a href="#" class="navigation__link" data-call="dropdown" data-on="hover" aria-haspopup="true"
+			<a href="#" class="navigation__link" data-call="dropdown" data-on="click" aria-haspopup="true"
 			   aria-controls="real-estate-dropdown">
-				Каталог недвижимости
+				Каталог <span class="visually-hidden visually-hidden--md">недвижимости</span>
 			</a>
 
 			<a href="#" class="navigation__link">Ипотека</a>
@@ -37,7 +37,9 @@
 			<a href="#" class="navigation__link">Прочее</a>
 		</nav>
 
-		<a href="#" class="button header__button button--outline button--small">Офисы и контакты</a>
+		<a href="#" class="button header__button button--outline button--small">
+			<span class="visually-hidden visually-hidden--md">Офисы и</span> контакты
+		</a>
 
 		<div id="real-estate-dropdown" class="dropdown header__dropdown">
 			<div class="container dropdown__container">
@@ -117,7 +119,7 @@
 					<p class="paragraph header__paragraph">Вступайте в клуб, <br> получайте бонусы <br>и скидки</p>
 
 					<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow card__arrow--red">
-						<use xlink:href="/img/sprite.svg#arrow-right"></use>
+						<use xlink:href="img/sprite.svg#arrow-right"></use>
 					</svg>
 				</a>
 			</div>

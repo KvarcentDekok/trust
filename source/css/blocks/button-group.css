@@ -22,12 +22,13 @@
     padding: 18px 15px;
     margin-left: -1px;
     border: 1px solid var(--border-grey-color);
-    border-left-color: transparent;
 
     color: var(--filter-dark-text);
     font-size: 14px;
     cursor: pointer;
     transition: all 200ms linear;
+
+    border-left-color: transparent;
 }
 
 .button-group__button--fix-size {

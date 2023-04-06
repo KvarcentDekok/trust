@@ -23,7 +23,7 @@
 }
 
 .checkbox__input:checked ~ .checkbox__label::before {
-    background: var(--red-color) url("/img/check.svg") no-repeat center;
+    background: var(--red-color) url("../img/check.svg") no-repeat center;
 }
 
 .checkbox__input:focus ~ .checkbox__label::before {

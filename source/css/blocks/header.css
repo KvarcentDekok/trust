@@ -1,18 +1,12 @@
 .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
     width: 100%;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 20px 0;
 
-    position: relative;
+    position: fixed;
     z-index: 4;
 
     background-color: var(--white-color);
-}
-
-.header--expanded {
-    padding-right: 20px;
-
-    position: fixed;
 }
 
 .header__container {
@@ -23,18 +17,18 @@
 }
 
 .header__logo {
-    margin-right: 56px;
+    margin-right: 0;
     order: 1;
 
     color: var(--red-color);
 }
 
 .header__navigation {
-    margin-left: 25px;
-    order: 3;
-    width: 100%;
+    margin-left: 0;
+    order: 2;
     height: 0;
     flex-direction: column;
+    width: 100%;
 
     color: var(--dark-color);
 
@@ -48,29 +42,32 @@
 }
 
 .header__dropdown {
-    display: none;
+    display: flex;
     width: 100%;
     border-top: 1px solid #E0E0E0;
     padding: 27px 0;
 
     left: 0;
-    top: calc(100% - 1px);
-    z-index: 1;
+    top: 96px;
+    z-index: 3;
 
     background-color: var(--white-color);
 }
 
 .header__link-list {
-    margin-right: 107px;
+    margin-right: 14px;
 }
 
 .header__button {
     display: none;
     order: 2;
     margin-left: auto;
+
+    text-transform: capitalize;
 }
 
 .header__card {
+    display: none;
     align-self: center;
     flex-grow: 1;
     padding-right: 32px;
@@ -117,18 +114,20 @@
 
 @media (min-width: 900px) {
     .header {
-        padding-bottom: 0;
+        padding: 0;
+    }
+
+    .header--expanded .header__navigation {
+        visibility: visible;
+        height: auto;
     }
 
     .header__navigation {
         height: auto;
+        width: auto;
         flex-direction: row;
 
         visibility: visible;
-    }
-
-    .header__dropdown {
-        display: flex;
     }
 
     .header__button {
@@ -138,13 +137,36 @@
     .header__toggle {
         display: none;
     }
+
+    .header__dropdown {
+        top: calc(100% - 1px);
+        z-index: 1;
+    }
+
+    .header__link-list {
+        margin-right: 107px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .header__logo {
+        margin-right: 56px;
+    }
+
+    .header__navigation {
+        margin-left: 25px;
+    }
+
+    .header__button {
+        text-transform: initial;
+    }
+
+    .header__card {
+        display: block;
+    }
 }
 
 @media (min-width: 1400px) {
-    .header {
-        padding-top: 0;
-    }
-
     .header__container {
         justify-content: initial;
     }

@@ -46,7 +46,7 @@
 
 @media (min-width: 900px) {
     .article--agent {
-        background-image: url("/img/agent.webp");
+        background-image: url("../img/agent.webp");
     }
 
     .article__description {

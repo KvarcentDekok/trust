@@ -61,6 +61,8 @@
     --swiper-scrollbar-bg-color: #D9D9D9;
     --swiper-scrollbar-drag-bg-color: var(--red-color);
     --swiper-scrollbar-size: 6px;
+
+    z-index: 1;
 }
 
 @media (min-width: 900px) {

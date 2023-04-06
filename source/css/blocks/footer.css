@@ -47,6 +47,15 @@
     right: 27px;
 }
 
+.footer__button {
+    margin-left: 0;
+}
+
+.footer__intrid {
+    margin-left: 0;
+    margin-bottom: 16px;
+}
+
 @media (min-width: 900px) {
     .footer__container {
         align-items: center;
@@ -66,6 +75,15 @@
         margin-left: auto;
 
         position: initial;
+    }
+
+    .footer__button {
+        margin-left: auto;
+    }
+
+    .footer__intrid {
+        margin-left: auto;
+        margin-bottom: 0;
     }
 }
 

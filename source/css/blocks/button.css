@@ -42,3 +42,42 @@
 .button--small {
     padding: 9px 19px 9px;
 }
+
+.button--linear {
+    border: none;
+    padding: 16px;
+
+    color: var(--red-color);
+
+    background-color: transparent;
+}
+
+.button--linear:hover {
+    text-decoration: underline;
+}
+
+.button--filter {
+    padding-left: 35px;
+
+    position: relative;
+}
+
+.button--filter::before {
+    width: 18px;
+    height: 18px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    content: "";
+
+    background: url("../img/icon-filter.svg") no-repeat center;
+    transform: translateY(-50%);
+}
+
+.button--grey {
+    color: #454545;
+
+    border-color: #BEBEBE;
+}

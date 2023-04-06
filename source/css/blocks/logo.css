@@ -1,8 +1,16 @@
+.logo {
+    max-width: 150px;
+}
+
 .logo__extend {
     display: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1280px) {
+    .logo {
+        max-width: initial;
+    }
+
     .logo__extend {
         display: initial;
     }

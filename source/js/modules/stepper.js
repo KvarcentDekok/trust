@@ -9,14 +9,16 @@ function stepper(selector, activeClassName) {
         const controls = step.querySelectorAll('[data-set-step]');
 
         for (let i = 0; i < controls.length; i++) {
-            controls[i].addEventListener('click', () => {
-                setActiveStep(controls[i]);
+            controls[i].addEventListener('click', (evt) => {
+                setActiveStep(evt, controls[i]);
             })
         }
     }
 
-    function setActiveStep(control) {
-        const targetStep = document.querySelector(`${selector}[data-index="${control.dataset.setStep}"]`)
+    function setActiveStep(evt, control) {
+        const targetStep = document.querySelector(`${selector}[data-index="${control.dataset.setStep}"]`);
+
+        evt.preventDefault();
 
         removeActiveClassName();
         targetStep.classList.add(activeClassName);

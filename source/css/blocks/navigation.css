@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    gap: 0;
 
     list-style: none;
 }
@@ -10,7 +11,6 @@
 .navigation__link {
     display: block;
     padding: 14px 0;
-    margin-right: 45px;
 
     position: relative;
     z-index: 2;
@@ -46,7 +46,17 @@
 }
 
 @media (min-width: 900px) {
+    .navigation {
+        gap: 30px;
+    }
+
     .navigation__link {
         padding: 22px 0 28px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navigation {
+        gap: 45px;
     }
 }

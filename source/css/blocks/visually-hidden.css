@@ -11,3 +11,18 @@
     overflow: hidden;
     white-space: nowrap;
 }
+
+@media (min-width: 1280px) {
+    .visually-hidden--md {
+        width: auto;
+        height: auto;
+        margin: initial;
+        padding: initial;
+
+        position: initial;
+
+        clip: initial;
+        overflow: initial;
+        white-space: initial;
+    }
+}

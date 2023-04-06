@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="/css/libs.min.css">
-	<link rel="stylesheet" href="/css/style.min.css">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 
 	<title>Траст</title>
 </head>
@@ -40,7 +40,7 @@
 							Квартира в новостройке
 
 							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
-								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
 							</svg>
 						</button>
 
@@ -115,7 +115,7 @@
 							Комнатность
 
 							<svg width="14" height="14" viewBox="0 0 14 14" class="filter__dropdown-icon">
-								<use xlink:href="/img/sprite.svg#arrow-down"></use>
+								<use xlink:href="img/sprite.svg#arrow-down"></use>
 							</svg>
 						</button>
 
@@ -178,7 +178,7 @@
 						        class="filter__dropdown-control filter__dropdown-control--price"
 						        data-call="dropdown" data-on="click" aria-haspopup="true"
 						        aria-controls="price-dropdown" aria-label="Указать диапазон стоимости">
-							0 — 0 млн
+							0 — 0 <span class="js-price-postfix">млн ₽</span>
 						</button>
 
 						<fieldset id="price-dropdown" class="dropdown filter__dropdown">
@@ -186,13 +186,13 @@
 
 							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
 								<input type="number" id="price-from" class="text-input" name="price-from"
-								       placeholder="от" min="0" step="100000">
+								       placeholder="от" min="0.1" max="20" step="0.1">
 								<span class="visually-hidden">От</span>
 							</label>
 
 							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
 								<input type="number" id="price-to" class="text-input" name="price-to" placeholder="до"
-								       min="0" step="100000">
+								       min="0.1" max="20" step="0.1">
 								<span class="visually-hidden">До</span>
 							</label>
 						</fieldset>
@@ -340,7 +340,7 @@
 						<p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
 
 						<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
-							<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							<use xlink:href="img/sprite.svg#arrow-right"></use>
 						</svg>
 					</a>
 				</li>
@@ -352,7 +352,7 @@
 						<p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
 
 						<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
-							<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							<use xlink:href="img/sprite.svg#arrow-right"></use>
 						</svg>
 					</a>
 				</li>
@@ -364,7 +364,7 @@
 						<p class="paragraph">Поможем получить одобрение банков, чтобы вы могли</p>
 
 						<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow">
-							<use xlink:href="/img/sprite.svg#arrow-right"></use>
+							<use xlink:href="img/sprite.svg#arrow-right"></use>
 						</svg>
 					</a>
 				</li>
@@ -417,13 +417,14 @@
 					<div class="questionnaire__controls">
 						<button type="button" class="questionnaire__back" disabled>
 							<svg width="13" height="12" viewBox="0 0 13 12">
-								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+								<use xlink:href="img/sprite.svg#arrow-left"></use>
 							</svg>
 
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="1" disabled>
+						<button type="button" class="button questionnaire__button button--fill js-questionnaire-continue"
+						        data-set-step="1" disabled>
 							Далее
 						</button>
 					</div>
@@ -469,13 +470,14 @@
 					<div class="questionnaire__controls">
 						<button type="button" class="questionnaire__back" data-set-step="0">
 							<svg width="13" height="12" viewBox="0 0 13 12">
-								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+								<use xlink:href="img/sprite.svg#arrow-left"></use>
 							</svg>
 
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="2" disabled>
+						<button type="button" class="button questionnaire__button button--fill js-questionnaire-continue"
+						        data-set-step="2" disabled>
 							Далее
 						</button>
 					</div>
@@ -521,13 +523,14 @@
 					<div class="questionnaire__controls">
 						<button type="button" class="questionnaire__back" data-set-step="1">
 							<svg width="13" height="12" viewBox="0 0 13 12">
-								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+								<use xlink:href="img/sprite.svg#arrow-left"></use>
 							</svg>
 
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="3" disabled>
+						<button type="button" class="button questionnaire__button button--fill js-questionnaire-continue"
+						        data-set-step="3" disabled>
 							Далее
 						</button>
 					</div>
@@ -573,13 +576,14 @@
 					<div class="questionnaire__controls">
 						<button type="button" class="questionnaire__back" data-set-step="2">
 							<svg width="13" height="12" viewBox="0 0 13 12">
-								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+								<use xlink:href="img/sprite.svg#arrow-left"></use>
 							</svg>
 
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="button" class="button questionnaire__button button--fill" data-set-step="4" disabled>
+						<button type="button" class="button questionnaire__button button--fill js-questionnaire-continue"
+						        data-set-step="4" disabled>
 							Далее
 						</button>
 					</div>
@@ -625,14 +629,32 @@
 					<div class="questionnaire__controls">
 						<button type="button" class="questionnaire__back" data-set-step="3">
 							<svg width="13" height="12" viewBox="0 0 13 12">
-								<use xlink:href="/img/sprite.svg#arrow-left"></use>
+								<use xlink:href="img/sprite.svg#arrow-left"></use>
 							</svg>
 
 							<span class="visually-hidden">Назад</span>
 						</button>
 
-						<button type="submit" class="button questionnaire__button button--fill" disabled>
+						<button type="submit" class="button questionnaire__button button--fill js-questionnaire-continue"
+						        data-set-step="5" disabled>
 							Готово
+						</button>
+					</div>
+				</li>
+
+				<li class="questionnaire__step questionnaire__step--done" data-index="5">
+					<div class="questionnaire__question-wrapper">
+						<p class="questionnaire__question">Ваша заявка принята, спасибо</p>
+						<p class="paragraph questionnaire__paragraph">
+							«Траст» входит в состав Российской Гильдии Риэлторов.
+							Стандарты качества услуг компании сертифицированы, деятельность застрахована.
+						</p>
+					</div>
+
+					<div class="questionnaire__controls">
+						<button type="reset" class="button questionnaire__button button--outline button--grey"
+						        data-set-step="0">
+							Заполнить заново
 						</button>
 					</div>
 				</li>
@@ -671,7 +693,7 @@
 
 									<label for="like-1" class="like__label">
 										<svg width="21" height="21" viewBox="0 0 21 21">
-											<use xlink:href="/img/sprite.svg#like"></use>
+											<use xlink:href="img/sprite.svg#like"></use>
 										</svg>
 
 										<span class="visually-hidden">Нравится</span>
@@ -685,10 +707,19 @@
 							</div>
 
 							<picture class="apartment__illustration">
-								<source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
-								<source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
 
-								<img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     class="apartment__image"
 								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
 							</picture>
 
@@ -710,7 +741,7 @@
 
 									<label for="like-2" class="like__label">
 										<svg width="21" height="21" viewBox="0 0 21 21">
-											<use xlink:href="/img/sprite.svg#like"></use>
+											<use xlink:href="img/sprite.svg#like"></use>
 										</svg>
 
 										<span class="visually-hidden">Нравится</span>
@@ -724,10 +755,19 @@
 							</div>
 
 							<picture class="apartment__illustration">
-								<source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
-								<source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
 
-								<img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     class="apartment__image"
 								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
 							</picture>
 
@@ -749,7 +789,7 @@
 
 									<label for="like-3" class="like__label">
 										<svg width="21" height="21" viewBox="0 0 21 21">
-											<use xlink:href="/img/sprite.svg#like"></use>
+											<use xlink:href="img/sprite.svg#like"></use>
 										</svg>
 
 										<span class="visually-hidden">Нравится</span>
@@ -763,12 +803,20 @@
 							</div>
 
 							<picture class="apartment__illustration">
-								<source type="image/avif" srcset="/img/slide-1@1x.avif 1x, /img/slide-1@2x.avif 2x">
-								<source type="image/webp" srcset="/img/slide-1@1x.webp 1x, /img/slide-1@2x.webp 2x">
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
 
-								<img src="/img/slide-1@1x.jpg" srcset="/img/slide-1@2x.jpg 2x" class="apartment__image"
-								     width="1055" height="686"
-								     alt="3-к квартира, 57м2, 12/15 эт.">
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     class="apartment__image"
+								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
 							</picture>
 
 							<p class="apartment__special">Кухня в подарок</p>
@@ -778,7 +826,7 @@
 
 				<button type="button" class="slider__control slider__control--left">
 					<svg width="13" height="12" viewBox="0 0 13 12">
-						<use xlink:href="/img/sprite.svg#arrow-left"></use>
+						<use xlink:href="img/sprite.svg#arrow-left"></use>
 					</svg>
 
 					<span class="visually-hidden">Прокрутить влево</span>
@@ -786,7 +834,7 @@
 
 				<button type="button" class="slider__control slider__control--right">
 					<svg width="13" height="12" viewBox="0 0 13 12">
-						<use xlink:href="/img/sprite.svg#arrow-right"></use>
+						<use xlink:href="img/sprite.svg#arrow-right"></use>
 					</svg>
 
 					<span class="visually-hidden">Прокрутить вправо</span>
@@ -799,7 +847,7 @@
 		</div>
 	</section>
 
-	<section class="section">
+	<section id="features" class="section">
 		<div class="container">
 			<header class="section__header">
 				<h2 class="section__title">Наши преимущества</h2>
@@ -864,7 +912,7 @@
 							Какие услуги будут оказаны и сколько это стоит для покупателя или продавца?
 
 							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
-								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+								<use xlink:href="img/sprite.svg#arrow-right"></use>
 							</svg>
 						</button>
 					</h2>
@@ -887,7 +935,7 @@
 							Какие риски могут возникнуть при сделке?
 
 							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
-								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+								<use xlink:href="img/sprite.svg#arrow-right"></use>
 							</svg>
 						</button>
 					</h2>
@@ -910,7 +958,7 @@
 							Какие действия будут предприняты в случае возникновения непредвиденных обстоятельств?
 
 							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
-								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+								<use xlink:href="img/sprite.svg#arrow-right"></use>
 							</svg>
 						</button>
 					</h2>
@@ -933,7 +981,7 @@
 							Какие услуги будут оказаны и сколько это стоит для покупателя или продавца?
 
 							<svg width="13" height="12" viewBox="0 0 13 12" class="accordion__arrow">
-								<use xlink:href="/img/sprite.svg#arrow-right"></use>
+								<use xlink:href="img/sprite.svg#arrow-right"></use>
 							</svg>
 						</button>
 					</h2>
@@ -982,6 +1030,7 @@
 
 @@include('fragments/footer.html')
 
-<script src="/js/index.js"></script>
+<script src="js/general.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

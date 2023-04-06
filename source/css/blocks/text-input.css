@@ -2,7 +2,6 @@
     padding: 20px 26px;
     border: 1px solid #D8D8D8;
     width: 100%;
-    min-width: 200px;
 
     font-size: 14px;
     line-height: 15px;
@@ -11,13 +10,13 @@
     border-radius: 4px;
 }
 
-.text-input:hover {
+.text-input:hover,
+.text-input:focus-visible {
     border-color: var(--blue-color);
 }
 
 .text-input:focus-visible {
     outline: none;
-    box-shadow: var(--focus-box-shadow);
 }
 
 .text-input:disabled {
@@ -29,5 +28,26 @@
 }
 
 .input-wrapper--rouble .text-input {
-    padding-right: 43px;
+    padding-right: 60px;
+}
+
+.form-control__group .text-input {
+    margin-left: -1px;
+
+    border-radius: 0;
+}
+
+.form-control__group .text-input:first-of-type {
+    margin-left: 0;
+
+    border-radius: 4px 0 0 4px;
+}
+
+.form-control__group .text-input:last-of-type {
+    border-radius: 0 4px 4px 0;
+}
+
+.form-control__group .text-input:hover,
+.form-control__group .text-input:focus-visible {
+    z-index: 1;
 }
