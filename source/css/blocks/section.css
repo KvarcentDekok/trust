@@ -3,6 +3,14 @@
     padding-bottom: 28px;
 }
 
+.section--first {
+    padding-top: 97px;
+}
+
+.section--grey {
+    background-color: #F5F5F5;
+}
+
 .section__header {
     display: grid;
     grid-template-rows: 1fr;

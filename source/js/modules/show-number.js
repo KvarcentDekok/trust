@@ -5,7 +5,7 @@ function onButtonClick(evt) {
 
     phoneNumberLink.href = 'tel:+79675648981';
     phoneNumberLink.classList.add('button', 'apartment__button', 'button--fill');
-    phoneNumberLink.textContent = 'Мария +7 (967) 564 89 81';
+    phoneNumberLink.textContent = '+7 (967) 564 89 81';
     evt.target.replaceWith(phoneNumberLink);
 }
 

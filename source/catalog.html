@@ -13,7 +13,7 @@
 @@include('fragments/header.html')
 
 <main class="main">
-	<section class="section">
+	<section class="section section--first">
 		<div class="container">
 			<ol class="breadcrumbs">
 				<li class="breadcrumbs__item">
@@ -126,35 +126,40 @@
 							<legend class="visually-hidden">Комнатность</legend>
 
 							<div class="button-group button-group--divided dropdown__button-group">
-								<input type="checkbox" id="number-of-rooms-1" class="visually-hidden button-group__input"
+								<input type="checkbox" id="number-of-rooms-1"
+								       class="visually-hidden button-group__input"
 								       name="number-of-rooms" data-filter="roominess-filter">
 								<label for="number-of-rooms-1"
 								       class="button-group__button button-group__button--fix-size">
 									1
 								</label>
 
-								<input type="checkbox" id="number-of-rooms-2" class="visually-hidden button-group__input"
+								<input type="checkbox" id="number-of-rooms-2"
+								       class="visually-hidden button-group__input"
 								       name="number-of-rooms" data-filter="roominess-filter">
 								<label for="number-of-rooms-2"
 								       class="button-group__button button-group__button--fix-size">
 									2
 								</label>
 
-								<input type="checkbox" id="number-of-rooms-3" class="visually-hidden button-group__input"
+								<input type="checkbox" id="number-of-rooms-3"
+								       class="visually-hidden button-group__input"
 								       name="number-of-rooms" data-filter="roominess-filter">
 								<label for="number-of-rooms-3"
 								       class="button-group__button button-group__button--fix-size">
 									3
 								</label>
 
-								<input type="checkbox" id="number-of-rooms-4" class="visually-hidden button-group__input"
+								<input type="checkbox" id="number-of-rooms-4"
+								       class="visually-hidden button-group__input"
 								       name="number-of-rooms" data-filter="roominess-filter">
 								<label for="number-of-rooms-4"
 								       class="button-group__button button-group__button--fix-size">
 									4
 								</label>
 
-								<input type="checkbox" id="number-of-rooms-5" class="visually-hidden button-group__input"
+								<input type="checkbox" id="number-of-rooms-5"
+								       class="visually-hidden button-group__input"
 								       name="number-of-rooms" data-filter="roominess-filter">
 								<label for="number-of-rooms-5"
 								       class="button-group__button button-group__button--fix-size">
@@ -189,13 +194,13 @@
 
 							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
 								<input type="number" id="price-from" class="text-input" name="price-from"
-								       placeholder="от" min="0" step="100000">
+								       placeholder="от" min="1.5" max="20" step="0.1">
 								<span class="visually-hidden">От</span>
 							</label>
 
 							<label class="input-wrapper input-wrapper--rouble dropdown__input-wrapper">
 								<input type="number" id="price-to" class="text-input" name="price-to" placeholder="до"
-								       min="0" step="100000">
+								       min="1.5" max="20" step="0.1">
 								<span class="visually-hidden">До</span>
 							</label>
 						</fieldset>
@@ -341,6 +346,324 @@
 		</div>
 	</section>
 
+	<section class="section section--grey">
+		<div class="container">
+			<ul class="row">
+				<li class="row__col-12 row__col-md-4">
+					<article class="apartment apartment--small">
+						<div class="apartment__info">
+							<h3 class="apartment__title">2—комн. квартира, 72 м2, 9/9 этаж</h3>
+
+							<p class="apartment__price">9 750 000 ₽</p>
+
+							<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+							<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+						</div>
+
+						<div class="apartment__buttons">
+							<div class="like apartment__like">
+								<input type="checkbox" id="like-1" class="visually-hidden like__input">
+
+								<label for="like-1" class="like__label">
+									<svg width="21" height="21" viewBox="0 0 21 21">
+										<use xlink:href="img/sprite.svg#like"></use>
+									</svg>
+
+									<span class="visually-hidden">Нравится</span>
+								</label>
+							</div>
+
+							<button type="button" class="button apartment__button button--fill"
+							        data-call="phone-number">
+								Показать номер
+							</button>
+						</div>
+
+						<div class="slider apartment__illustration">
+							<div id="slider-1" class="slider__init swiper">
+								<ul class="slider__list apartment__slider-list swiper-wrapper">
+									<li class="slider__slide swiper-slide">
+										<picture>
+											<source type="image/avif"
+											        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+											<source type="image/webp"
+											        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+											<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+											     class="apartment__image"
+											     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+										</picture>
+									</li>
+
+									<li class="slider__slide swiper-slide">
+										<picture>
+											<source type="image/avif"
+											        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+											<source type="image/webp"
+											        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+											<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+											     class="apartment__image"
+											     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+										</picture>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button"
+							        class="slider__control apartment__slider-control slider__control--left"
+							        data-slider="slider-1">
+								<svg width="13" height="12" viewBox="0 0 13 12">
+									<use xlink:href="img/sprite.svg#arrow-left"></use>
+								</svg>
+
+								<span class="visually-hidden">Прокрутить влево</span>
+							</button>
+
+							<button type="button"
+							        class="slider__control apartment__slider-control slider__control--right"
+							        data-slider="slider-1">
+								<svg width="13" height="12" viewBox="0 0 13 12">
+									<use xlink:href="img/sprite.svg#arrow-right"></use>
+								</svg>
+
+								<span class="visually-hidden">Прокрутить вправо</span>
+							</button>
+						</div>
+
+						<p class="apartment__special">Кухня в подарок</p>
+					</article>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<article class="apartment apartment--small">
+						<div class="apartment__info">
+							<h3 class="apartment__title">2—комн. квартира, 72 м2, 9/9 этаж</h3>
+
+							<p class="apartment__price">9 750 000 ₽</p>
+
+							<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+							<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+						</div>
+
+						<div class="apartment__buttons">
+							<div class="like apartment__like">
+								<input type="checkbox" id="like-2" class="visually-hidden like__input">
+
+								<label for="like-2" class="like__label">
+									<svg width="21" height="21" viewBox="0 0 21 21">
+										<use xlink:href="img/sprite.svg#like"></use>
+									</svg>
+
+									<span class="visually-hidden">Нравится</span>
+								</label>
+							</div>
+
+							<button type="button" class="button apartment__button button--fill"
+							        data-call="phone-number">
+								Показать номер
+							</button>
+						</div>
+
+						<picture class="apartment__illustration">
+							<source type="image/avif"
+							        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+							<source type="image/webp"
+							        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+							<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+							     class="apartment__image"
+							     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+						</picture>
+
+						<p class="apartment__special">Кухня в подарок</p>
+					</article>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<article class="apartment apartment--small">
+						<div class="apartment__info">
+							<h3 class="apartment__title">2—комн. квартира, 72 м2, 9/9 этаж</h3>
+
+							<p class="apartment__price">9 750 000 ₽</p>
+
+							<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+							<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+						</div>
+
+						<div class="apartment__buttons">
+							<div class="like apartment__like">
+								<input type="checkbox" id="like-3" class="visually-hidden like__input">
+
+								<label for="like-3" class="like__label">
+									<svg width="21" height="21" viewBox="0 0 21 21">
+										<use xlink:href="img/sprite.svg#like"></use>
+									</svg>
+
+									<span class="visually-hidden">Нравится</span>
+								</label>
+							</div>
+
+							<button type="button" class="button apartment__button button--fill"
+							        data-call="phone-number">
+								Показать номер
+							</button>
+						</div>
+
+						<picture class="apartment__illustration">
+							<source type="image/avif"
+							        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+							<source type="image/webp"
+							        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+							<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+							     class="apartment__image"
+							     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+						</picture>
+
+						<p class="apartment__special">Кухня в подарок</p>
+					</article>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<article class="apartment apartment--small">
+						<div class="apartment__info">
+							<h3 class="apartment__title">2—комн. квартира, 72 м2, 9/9 этаж</h3>
+
+							<p class="apartment__price">9 750 000 ₽</p>
+
+							<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+							<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+						</div>
+
+						<div class="apartment__buttons">
+							<div class="like apartment__like">
+								<input type="checkbox" id="like-4" class="visually-hidden like__input">
+
+								<label for="like-4" class="like__label">
+									<svg width="21" height="21" viewBox="0 0 21 21">
+										<use xlink:href="img/sprite.svg#like"></use>
+									</svg>
+
+									<span class="visually-hidden">Нравится</span>
+								</label>
+							</div>
+
+							<button type="button" class="button apartment__button button--fill"
+							        data-call="phone-number">
+								Показать номер
+							</button>
+						</div>
+
+						<div class="slider apartment__illustration">
+							<div id="slider-2" class="slider__init swiper">
+								<ul class="slider__list apartment__slider-list swiper-wrapper">
+									<li class="slider__slide swiper-slide">
+										<picture>
+											<source type="image/avif"
+											        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+											<source type="image/webp"
+											        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+											<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+											     class="apartment__image"
+											     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+										</picture>
+									</li>
+
+									<li class="slider__slide swiper-slide">
+										<picture>
+											<source type="image/avif"
+											        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+											<source type="image/webp"
+											        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+											<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+											     class="apartment__image"
+											     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+										</picture>
+									</li>
+								</ul>
+							</div>
+
+							<button type="button"
+							        class="slider__control apartment__slider-control slider__control--left"
+							        data-slider="slider-2">
+								<svg width="13" height="12" viewBox="0 0 13 12">
+									<use xlink:href="img/sprite.svg#arrow-left"></use>
+								</svg>
+
+								<span class="visually-hidden">Прокрутить влево</span>
+							</button>
+
+							<button type="button"
+							        class="slider__control apartment__slider-control slider__control--right"
+							        data-slider="slider-2">
+								<svg width="13" height="12" viewBox="0 0 13 12">
+									<use xlink:href="img/sprite.svg#arrow-right"></use>
+								</svg>
+
+								<span class="visually-hidden">Прокрутить вправо</span>
+							</button>
+						</div>
+
+						<p class="apartment__special">Кухня в подарок</p>
+					</article>
+				</li>
+
+				<li class="row__col-12 row__col-md-8">
+					<article class="apartment">
+						<div class="apartment__info">
+							<h3 class="apartment__title">2—комн. квартира, 72 м2, 9/9 этаж</h3>
+
+							<p class="apartment__price">9 750 000 ₽</p>
+
+							<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+							<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+						</div>
+
+						<div class="apartment__buttons">
+							<div class="like apartment__like">
+								<input type="checkbox" id="like-5" class="visually-hidden like__input">
+
+								<label for="like-5" class="like__label">
+									<svg width="21" height="21" viewBox="0 0 21 21">
+										<use xlink:href="img/sprite.svg#like"></use>
+									</svg>
+
+									<span class="visually-hidden">Нравится</span>
+								</label>
+							</div>
+
+							<button type="button" class="button apartment__button button--fill"
+							        data-call="phone-number">
+								Показать номер
+							</button>
+						</div>
+
+						<picture class="apartment__illustration">
+							<source type="image/avif"
+							        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+							<source type="image/webp"
+							        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+							<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+							     class="apartment__image"
+							     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+						</picture>
+
+						<p class="apartment__special">Кухня в подарок</p>
+					</article>
+				</li>
+			</ul>
+		</div>
+	</section>
+
 	<div class="modal" role="dialog" id="more-filters" tabindex="-1" data-call="close" aria-modal="true"
 	     aria-labelledby="more-filters-label">
 		<div class="modal__content">
@@ -407,12 +730,14 @@
 									<div class="row__col-12 row__col-md-6">
 										<div class="checkbox-wrapper">
 											<div class="checkbox">
-												<input type="checkbox" id="not-first" class="visually-hidden checkbox__input">
+												<input type="checkbox" id="not-first"
+												       class="visually-hidden checkbox__input">
 												<label for="not-first" class="checkbox__label">не первый</label>
 											</div>
 
 											<div class="checkbox">
-												<input type="checkbox" id="not-last" class="visually-hidden checkbox__input">
+												<input type="checkbox" id="not-last"
+												       class="visually-hidden checkbox__input">
 												<label for="not-last" class="checkbox__label">не последний</label>
 											</div>
 										</div>
@@ -426,7 +751,8 @@
 						<div class="row__col-12">
 							<div class="checkbox-wrapper">
 								<div class="checkbox">
-									<input type="checkbox" id="design-renovation" class="visually-hidden checkbox__input">
+									<input type="checkbox" id="design-renovation"
+									       class="visually-hidden checkbox__input">
 									<label for="design-renovation" class="checkbox__label">дизайнерский ремонт</label>
 								</div>
 
@@ -436,7 +762,8 @@
 								</div>
 
 								<div class="checkbox">
-									<input type="checkbox" id="living-condition" class="visually-hidden checkbox__input">
+									<input type="checkbox" id="living-condition"
+									       class="visually-hidden checkbox__input">
 									<label for="living-condition" class="checkbox__label">жилое состояние</label>
 								</div>
 
@@ -451,12 +778,14 @@
 								</div>
 
 								<div class="checkbox">
-									<input type="checkbox" id="needs-renovation" class="visually-hidden checkbox__input">
+									<input type="checkbox" id="needs-renovation"
+									       class="visually-hidden checkbox__input">
 									<label for="needs-renovation" class="checkbox__label">требует ремонта</label>
 								</div>
 
 								<div class="checkbox">
-									<input type="checkbox" id="without-finishing" class="visually-hidden checkbox__input">
+									<input type="checkbox" id="without-finishing"
+									       class="visually-hidden checkbox__input">
 									<label for="without-finishing" class="checkbox__label">без отделки</label>
 								</div>
 							</div>
@@ -494,25 +823,30 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="checkbox">
-							<input type="checkbox" id="balcony" class="visually-hidden checkbox__input">
-							<label for="balcony" class="checkbox__label">есть балкон</label>
-						</div>
+					<div class="row row--mt">
+						<div class="row__col-12">
+							<div class="checkbox-wrapper">
+								<div class="checkbox">
+									<input type="checkbox" id="balcony" class="visually-hidden checkbox__input">
+									<label for="balcony" class="checkbox__label">есть балкон</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="loggia" class="visually-hidden checkbox__input">
-							<label for="loggia" class="checkbox__label">есть лоджия</label>
-						</div>
+								<div class="checkbox">
+									<input type="checkbox" id="loggia" class="visually-hidden checkbox__input">
+									<label for="loggia" class="checkbox__label">есть лоджия</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="ground-parking" class="visually-hidden checkbox__input">
-							<label for="ground-parking" class="checkbox__label">наземная парковка</label>
-						</div>
+								<div class="checkbox">
+									<input type="checkbox" id="ground-parking" class="visually-hidden checkbox__input">
+									<label for="ground-parking" class="checkbox__label">наземная парковка</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="underground-parking" class="visually-hidden checkbox__input">
-							<label for="underground-parking" class="checkbox__label">подземная парковка</label>
+								<div class="checkbox">
+									<input type="checkbox" id="underground-parking"
+									       class="visually-hidden checkbox__input">
+									<label for="underground-parking" class="checkbox__label">подземная парковка</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -546,37 +880,42 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="checkbox">
-							<input type="checkbox" id="brick" class="visually-hidden checkbox__input">
-							<label for="brick" class="checkbox__label">кирпич</label>
-						</div>
+					<div class="row row--mt">
+						<div class="row__col-12">
+							<div class="checkbox-wrapper">
+								<div class="checkbox">
+									<input type="checkbox" id="brick" class="visually-hidden checkbox__input">
+									<label for="brick" class="checkbox__label">кирпич</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="blocks" class="visually-hidden checkbox__input">
-							<label for="blocks" class="checkbox__label">блоки</label>
-						</div>
+								<div class="checkbox">
+									<input type="checkbox" id="blocks" class="visually-hidden checkbox__input">
+									<label for="blocks" class="checkbox__label">блоки</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="monolith" class="visually-hidden checkbox__input">
-							<label for="monolith" class="checkbox__label">монолит</label>
-						</div>
+								<div class="checkbox">
+									<input type="checkbox" id="monolith" class="visually-hidden checkbox__input">
+									<label for="monolith" class="checkbox__label">монолит</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="panel" class="visually-hidden checkbox__input">
-							<label for="panel" class="checkbox__label">панель</label>
-						</div>
+								<div class="checkbox">
+									<input type="checkbox" id="panel" class="visually-hidden checkbox__input">
+									<label for="panel" class="checkbox__label">панель</label>
+								</div>
 
-						<div class="checkbox">
-							<input type="checkbox" id="brick-monolithic" class="visually-hidden checkbox__input">
-							<label for="brick-monolithic" class="checkbox__label">кирпично-монолитный</label>
+								<div class="checkbox">
+									<input type="checkbox" id="brick-monolithic"
+									       class="visually-hidden checkbox__input">
+									<label for="brick-monolithic" class="checkbox__label">кирпично-монолитный</label>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
 
 				<div class="modal__buttons">
 					<button type="reset" class="button button--linear">Сбросить фильтры</button>
-					<button type="submit" class="button button--fill">Показать 1778 предложений</button>
+					<button type="submit" class="button modal__button button--fill">Показать 1778 предложений</button>
 				</div>
 			</form>
 		</div>

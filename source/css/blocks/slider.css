@@ -55,6 +55,14 @@
     cursor: initial;
 }
 
+.apartment__slider-control.slider__control--left {
+    left: 28px;
+}
+
+.apartment__slider-control.slider__control--right {
+    right: 28px;
+}
+
 .slider .slider__scrollbar {
     --swiper-scrollbar-border-radius: 1px;
     --swiper-scrollbar-sides-offset: 0%;

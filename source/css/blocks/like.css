@@ -1,3 +1,9 @@
+.like {
+    color: #BABABA;
+
+    border-color: #BABABA;
+}
+
 .like__input:checked ~ .like__label {
     color: var(--red-color);
 
@@ -18,24 +24,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #BABABA;
+    border: 1px solid;
 
-    color: #BABABA;
+    color: inherit;
 
     border-radius: 4px;
     background-color: transparent;
     transition: all 200ms linear;
     cursor: pointer;
+    border-color: inherit;
 }
 
 .like__label:hover {
-    border-color: var(--red-color);
-}
+    color: #707070;
 
-@media (min-width: 900px) {
-    .like__label {
-        color: #EFEFEF;
-
-        border-color: var(--white-color);
-    }
+    border-color: #4F4F4F;
 }

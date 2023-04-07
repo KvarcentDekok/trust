@@ -19,7 +19,7 @@
     width: 95%;
     max-width: 941px;
     margin: 50px auto;
-    padding: 36px;
+    padding: 16px;
 
     position: relative;
     z-index: 20;
@@ -70,4 +70,21 @@
     line-height: 33px;
     font-weight: 600;
     color: var(--black-color);
+}
+
+.modal__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+.modal__button {
+    padding: 20px 63px;
+}
+
+@media (min-width: 900px) {
+    .modal__content {
+        padding: 36px;
+    }
 }
