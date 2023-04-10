@@ -1,0 +1,31 @@
+.content {
+    color: #212121;
+}
+
+.content__title {
+    color: var(--black-color);
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.content p {
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.content dt {
+    padding: 10px 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #838383;
+}
+
+.content dd {
+    padding: 10px 0;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #212121;
+}

@@ -1,0 +1,58 @@
+.object-characteristics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.object-characteristics__wrapper {
+    padding-left: 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.object-characteristics__wrapper::before {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    content: "";
+
+    transform: translateY(-50%);
+}
+
+.object-characteristics__wrapper--total-area::before {
+    background: url("../img/icon-area.svg") no-repeat center;
+}
+
+.object-characteristics__wrapper--living-space::before {
+    background: url("../img/icon-armchair.svg") no-repeat center;
+}
+
+.object-characteristics__wrapper--kitchen-area::before {
+    background: url("../img/icon-kitchen.svg") no-repeat center;
+}
+
+.object-characteristics__wrapper--floor::before {
+    background: url("../img/icon-floor.svg") no-repeat center;
+}
+
+.object-characteristics__term {
+    font-size: 12px;
+    line-height: 14px;
+    color: #727272;
+}
+
+.object-characteristics__value {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 17px;
+
+    color: var(--black-color);
+}

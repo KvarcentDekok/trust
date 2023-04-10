@@ -86,3 +86,8 @@
 .button--fluid {
     width: 100%;
 }
+
+.button--ps-0 {
+    padding-left: 0;
+    padding-right: 0;
+}

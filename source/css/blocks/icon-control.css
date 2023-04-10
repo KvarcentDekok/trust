@@ -1,0 +1,44 @@
+.icon-control {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+
+    color: #C3C3C3;
+    text-decoration: none;
+
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.icon-control:hover {
+    color: var(--red-color);
+}
+
+.icon-control:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-box-shadow);
+}
+
+.icon-control--ml {
+    margin-left: auto;
+}
+
+.icon-control label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.icon-control input:checked ~ label {
+    color: var(--red-color);
+}
+
+.icon-control input:focus-visible ~ label {
+    box-shadow: var(--focus-box-shadow);
+}

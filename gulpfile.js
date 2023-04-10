@@ -57,7 +57,12 @@ gulp.task("html", () => {
 });
 
 gulp.task("js", () => {
-    return gulp.src(['./source/js/general.js', './source/js/index.js', './source/js/catalog.js'])
+    return gulp.src([
+        './source/js/general.js',
+        './source/js/index.js',
+        './source/js/catalog.js',
+        './source/js/object.js'
+    ])
         .pipe(named())
         .pipe(webpackStream(webpackConfig))
         .pipe(gulp.dest("./build/js"));

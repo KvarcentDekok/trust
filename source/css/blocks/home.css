@@ -31,6 +31,8 @@
     margin: 0;
     padding-top: 15px;
     max-width: 383px;
+
+    color: var(--white-color);
 }
 
 .home__cards-wrapper {

@@ -1,0 +1,11 @@
+.gallery {
+    padding-top: 0;
+}
+
+.gallery__slide {
+    max-width: 580px;
+}
+
+.gallery__image {
+    border-radius: 4px;
+}

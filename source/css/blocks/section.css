@@ -25,10 +25,18 @@
     font-weight: 600;
 }
 
+.section__title--ml {
+    margin-left: auto;
+}
+
 .section__paragraph {
     display: none;
 
     color: #838383;
+}
+
+.section__paragraph--ml {
+    margin-left: auto;
 }
 
 .section__button {
@@ -42,6 +50,12 @@
 .section__filter {
     margin-top: 33px;
     margin-bottom: 33px;
+}
+
+.section__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
 }
 
 @media (min-width: 900px) {

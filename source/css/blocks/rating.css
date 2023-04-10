@@ -1,0 +1,9 @@
+.rating__stars {
+    width: 90px;
+    height: 18px;
+
+    position: relative;
+
+    mask-image: url("../img/sprite.svg#rating");
+    background-color: #D9D9D9;
+}
