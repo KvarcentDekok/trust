@@ -1,5 +1,6 @@
 .button {
     border: 1px solid var(--red-color);
+    padding: 20px;
 
     text-align: center;
     text-decoration: none;
@@ -80,4 +81,8 @@
     color: #454545;
 
     border-color: #BEBEBE;
+}
+
+.button--fluid {
+    width: 100%;
 }

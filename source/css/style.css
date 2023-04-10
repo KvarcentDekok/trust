@@ -40,3 +40,6 @@
 @import url("blocks/row.css");
 @import url("blocks/form-control.css");
 @import url("blocks/checkbox-wrapper.css");
+@import url("blocks/pagination.css");
+@import url("blocks/red-text.css");
+@import url("blocks/inline-link.css");

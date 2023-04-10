@@ -7,7 +7,6 @@ import animationFeatures from "./modules/animation-features";
 import {initSliderMain} from "./modules/slider";
 
 filter();
-inputMask();
 stepper('.questionnaire__step', 'questionnaire__step--active');
 questionnaire();
 accordion();

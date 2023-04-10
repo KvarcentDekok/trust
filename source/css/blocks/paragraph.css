@@ -5,3 +5,7 @@
     line-height: 21px;
     color: var(--white-color);
 }
+
+.paragraph--small {
+    font-size: 12px;
+}

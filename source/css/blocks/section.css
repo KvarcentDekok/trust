@@ -45,6 +45,12 @@
 }
 
 @media (min-width: 900px) {
+    .section--feedback {
+        padding: 77px 0;
+
+        background: url("../img/feedback.webp") no-repeat center right;
+    }
+
     .section__header {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;

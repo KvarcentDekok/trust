@@ -13,6 +13,8 @@
     padding: 0;
     margin: 0;
     border: none;
+
+    position: relative;
 }
 
 .form-control__label {
@@ -104,3 +106,55 @@
 .form-control__select-option--focus {
     background-color: rgba(220, 25, 25, 0.4);
 }
+
+.form-control--fill .form-control__input {
+    padding: 30px 20px 10px;
+    border: none;
+    width: 100%;
+
+    font-size: 14px;
+
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    transition: all 200ms linear;
+}
+
+.form-control--fill .form-control__input:hover,
+.form-control--fill .form-control__input:focus-visible {
+    background-color: #E5E5E5;
+}
+
+.form-control--fill .form-control__input:focus {
+    outline: none;
+}
+
+.form-control--fill .form-control__input::placeholder {
+    opacity: 0;
+}
+
+.form-control--fill .form-control__input:placeholder-shown {
+    padding: 20px;
+}
+
+.form-control--fill .form-control__label {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    font-size: 12px;
+    color: var(--red-color);
+
+    transition: all 200ms linear;
+}
+
+.form-control--fill .form-control__input:placeholder-shown ~ .form-control__label {
+    top: 50%;
+    left: 20px;
+
+    font-size: 14px;
+    color: #838383;
+
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+

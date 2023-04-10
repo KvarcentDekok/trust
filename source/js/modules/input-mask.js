@@ -1,49 +1,74 @@
 import Cleave from 'cleave.js';
+import 'cleave.js/dist/addons/cleave-phone.ru';
 
 const numberInputs = document.querySelectorAll('input[type="number"]');
+const telInputs = document.querySelectorAll('input[type="tel"]');
+
+function inputKeydownHandler(evt) {
+    if (!isNumeric(evt.key)) {
+        evt.preventDefault();
+    }
+}
 
 function inputHandler(evt) {
     const input = evt.target;
     const value = input.value;
-    //const regexp = /\d*,?\d*/;
+    const max = input.max;
+    const inputEvent = new Event('input');
 
-    console.log(input.value);
+    if (max && Number(value) > max) {
+        input.value = max;
 
-    if (!test(value)) {
-        input.value = value.slice(1, -2);
+        input.dispatchEvent(inputEvent);
     }
 }
 
-function test(string) {
-    if (!string) {
-        return false;
+function inputChangeHandler(evt) {
+    const input = evt.target;
+    const value = input.value;
+    const min = input.min;
+    const inputEvent = new Event('input');
+
+    if (min && Number(value) < min) {
+        input.value = min;
+
+        input.dispatchEvent(inputEvent);
     }
+}
 
-    string = string.split(",");
+function isNumeric(key) {
+    const suitableKeys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0', ',', 'Backspace', 'ArrowUp', 'ArrowDown', 'Tab'];
 
-    for (let i = 0; i < string.length; i++) {
-        if (isNaN(string[i]) || !string[i]) {
-            return false;
-        }
-    }
+    return suitableKeys.includes(key);
+}
 
-    return true;
+function makePhoneMask(input) {
+    const cleavePhone = new Cleave(`#${input.id}`, {
+        phone: true,
+        phoneRegionCode: 'ru',
+        prefix: '+7',
+        noImmediatePrefix: true,
+    });
 }
 
 function inputMask() {
     for (let i = 0; i < numberInputs.length; i++) {
+        numberInputs[i].addEventListener('keydown', (evt) => {
+            inputKeydownHandler(evt);
+        });
+
         numberInputs[i].addEventListener('input', (evt) => {
             inputHandler(evt);
         });
+
+        numberInputs[i].addEventListener('change', (evt) => {
+            inputChangeHandler(evt);
+        });
     }
 
-    /*const cleavePriceFrom = new Cleave('#price-from', {
-        numeral: true
-    });
-
-    const cleavePriceTo = new Cleave('#price-to', {
-        numeral: true
-    });*/
+    for (let i = 0; i < telInputs.length; i++) {
+        makePhoneMask(telInputs[i]);
+    }
 }
 
 export default inputMask;

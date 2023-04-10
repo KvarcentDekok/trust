@@ -143,7 +143,7 @@
 
 @media (min-width: 900px) {
     .apartment:not(.apartment--small) {
-        padding: 50px 62px 50px 42px;
+        padding: 120px 62px 50px 42px;
         border: none;
 
         background-color: #696565;
@@ -204,8 +204,9 @@
     }
 
     .apartment:not(.apartment--small) .apartment__button {
-        padding: 20px 87px 20px;
+        padding: 20px;
         flex-grow: initial;
+        width: 280px;
     }
 
     .apartment:not(.apartment--small) .apartment__special {

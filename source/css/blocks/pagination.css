@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    padding: 29px 0 0;
+}
+
+.pagination__link {
+    display: block;
+    width: 37px;
+    height: 39px;
+
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 39px;
+    color: #757575;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 4px;
+}
+
+.pagination__link:hover {
+    color: var(--red-color);
+}
+
+.pagination__link:active {
+    opacity: 0.6;
+}
+
+.pagination__link--active {
+    color: var(--white-color);
+
+    background-color: var(--red-color);
+}
+
+.pagination__link--active:hover {
+    color: var(--white-color);
+}

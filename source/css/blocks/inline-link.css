@@ -1,0 +1,12 @@
+.inline-link {
+    color: var(--red-color);
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+.inline-link:active {
+    opacity: 0.6;
+}
