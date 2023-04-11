@@ -141,6 +141,15 @@
     background-color: rgba(148, 148, 148, 0.65);
 }
 
+.apartment__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.apartment__link:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 900px) {
     .apartment:not(.apartment--small) {
         padding: 120px 62px 50px 42px;

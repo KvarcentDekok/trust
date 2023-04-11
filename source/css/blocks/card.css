@@ -39,6 +39,8 @@
 }
 
 .card--white {
+    color: var(--black-color);
+
     background-color: var(--white-color);
 }
 
@@ -78,6 +80,24 @@
     background-size: 187px;
 }
 
+.card--icon-mortgage {
+    background-image: url("../img/card-mortgage.webp");
+    background-size: 195px;
+    background-position: bottom right 14px;
+}
+
+.card--icon-mortgage:hover {
+    background-size: 205px;
+}
+
+.card--mt {
+    margin-top: 20px;
+}
+
+.card--p-sm-0 {
+    padding: 0;
+}
+
 .card__title {
     margin: 0 0 12px;
 
@@ -96,6 +116,24 @@
 
 .card__arrow--red {
     color: var(--red-color);
+}
+
+.card__paragraph {
+    margin-bottom: 25px;
+
+    color: #838383;
+}
+
+@media (max-width: 900px) {
+    .card--sm-grey {
+        background-color: #F2F2F2;
+    }
+}
+
+@media (min-width: 900px) {
+    .card--p-sm-0 {
+        padding: 22px 32px;
+    }
 }
 
 @media (min-width: 1400px) {

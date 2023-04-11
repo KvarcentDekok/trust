@@ -49,12 +49,29 @@ export function initSliderObject() {
         slidesPerView: 'auto',
         lazy: true,
         navigation: {
-            nextEl: '.slider__control.slider__control--right',
-            prevEl: '.slider__control.slider__control--left',
+            nextEl: '.gallery__slider-control.slider__control--right',
+            prevEl: '.gallery__slider-control.slider__control--left',
             disabledClass: 'slider__control--disabled'
         },
         scrollbar: {
-            el: '.slider__scrollbar',
+            el: '#gallery-scrollbar',
+            draggable: true,
+            dragClass: 'slider__scrollbar-drag'
+        }
+    });
+
+    const sliderOffers = new Swiper('#similar-offers', {
+        modules: [Navigation, Scrollbar],
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        lazy: true,
+        navigation: {
+            nextEl: '.similar-offers__slider-control.slider__control--right',
+            prevEl: '.similar-offers__slider-control.slider__control--left',
+            disabledClass: 'slider__control--disabled'
+        },
+        scrollbar: {
+            el: '#similar-offers-scrollbar',
             draggable: true,
             dragClass: 'slider__scrollbar-drag'
         }

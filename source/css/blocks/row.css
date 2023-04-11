@@ -17,6 +17,10 @@
     padding-right: 10px;
 }
 
+.row__col-6 {
+    width: 50%;
+}
+
 .row__col-12 {
     width: 100%;
 }
@@ -36,8 +40,16 @@
         width: calc(100% / 3);
     }
 
+    .row__col-md-5 {
+        width: calc(100% / 12 * 5);
+    }
+
     .row__col-md-6 {
         width: 50%;
+    }
+
+    .row__col-md-7 {
+        width: calc(100% / 12 * 7);
     }
 
     .row__col-md-8 {

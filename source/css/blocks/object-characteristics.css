@@ -1,7 +1,7 @@
 .object-characteristics {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 32px 50px;
 }
 
 .object-characteristics__wrapper {
@@ -55,4 +55,11 @@
     line-height: 17px;
 
     color: var(--black-color);
+}
+
+@media (min-width: 900px) {
+    .object-characteristics {
+        justify-content: space-between;
+        gap: 0;
+    }
 }

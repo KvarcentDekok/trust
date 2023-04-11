@@ -1,8 +1,8 @@
 @import url("variables.css");
 @import url("fonts.css");
 @import url("global.css");
-@import url("blocks/card.css");
 @import url("blocks/paragraph.css");
+@import url("blocks/card.css");
 @import url("blocks/navigation.css");
 @import url("blocks/dropdown.css");
 @import url("blocks/header.css");
@@ -48,3 +48,8 @@
 @import url("blocks/object-characteristics.css");
 @import url("blocks/content.css");
 @import url("blocks/rating.css");
+@import url("blocks/person.css");
+@import url("blocks/phone.css");
+@import url("blocks/map.css");
+@import url("blocks/similar-offers.css");
+@import url("blocks/print-hide.css");

@@ -1,0 +1,14 @@
+.map {
+    border: none;
+    height: 250px;
+}
+
+.map--mt {
+    margin-top: 32px;
+}
+
+@media (min-width: 900px) {
+    .map {
+        height: 400px;
+    }
+}

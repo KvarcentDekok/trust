@@ -96,3 +96,9 @@
         justify-content: initial;
     }
 }
+
+@media print {
+    .footer {
+        display: none;
+    }
+}

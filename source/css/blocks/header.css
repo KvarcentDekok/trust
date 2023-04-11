@@ -180,3 +180,9 @@
         order: 3;
     }
 }
+
+@media print {
+    .header {
+        display: none;
+    }
+}

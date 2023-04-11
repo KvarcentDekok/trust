@@ -22,3 +22,22 @@ body {
 sup {
   font-size: 10px;
 }
+
+[data-call="hidden"] {
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+
+  visibility: hidden !important;
+  opacity: 0 !important;
+  transition: all 200ms linear;
+}
+
+[data-call="shown"] {
+  height: auto;
+
+  visibility: visible;
+  opacity: 1;
+  transition: all 200ms linear;
+}

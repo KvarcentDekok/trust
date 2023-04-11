@@ -16,7 +16,7 @@
 <main class="main">
 	<section class="section section--first">
 		<div class="container">
-			<div class="section__wrapper">
+			<div class="section__wrapper section__wrapper--mb-sm">
 				<ol class="breadcrumbs">
 					<li class="breadcrumbs__item">
 						<a href="index.html" class="breadcrumbs__link">Главная</a>
@@ -140,8 +140,7 @@
 				</div>
 
 				<button type="button"
-				        class="slider__control apartment__slider-control slider__control--left"
-				        data-slider="slider-1">
+				        class="slider__control gallery__slider-control slider__control--left">
 					<svg width="13" height="12" viewBox="0 0 13 12">
 						<use xlink:href="img/sprite.svg#arrow-left"></use>
 					</svg>
@@ -150,8 +149,7 @@
 				</button>
 
 				<button type="button"
-				        class="slider__control apartment__slider-control slider__control--right"
-				        data-slider="slider-1">
+				        class="slider__control gallery__slider-control slider__control--right">
 					<svg width="13" height="12" viewBox="0 0 13 12">
 						<use xlink:href="img/sprite.svg#arrow-right"></use>
 					</svg>
@@ -159,7 +157,7 @@
 					<span class="visually-hidden">Прокрутить вправо</span>
 				</button>
 
-				<div class="swiper-scrollbar slider__scrollbar">
+				<div id="gallery-scrollbar" class="swiper-scrollbar slider__scrollbar">
 					<div class="swiper-scrollbar-drag slider__scrollbar-drag"></div>
 				</div>
 			</div>
@@ -171,8 +169,8 @@
 
 		<div class="container">
 			<div class="row">
-				<div class="row__col-12 row__col-md-8">
-					<article class="card card--white">
+				<div class="row__col-12 row__col-md-7">
+					<article class="card card--white card--p-sm-0">
 						<h3 class="visually-hidden">Подробная информация</h3>
 
 						<dl class="object-characteristics">
@@ -227,7 +225,20 @@
 								Показ возможет в любое время. Помощь о оформлении ипотеки.
 							</p>
 
-							<button type="button" class="button button--linear button--ps-0">Показать еще</button>
+							<div id="description-block" data-call="hidden">
+								<p>
+									Дорогая входная -безопасная дверь. Ширина стен от 80-95 см,
+									что позволяет дому зимой хорошо сохранять тепло и не нагревать помещения летом.
+									В квартире установлен кондиционер, но им не пользовались, так как летом температура
+									в квартире комфортная. Отдельно расположена ванная комната и туалет
+									с умывальником и стиральной машинкой.
+								</p>
+							</div>
+
+							<button type="button" class="button button--linear button--ps-0 print-hide" data-call="show"
+							        data-behavior="hide" aria-controls="description-block">
+								Показать еще
+							</button>
 						</section>
 
 						<section class="content">
@@ -303,15 +314,43 @@
 										<dd>9 м<sup>2</sup></dd>
 									</div>
 								</div>
+
+								<div id="characteristics-block" data-call="hidden">
+									<div class="row">
+										<div class="row__col-6 row__col-md-4">
+											<dt>Код объекта</dt>
+										</div>
+
+										<div class="row__col-6 row__col-md-4">
+											<dd>8314244</dd>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="row__col-6 row__col-md-4">
+											<dt>Общая площадь</dt>
+										</div>
+
+										<div class="row__col-6 row__col-md-4">
+											<dd>58 м<sup>2</sup></dd>
+										</div>
+									</div>
+								</div>
 							</dl>
 
-							<button type="button" class="button button--linear button--ps-0">Показать еще</button>
+							<button type="button" class="button button--linear button--ps-0 print-hide" data-call="show"
+								aria-controls="characteristics-block" data-behavior="hide">
+								Показать еще
+							</button>
 						</section>
 					</article>
+
+					<iframe src="https://yandex.ru/map-widget/v1/?ll=39.317911%2C51.735620&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxODIzODY4MjYxEj7QoNC-0YHRgdC40Y8sINCS0L7RgNC-0L3QtdC2LCDQodC10LvRjNGB0LrQsNGPINGD0LvQuNGG0LAsIDLQnCIKDaNDHUIVQfdOQg%2C%2C&z=12.17"
+					        width="100%" height="400" allowfullscreen="true" class="map map--mt print-hide"></iframe>
 				</div>
 
-				<div class="row__col-12 row__col-md-4">
-					<article class="card card--white">
+				<div class="row__col-12 row__col-md-5">
+					<article class="card card--white card--p-sm-0">
 						<div class="person">
 							<picture class="person__avatar">
 								<source type="image/avif"
@@ -320,7 +359,7 @@
 								        srcset="img/person-1@1x.webp 1x, img/person-1@2x.webp 2x">
 
 								<img src="img/person-1@1x.jpg" srcset="img/person-1@2x.jpg 2x"
-								     width="130" height="130" alt="Проскурикова Александра">
+								     width="130" height="130" alt="Проскурикова Александра" class="person__image">
 							</picture>
 
 							<div class="person__info">
@@ -341,7 +380,294 @@
 								</div>
 							</div>
 						</div>
+
+						<a href="tel:79009691809" class="phone">
+							<svg width="23" height="20" viewBox="0 0 23 20" class="phone__icon">
+								<use xlink:href="img/sprite.svg#phone"></use>
+							</svg>
+
+							7 (900) 969 18 09
+						</a>
+
+						<p class="paragraph card__paragraph print-hide">или оставьте номер и я перезвоню вам</p>
+
+						<div class="row print-hide">
+							<div class="row__col-12">
+								<div class="form-control form-control--fill">
+									<input type="tel" id="phone" class="form-control__input" placeholder="Номер телефона">
+									<label for="phone" class="form-control__label">Номер телефона</label>
+								</div>
+							</div>
+
+							<div class="row__col-12">
+								<button type="submit" class="button button--fill button--fluid">Перезвоните мне</button>
+							</div>
+						</div>
 					</article>
+
+					<a href="#" class="card card--white card--sm-grey card--icon-mortgage card--pr card--mt print-hide">
+						<h3 class="card__title">Ипотека онлайн</h3>
+
+						<p class="paragraph">Пройдите опрос и мы <br> подберем для вас <br> лучшее предложение</p>
+
+						<svg width="13" height="12" viewBox="0 0 13 12" class="card__arrow card__arrow--red">
+							<use xlink:href="img/sprite.svg#arrow-right"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section print-hide">
+		<div class="container">
+			<h2 class="section__title">Похожие предложения</h2>
+
+			<p class="paragraph section__paragraph">
+				В данном случае я выступаю в роли Морфеуса — лишь указываю <br> на дверь, войти придётся самостоятельно.
+			</p>
+
+			<div class="slider similar-offers">
+				<div id="similar-offers" class="slider__init">
+					<ul class="slider__list swiper-wrapper">
+						<li class="slider__slide swiper-slide similar-offers__item">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-1" class="visually-hidden like__input">
+
+										<label for="like-1" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source media="(min-width: 660px)" type="image/avif"
+									        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source media="(min-width: 660px)" type="image/webp"
+									        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+									<source media="(min-width: 660px)"
+									        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="slider__slide swiper-slide similar-offers__item">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-2" class="visually-hidden like__input">
+
+										<label for="like-2" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source media="(min-width: 660px)" type="image/avif"
+									        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source media="(min-width: 660px)" type="image/webp"
+									        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+									<source media="(min-width: 660px)"
+									        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="slider__slide swiper-slide similar-offers__item">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-3" class="visually-hidden like__input">
+
+										<label for="like-3" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source media="(min-width: 660px)" type="image/avif"
+									        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source media="(min-width: 660px)" type="image/webp"
+									        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+									<source media="(min-width: 660px)"
+									        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="slider__slide swiper-slide similar-offers__item">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-4" class="visually-hidden like__input">
+
+										<label for="like-4" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source media="(min-width: 660px)" type="image/avif"
+									        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source media="(min-width: 660px)" type="image/webp"
+									        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+									<source media="(min-width: 660px)"
+									        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+					</ul>
+				</div>
+
+				<button type="button"
+				        class="slider__control similar-offers__slider-control slider__control--left">
+					<svg width="13" height="12" viewBox="0 0 13 12">
+						<use xlink:href="img/sprite.svg#arrow-left"></use>
+					</svg>
+
+					<span class="visually-hidden">Прокрутить влево</span>
+				</button>
+
+				<button type="button"
+				        class="slider__control similar-offers__slider-control slider__control--right">
+					<svg width="13" height="12" viewBox="0 0 13 12">
+						<use xlink:href="img/sprite.svg#arrow-right"></use>
+					</svg>
+
+					<span class="visually-hidden">Прокрутить вправо</span>
+				</button>
+
+				<div id="similar-offers-scrollbar" class="swiper-scrollbar slider__scrollbar">
+					<div class="swiper-scrollbar-drag slider__scrollbar-drag"></div>
 				</div>
 			</div>
 		</div>

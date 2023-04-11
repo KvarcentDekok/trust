@@ -23,10 +23,6 @@
     box-shadow: var(--focus-box-shadow);
 }
 
-.icon-control--ml {
-    margin-left: auto;
-}
-
 .icon-control label {
     display: flex;
     justify-content: center;
@@ -41,4 +37,16 @@
 
 .icon-control input:focus-visible ~ label {
     box-shadow: var(--focus-box-shadow);
+}
+
+@media (min-width: 900px) {
+    .icon-control--ml {
+        margin-left: auto;
+    }
+}
+
+@media print {
+    .icon-control {
+        display: none;
+    }
 }

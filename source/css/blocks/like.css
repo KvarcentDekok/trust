@@ -5,9 +5,10 @@
 }
 
 .like__input:checked ~ .like__label {
-    color: var(--red-color);
+    color: var(--white-color);
 
     border-color: var(--red-color);
+    background-color: var(--red-color);
 }
 
 .like__input:focus ~ .like__label {
@@ -36,7 +37,7 @@
 }
 
 .like__label:hover {
-    color: #707070;
+    color: var(--red-color);
 
-    border-color: #4F4F4F;
+    border-color: var(--red-color);
 }
