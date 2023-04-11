@@ -77,3 +77,22 @@ export function initSliderObject() {
         }
     });
 }
+
+export function initSliderResidentialComplex() {
+    const sliderObject = new Swiper('.slider__init', {
+        modules: [Navigation, Scrollbar],
+        spaceBetween: 30,
+        slidesPerView: 'auto',
+        lazy: true,
+        navigation: {
+            nextEl: '.gallery__slider-control.slider__control--right',
+            prevEl: '.gallery__slider-control.slider__control--left',
+            disabledClass: 'slider__control--disabled'
+        },
+        scrollbar: {
+            el: '#gallery-scrollbar',
+            draggable: true,
+            dragClass: 'slider__scrollbar-drag'
+        }
+    });
+}

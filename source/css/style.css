@@ -41,6 +41,7 @@
 @import url("blocks/form-control.css");
 @import url("blocks/checkbox-wrapper.css");
 @import url("blocks/pagination.css");
+@import url("blocks/amount-row.css");
 @import url("blocks/red-text.css");
 @import url("blocks/inline-link.css");
 @import url("blocks/icon-control.css");
@@ -53,3 +54,5 @@
 @import url("blocks/map.css");
 @import url("blocks/similar-offers.css");
 @import url("blocks/print-hide.css");
+@import url("blocks/video.css");
+@import url("blocks/peculiarity.css");

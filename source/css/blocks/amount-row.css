@@ -1,0 +1,50 @@
+.amount-row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.amount-row:hover {
+    text-decoration: underline;
+}
+
+.amount-row::before {
+    width: 100%;
+    height: 1px;
+    flex-grow: 1;
+    order: 3;
+
+    content: "";
+
+    background-color: #E3E3E3;
+}
+
+.amount-row__roominess {
+    order: 1;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #212121;
+    white-space: nowrap;
+}
+
+.amount-row__price {
+    order: 2;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #838383;
+    white-space: nowrap;
+}
+
+.amount-row__amount {
+    order: 4;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #D92929;
+    white-space: nowrap;
+}

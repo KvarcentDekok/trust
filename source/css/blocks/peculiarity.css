@@ -1,0 +1,54 @@
+.peculiarity {
+    width: 100%;
+    height: 345px;
+    padding: 32px;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 32px;
+    color: var(--white-color);
+
+    border-radius: 4px;
+    background-color: var(--dark-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.peculiarity--layout {
+    background-image: image-set(
+            url("../img/peculiarity-layout@2x.webp") 2x,
+            url("../img/peculiarity-layout@1x.webp") 1x
+    );
+}
+
+.peculiarity--near {
+    background-image: image-set(
+            url("../img/peculiarity-near@2x.webp") 2x,
+            url("../img/peculiarity-near@1x.webp") 1x
+    );
+}
+
+.peculiarity--ecology {
+    background-image: image-set(
+            url("../img/peculiarity-ecology@2x.webp") 2x,
+            url("../img/peculiarity-ecology@1x.webp") 1x
+    );
+}
+
+.peculiarity--center {
+    background-image: image-set(
+            url("../img/peculiarity-center@2x.webp") 2x,
+            url("../img/peculiarity-center@1x.webp") 1x
+    );
+}
+
+.peculiarity--location {
+    background-image: image-set(
+            url("../img/peculiarity-location@2x.webp") 2x,
+            url("../img/peculiarity-location@1x.webp") 1x
+    );
+}

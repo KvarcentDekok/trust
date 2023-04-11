@@ -5,6 +5,7 @@ import select from "./modules/select";
 import showNumber from "./modules/show-number";
 import inputMask from "./modules/input-mask";
 import toggleVisibility from "./modules/toggle-visibility";
+import video from "./modules/video";
 
 dropdown();
 header();
@@ -13,3 +14,4 @@ select();
 showNumber();
 inputMask();
 toggleVisibility();
+video();

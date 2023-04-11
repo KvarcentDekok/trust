@@ -9,3 +9,12 @@
 .gallery__image {
     border-radius: 4px;
 }
+
+.gallery--large .gallery__slide {
+    max-width: none;
+}
+
+.gallery--large .gallery__image,
+.gallery--large .gallery__slide {
+    width: 100%;
+}

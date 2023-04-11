@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<title>ЖК «Галактика»
+	</title>
+</head>
+
+<body>
+@@include('fragments/header.html')
+
+<main class="main">
+	<section class="section section--first">
+		<div class="container">
+			<div class="section__wrapper section__wrapper--mb-sm">
+				<ol class="breadcrumbs">
+					<li class="breadcrumbs__item">
+						<a href="index.html" class="breadcrumbs__link">Главная</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<a href="#" class="breadcrumbs__link">База недвижимости</a>
+					</li>
+
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link">ЖК «Галактика»</a>
+					</li>
+				</ol>
+
+				<a href="javascript:(print())" class="icon-control icon-control--ml" title="Распечатать">
+					<svg width="20" height="20" viewBox="0 0 20 20">
+						<use xlink:href="img/sprite.svg#print"></use>
+					</svg>
+
+					<span class="visually-hidden">Распечатать</span>
+				</a>
+
+				<button type="button" class="icon-control" title="Поделиться">
+					<svg width="17" height="17" viewBox="0 0 17 17">
+						<use xlink:href="img/sprite.svg#share"></use>
+					</svg>
+
+					<span class="visually-hidden">Поделиться</span>
+				</button>
+
+				<div class="icon-control" title="Нравится">
+					<input type="checkbox" id="like-object" class="visually-hidden">
+
+					<label for="like-object">
+						<svg width="21" height="21" viewBox="0 0 21 21">
+							<use xlink:href="img/sprite.svg#like"></use>
+						</svg>
+
+						<span class="visually-hidden">Нравится</span>
+					</label>
+				</div>
+			</div>
+
+			<div class="section__wrapper">
+				<h1 class="section__title">ЖК «Галактика»
+				</h1>
+
+				<p class="section__title section__title--ml">от 3 800 000 ₽</p>
+			</div>
+
+			<div class="section__wrapper">
+				<p class="paragraph section__paragraph">
+					р-н Железнодорожный, мкр. Боровое, ул. Сельская, 2М <a href="#" class="inline-link">Показать карте</a>
+				</p>
+
+				<p class="paragraph section__paragraph section__paragraph--ml">75 676 ₽ / м2</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2 class="visually-hidden">Галерея</h2>
+
+		<div class="container">
+			<div class="slider">
+				<div class="slider__init">
+					<ul class="slider__list swiper-wrapper gallery gallery--large">
+						<li class="slider__slide swiper-slide gallery__slide">
+							<picture>
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт." class="gallery__image">
+							</picture>
+						</li>
+
+						<li class="slider__slide swiper-slide gallery__slide">
+							<picture>
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт." class="gallery__image">
+							</picture>
+						</li>
+
+						<li class="slider__slide swiper-slide gallery__slide">
+							<picture>
+								<source media="(min-width: 660px)" type="image/avif"
+								        srcset="img/slide-1-desktop@2x.avif 1x, img/slide-1-desktop@2x.avif 2x">
+								<source type="image/avif"
+								        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+								<source media="(min-width: 660px)" type="image/webp"
+								        srcset="img/slide-1-desktop@2x.webp 1x, img/slide-1-desktop@2x.webp 2x">
+								<source type="image/webp"
+								        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+								<source media="(min-width: 660px)"
+								        srcset="img/slide-1-desktop@2x.jpg 1x, img/slide-1-desktop@2x.jpg 2x">
+
+								<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+								     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт." class="gallery__image">
+							</picture>
+						</li>
+					</ul>
+				</div>
+
+				<button type="button"
+				        class="slider__control gallery__slider-control slider__control--left">
+					<svg width="13" height="12" viewBox="0 0 13 12">
+						<use xlink:href="img/sprite.svg#arrow-left"></use>
+					</svg>
+
+					<span class="visually-hidden">Прокрутить влево</span>
+				</button>
+
+				<button type="button"
+				        class="slider__control gallery__slider-control slider__control--right">
+					<svg width="13" height="12" viewBox="0 0 13 12">
+						<use xlink:href="img/sprite.svg#arrow-right"></use>
+					</svg>
+
+					<span class="visually-hidden">Прокрутить вправо</span>
+				</button>
+
+				<div id="gallery-scrollbar" class="swiper-scrollbar slider__scrollbar">
+					<div class="swiper-scrollbar-drag slider__scrollbar-drag"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--grey">
+		<h2 class="visually-hidden">Информация о ЖК</h2>
+
+		<div class="container">
+			<article class="card card--white card--p-sm-0">
+				<div class="row">
+					<div class="row__col-12 row__col-md-7">
+						<dl class="object-characteristics">
+							<div class="object-characteristics__wrapper">
+								<dt class="object-characteristics__term">Срок сдачи</dt>
+								<dd class="object-characteristics__value">4 кв. 2022
+								</dd>
+							</div>
+
+							<div class="object-characteristics__wrapper">
+								<dt class="object-characteristics__term">Тип дома</dt>
+								<dd class="object-characteristics__value">монолит-кирпич</dd>
+							</div>
+
+							<div class="object-characteristics__wrapper">
+								<dt class="object-characteristics__term">Класс ЖК</dt>
+								<dd class="object-characteristics__value">комфорт</dd>
+							</div>
+
+							<div class="object-characteristics__wrapper">
+								<dt class="object-characteristics__term">Этажность</dt>
+								<dd class="object-characteristics__value">4-12 этажей</dd>
+							</div>
+
+							<div class="object-characteristics__wrapper">
+								<dt class="object-characteristics__term">Паркинг</dt>
+								<dd class="object-characteristics__value">наземный</dd>
+							</div>
+						</dl>
+					</div>
+
+					<div class="row__col-md-7">
+						<div class="content">
+							<h2 class="content__title">О проекте</h2>
+
+							<p>
+								ЖК «Лайково» - уютный жилой комплекс в Одинцовском районе, всего в 12 км от МКАД,
+								в окружении обширного Подушкинского лесопарка. Предлагаются на выбор удобные
+								планировочные решения и редкие форматы квартир. Во дворах безопасные детские и
+								спортивные площадки, собственная школа и детский сад.
+								Объект состоит из 12-ти многоэтажных жилых домов от 4 до 12 этажей, выполненных
+								в едином классическом стиле. Для жителей комплекса предусмотрены кладовые помещения.
+								На территории объекта также построят школу для 1100 учащихся и детский сад для 380 малышей.
+								Хорошую транспортную доступность ЖК «Лайково» обеспечивает близость к Красногорскому
+								и Рублёво-Успенскому шоссе.
+							</p>
+
+							<p id="about-project-block" data-call="hidden">
+								ЖК «Лайково» - уютный жилой комплекс в Одинцовском районе, всего в 12 км от МКАД,
+								в окружении обширного Подушкинского лесопарка. Предлагаются на выбор удобные
+								планировочные решения и редкие форматы квартир. Во дворах безопасные детские и
+								спортивные площадки, собственная школа и детский сад.
+								Объект состоит из 12-ти многоэтажных жилых домов от 4 до 12 этажей, выполненных
+								в едином классическом стиле. Для жителей комплекса предусмотрены кладовые помещения.
+								На территории объекта также построят школу для 1100 учащихся и детский сад для 380 малышей.
+								Хорошую транспортную доступность ЖК «Лайково» обеспечивает близость к Красногорскому
+								и Рублёво-Успенскому шоссе.
+							</p>
+
+							<button type="button" class="button button--linear button--ps-0 print-hide" data-call="show"
+							        data-behavior="hide" aria-controls="about-project-block">
+								Показать еще
+							</button>
+						</div>
+					</div>
+
+					<div class="row__col-md-5 print-hide">
+						<div class="video">
+							<a class="video__link" href="https://youtu.be/DMkdg4xEEi8">
+								<picture>
+									<source srcset="https://i.ytimg.com/vi_webp/DMkdg4xEEi8/maxresdefault.webp"
+									        type="image/webp">
+
+									<img class="video__media" src="https://i.ytimg.com/vi/DMkdg4xEEi8/maxresdefault.jpg"
+									     width="495" height="278" alt="Обзор жилого комплекса ГАЛАКТИКА в г.Воронеже">
+								</picture>
+							</a>
+
+							<button type="button" class="video__button" aria-label="Запустить видео">
+								<svg width="68" height="48" viewBox="0 0 68 48">
+									<path class="video__button-shape" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path>
+									<path class="video__button-icon" d="M 45,24 27,14 27,34"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<h3 class="section__title print-hide">Квартиры от 4,2 млн ₽</h3>
+
+				<ul class="row print-hide">
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess">Студии</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">270</span>
+						</a>
+					</li>
+
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess">1—комнатные</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">350</span>
+						</a>
+					</li>
+
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess">2—комнатные</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">270</span>
+						</a>
+					</li>
+
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess">3—комнатные</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">350</span>
+						</a>
+					</li>
+
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess">4—комнатные</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">270</span>
+						</a>
+					</li>
+
+					<li class="row__col-12 row__col-md-4">
+						<a href="#" class="amount-row">
+							<span class="amount-row__roominess red-text">Все квартиры</span>
+							<span class="amount-row__price">от 4,2 млн ₽</span>
+							<span class="amount-row__amount">350</span>
+						</a>
+					</li>
+				</ul>
+			</article>
+		</div>
+	</section>
+
+	<section class="section print-hide">
+		<div class="container">
+			<h2 class="section__title">Особенности</h2>
+
+			<ul class="row row--mt">
+				<li class="row__col-12 row__col-md-8">
+					<p class="peculiarity peculiarity--layout">Продуманные планировки</p>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<p class="peculiarity peculiarity--near">Всё рядом</p>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<p class="peculiarity peculiarity--ecology">Благоприятная экология</p>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<p class="peculiarity peculiarity--center">В центре истории</p>
+				</li>
+
+				<li class="row__col-12 row__col-md-4">
+					<p class="peculiarity peculiarity--location">Удобное расположение</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+</main>
+
+@@include('fragments/footer.html')
+
+<script src="js/general.js"></script>
+<script src="js/residential-complex.js"></script>
+</body>
+</html>

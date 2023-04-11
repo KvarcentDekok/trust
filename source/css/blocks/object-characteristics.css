@@ -5,7 +5,6 @@
 }
 
 .object-characteristics__wrapper {
-    padding-left: 41px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -13,7 +12,11 @@
     position: relative;
 }
 
-.object-characteristics__wrapper::before {
+.object-characteristics__wrapper--icon {
+    padding-left: 41px;
+}
+
+.object-characteristics__wrapper--icon::before {
     width: 25px;
     height: 25px;
 
