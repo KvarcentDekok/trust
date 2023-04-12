@@ -1,5 +1,7 @@
 .feature {
     padding: 70px 26px 36px;
+    display: flex;
+    flex-direction: column;
 
     position: relative;
 
@@ -43,6 +45,20 @@
     background: url("../img/icon-agent.svg") no-repeat center;
 }
 
+.feature--fire::before {
+    width: 25px;
+    height: 32px;
+
+    background: url("../img/icon-fire.svg") no-repeat center;
+}
+
+.feature--exchange::before {
+    width: 40px;
+    height: 26px;
+
+    background: url("../img/icon-exchange.svg") no-repeat center;
+}
+
 .feature__title {
     margin: 0 0 18px;
 
@@ -50,6 +66,10 @@
     font-size: 21px;
     line-height: 29px;
     color: #333333;
+}
+
+.feature__title--single {
+    margin: auto 0 0;
 }
 
 .feature__paragraph {
