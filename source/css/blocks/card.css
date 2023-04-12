@@ -124,6 +124,17 @@
     color: #838383;
 }
 
+.card__paragraph--mb-0 {
+    margin-bottom: 0;
+}
+
+.card__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 @media (max-width: 900px) {
     .card--sm-grey {
         background-color: #F2F2F2;

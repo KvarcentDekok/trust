@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 32px 50px;
+    margin: 0;
 }
 
 .object-characteristics__wrapper {
@@ -58,6 +59,12 @@
     line-height: 17px;
 
     color: var(--black-color);
+}
+
+.object-characteristics__value--large {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
 }
 
 @media (min-width: 900px) {

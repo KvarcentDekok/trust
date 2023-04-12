@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+
+	<title>Валентина Суворова | Траст</title>
+</head>
+
+<body>
+@@include('fragments/header.html')
+
+<main class="main">
+	<section class="section section--first section--pb-0">
+		<div class="container">
+			<ol class="breadcrumbs">
+				<li class="breadcrumbs__item">
+					<a href="index.html" class="breadcrumbs__link">Главная</a>
+				</li>
+
+				<li class="breadcrumbs__item">
+					<a href="#" class="breadcrumbs__link">База недвижимости</a>
+				</li>
+
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link">Валентина Суворова</a>
+				</li>
+			</ol>
+
+			<div class="row">
+				<div class="row__col-12 row__col-md-6">
+					<div class="person person--large">
+						<picture class="person__avatar">
+							<source type="image/avif"
+							        srcset="img/person-1@1x.avif 1x, img/person-1@2x.avif 2x">
+							<source type="image/webp"
+							        srcset="img/person-1@1x.webp 1x, img/person-1@2x.webp 2x">
+
+							<img src="img/person-1@1x.jpg" srcset="img/person-1@2x.jpg 2x"
+							     width="185" height="185" alt="Валентина Суворова" class="person__image">
+						</picture>
+
+						<div class="person__info">
+							<h1 class="person__name">Валентина Суворова</h1>
+
+							<p class="paragraph person__paragraph">
+								Менеджер, руководитель группы, ведущий эксперт по недвижимости
+							</p>
+
+							<div class="rating">
+								<div class="rating__stars">
+									<svg width="90" height="16" viewBox="0 0 90 16">
+										<rect x="0" y="0" width="80%" height="100%" fill="#DC1919"></rect>
+									</svg>
+								</div>
+
+								<span class="rating__number">4,7</span>
+
+								<a href="agent.html" class="inline-link">191 отзыв</a>
+							</div>
+
+							<dl class="object-characteristics person__characteristics person__characteristics--mt-auto">
+								<div class="object-characteristics__wrapper">
+									<dt class="object-characteristics__term">Опыт работы</dt>
+									<dd class="object-characteristics__value object-characteristics__value--large">с 2010 года</dd>
+								</div>
+
+								<div class="object-characteristics__wrapper">
+									<dt class="object-characteristics__term">Предложений</dt>
+									<dd class="object-characteristics__value object-characteristics__value--large">16</dd>
+								</div>
+
+								<div class="object-characteristics__wrapper">
+									<dt class="object-characteristics__term">Отзывов</dt>
+									<dd class="object-characteristics__value object-characteristics__value--large">191</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row row--mt">
+				<div class="row__col-12 row__col-md-8">
+					<div class="section__wrapper">
+						<button type="button" class="tab tab--active" data-call="tab" data-name="agent-tab"
+						        data-active-class="tab--active" aria-controls="reviews-block">
+							Отзывы
+						</button>
+
+						<button type="button" class="tab" data-call="tab" data-name="agent-tab"
+						        data-active-class="tab--active" aria-controls="offers-block">
+							Предложения
+						</button>
+
+						<a href="#" class="button button--linear button--ml-md-auto button--ps-0">
+							Оставить отзыв
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section section--grey">
+		<div class="container">
+			<div class="row">
+				<div id="reviews-block" class="row__col-12 row__col-md-8" data-name="agent-block">
+					<h2 class="visually-hidden">Отзывы</h2>
+
+					<ul class="row">
+						<li class="row__col-12">
+							<article class="card card--white card--p-sm-0">
+								<header class="card__header">
+									<h3 class="paragraph card__paragraph card__paragraph--mb-0">
+										<span class="visually-hidden">Отзыв от </span>Леонид
+									</h3>
+
+									<div class="rating">
+										<div class="rating__stars">
+											<svg width="90" height="16" viewBox="0 0 90 16">
+												<rect x="0" y="0" width="80%" height="100%" fill="#DC1919"></rect>
+											</svg>
+
+											<span class="visually-hidden">Оценка: 4 из 5</span>
+										</div>
+									</div>
+								</header>
+
+								<div class="content">
+									<p>
+										Уникальная Евро-2 комнатная квартира c террасой в 100 м2.С УК согласовано
+										и получено разрешение на постройку на террасе закрытой веранды,
+										а также возможна постройка двухуровневой пристройки,
+										любой вариант дизайнерского решения.
+									</p>
+
+									<p>
+										На террасу выведено электричество под освещение, отопление ( теплые полы).
+										В квартире произведен современный ремонт из высококачественных материалов.
+										Натяжной потолок из экологично-безопасной ткани.
+									</p>
+								</div>
+
+								<footer class="card__footer">
+									<time class="paragraph card__paragraph" datetime="2022-15-06">
+										15 июня 2022 года
+									</time>
+								</footer>
+							</article>
+						</li>
+
+						<li class="row__col-12">
+							<article class="card card--white card--p-sm-0">
+								<header class="card__header">
+									<h3 class="paragraph card__paragraph card__paragraph--mb-0">
+										<span class="visually-hidden">Отзыв от </span>Леонид
+									</h3>
+
+									<div class="rating">
+										<div class="rating__stars">
+											<svg width="90" height="16" viewBox="0 0 90 16">
+												<rect x="0" y="0" width="80%" height="100%" fill="#DC1919"></rect>
+											</svg>
+
+											<span class="visually-hidden">Оценка: 4 из 5</span>
+										</div>
+									</div>
+								</header>
+
+								<div class="content">
+									<p>
+										Уникальная Евро-2 комнатная квартира c террасой в 100 м2.С УК согласовано
+										и получено разрешение на постройку на террасе закрытой веранды,
+										а также возможна постройка двухуровневой пристройки,
+										любой вариант дизайнерского решения.
+									</p>
+
+									<p>
+										На террасу выведено электричество под освещение, отопление ( теплые полы).
+										В квартире произведен современный ремонт из высококачественных материалов.
+										Натяжной потолок из экологично-безопасной ткани.
+									</p>
+								</div>
+
+								<footer class="card__footer">
+									<time class="paragraph card__paragraph" datetime="2022-15-06">
+										15 июня 2022 года
+									</time>
+								</footer>
+							</article>
+						</li>
+
+						<li class="row__col-12">
+							<article class="card card--white card--p-sm-0">
+								<header class="card__header">
+									<h3 class="paragraph card__paragraph card__paragraph--mb-0">
+										<span class="visually-hidden">Отзыв от </span>Леонид
+									</h3>
+
+									<div class="rating">
+										<div class="rating__stars">
+											<svg width="90" height="16" viewBox="0 0 90 16">
+												<rect x="0" y="0" width="80%" height="100%" fill="#DC1919"></rect>
+											</svg>
+
+											<span class="visually-hidden">Оценка: 4 из 5</span>
+										</div>
+									</div>
+								</header>
+
+								<div class="content">
+									<p>
+										Уникальная Евро-2 комнатная квартира c террасой в 100 м2.С УК согласовано
+										и получено разрешение на постройку на террасе закрытой веранды,
+										а также возможна постройка двухуровневой пристройки,
+										любой вариант дизайнерского решения.
+									</p>
+
+									<p>
+										На террасу выведено электричество под освещение, отопление ( теплые полы).
+										В квартире произведен современный ремонт из высококачественных материалов.
+										Натяжной потолок из экологично-безопасной ткани.
+									</p>
+								</div>
+
+								<footer class="card__footer">
+									<time class="paragraph card__paragraph" datetime="2022-15-06">
+										15 июня 2022 года
+									</time>
+								</footer>
+							</article>
+						</li>
+					</ul>
+
+					@@include('fragments/pagination.html')
+				</div>
+
+				<div id="offers-block" class="row__col-12 row__col-md-8" data-call="hidden" data-name="agent-block">
+					<ul class="row">
+						<li class="row__col-12 row__col-md-6">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-1" class="visually-hidden like__input">
+
+										<label for="like-1" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<div class="slider apartment__illustration">
+									<div id="slider-1" class="slider__init swiper">
+										<ul class="slider__list apartment__slider-list swiper-wrapper">
+											<li class="slider__slide swiper-slide">
+												<picture>
+													<source type="image/avif"
+													        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+													<source type="image/webp"
+													        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+													<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+													     class="apartment__image"
+													     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+												</picture>
+											</li>
+
+											<li class="slider__slide swiper-slide">
+												<picture>
+													<source type="image/avif"
+													        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+													<source type="image/webp"
+													        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+													<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+													     class="apartment__image"
+													     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+												</picture>
+											</li>
+										</ul>
+									</div>
+
+									<button type="button"
+									        class="slider__control apartment__slider-control slider__control--left"
+									        data-slider="slider-1">
+										<svg width="13" height="12" viewBox="0 0 13 12">
+											<use xlink:href="img/sprite.svg#arrow-left"></use>
+										</svg>
+
+										<span class="visually-hidden">Прокрутить влево</span>
+									</button>
+
+									<button type="button"
+									        class="slider__control apartment__slider-control slider__control--right"
+									        data-slider="slider-1">
+										<svg width="13" height="12" viewBox="0 0 13 12">
+											<use xlink:href="img/sprite.svg#arrow-right"></use>
+										</svg>
+
+										<span class="visually-hidden">Прокрутить вправо</span>
+									</button>
+								</div>
+
+								<p class="tag apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="row__col-12 row__col-md-6">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-2" class="visually-hidden like__input">
+
+										<label for="like-2" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="tag apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="row__col-12 row__col-md-6">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-3" class="visually-hidden like__input">
+
+										<label for="like-3" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="tag apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+
+						<li class="row__col-12 row__col-md-6">
+							<article class="apartment apartment--small">
+								<div class="apartment__info">
+									<h3 class="apartment__title">
+										<a href="object.html" class="apartment__link">2—комн. квартира, 72 м2, 9/9 этаж</a>
+									</h3>
+
+									<p class="apartment__price">9 750 000 ₽</p>
+
+									<p class="apartment__address">р-н Железнодорожный, мкр. Боровое, ул. Федора Тютчева, 95М</p>
+
+									<p class="apartment__price-per-meter">75 676 ₽ за м<sup>2</sup></p>
+								</div>
+
+								<div class="apartment__buttons">
+									<div class="like apartment__like">
+										<input type="checkbox" id="like-4" class="visually-hidden like__input">
+
+										<label for="like-4" class="like__label">
+											<svg width="21" height="21" viewBox="0 0 21 21">
+												<use xlink:href="img/sprite.svg#like"></use>
+											</svg>
+
+											<span class="visually-hidden">Нравится</span>
+										</label>
+									</div>
+
+									<button type="button" class="button apartment__button button--fill"
+									        data-call="phone-number">
+										Показать номер
+									</button>
+								</div>
+
+								<picture class="apartment__illustration">
+									<source type="image/avif"
+									        srcset="img/slide-1-mobile@1x.avif 1x, img/slide-1-mobile@2x.avif 2x">
+									<source type="image/webp"
+									        srcset="img/slide-1-mobile@1x.webp 1x, img/slide-1-mobile@2x.webp 2x">
+
+									<img src="img/slide-1-mobile@1x.jpg" srcset="img/slide-1-mobile@2x.jpg 2x"
+									     class="apartment__image"
+									     width="1055" height="686" alt="3-к квартира, 57м2, 12/15 эт.">
+								</picture>
+
+								<p class="tag apartment__special">Кухня в подарок</p>
+							</article>
+						</li>
+					</ul>
+
+					@@include('fragments/pagination.html')
+				</div>
+
+				<div class="row__col-12 row__col-md-4">
+					<article class="card card--white card--p-sm-0">
+						<h2 class="visually-hidden">Связаться с агентом</h2>
+
+						<a href="tel:79009691809" class="phone">
+							<svg width="23" height="20" viewBox="0 0 23 20" class="phone__icon">
+								<use xlink:href="img/sprite.svg#phone"></use>
+							</svg>
+
+							7 (900) 969 18 09
+						</a>
+
+						<p class="paragraph card__paragraph">или заполните форму и я вам перезвоню</p>
+
+						<form class="row">
+							<div class="row__col-12">
+								<div class="button-group button-group--divided button-group--wrap button-group--small">
+									<input type="checkbox" id="action-buy" class="visually-hidden button-group__input"
+									       name="action">
+									<label for="action-buy" class="button-group__button">
+										Купить
+									</label>
+
+									<input type="checkbox" id="action-sell" class="visually-hidden button-group__input"
+									       name="action">
+									<label for="action-sell" class="button-group__button">
+										Продать
+									</label>
+
+									<input type="checkbox" id="action-exchange"
+									       class="visually-hidden button-group__input" name="action">
+									<label for="action-exchange" class="button-group__button">
+										Обменять
+									</label>
+
+									<input type="checkbox" id="action-sell-to-buy"
+									       class="visually-hidden button-group__input"
+									       name="action">
+									<label for="action-sell-to-buy" class="button-group__button">
+										Продать, чтобы купить
+									</label>
+								</div>
+							</div>
+
+							<div class="row__col-12">
+								<div class="form-control form-control--fill">
+									<input type="text" id="property-type" class="form-control__input"
+									       placeholder="Тип недвижимости">
+									<label for="property-type" class="form-control__label">Тип недвижимости</label>
+								</div>
+							</div>
+
+							<div class="row__col-12">
+								<div class="form-control form-control--fill">
+									<input type="tel" id="phone" class="form-control__input"
+									       placeholder="Номер телефона">
+									<label for="phone" class="form-control__label">Номер телефона</label>
+								</div>
+							</div>
+
+							<div class="row__col-12">
+								<button type="submit" class="button button--fill button--fluid">Перезвоните мне</button>
+							</div>
+						</form>
+					</article>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include('fragments/footer.html')
+
+<script src="js/general.js"></script>
+<script src="js/agent.js"></script>
+</body>
+</html>

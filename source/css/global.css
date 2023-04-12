@@ -29,9 +29,18 @@ sup {
   padding: 0 !important;
   border: none !important;
 
+  position: absolute;
+
   visibility: hidden !important;
   opacity: 0 !important;
-  transition: all 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+[data-call="hidden"] * {
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 [data-call="shown"] {
@@ -39,5 +48,5 @@ sup {
 
   visibility: visible;
   opacity: 1;
-  transition: all 200ms linear;
+  transition: opacity 200ms linear;
 }

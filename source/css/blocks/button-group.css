@@ -3,11 +3,18 @@
 }
 
 .button-group--divided {
+    gap: 9px;
+}
+
+.button-group--wrap {
+    flex-wrap: wrap;
+}
+
+.button-group--mt {
     margin-top: 17px;
 }
 
 .button-group--divided .button-group__button {
-    margin: 0 9px 0 0;
     border-left-color: var(--border-grey-color);
 }
 
@@ -15,6 +22,10 @@
 .button-group--divided .button-group__button:first-of-type,
 .button-group--divided .button-group__button:last-of-type {
     border-radius: 4px;
+}
+
+.button-group--small .button-group__button {
+    padding: 12px 15px;
 }
 
 .button-group__button {
@@ -56,9 +67,9 @@
 }
 
 .button-group__input:checked + .button-group__button {
-    color: var(--white-color);
+    color: var(--red-color);
 
-    background-color: var(--red-color);
+    border-color: var(--red-color);
 }
 
 .button-group__input:focus + .button-group__button {

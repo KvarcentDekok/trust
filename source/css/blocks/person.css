@@ -1,6 +1,11 @@
 .person {
     display: flex;
     gap: 18px;
+    flex-wrap: wrap;
+}
+
+.person--large {
+    gap: 32px;
 }
 
 .person__avatar {
@@ -9,6 +14,11 @@
     height: 130px;
 
     position: relative;
+}
+
+.person--large .person__avatar {
+    width: 185px;
+    height: 185px;
 }
 
 .person__image {
@@ -33,10 +43,32 @@
     line-height: 28px;
     color: #000000;
 }
+.person--large .person__name {
+    font-size: 27px;
+    line-height: 32px;
+}
 
 .person__paragraph {
-    margin-bottom: auto;
+    margin-bottom: 16px;
 
     line-height: 20px;
     color: #838383;
+}
+
+.person__paragraph--mb-auto {
+    margin-bottom: auto;
+}
+
+.person__characteristics {
+    padding-top: 32px;
+}
+
+.person__characteristics--mt-auto {
+    margin-top: auto;
+}
+
+@media (min-width: 900px) {
+    .person {
+        flex-wrap: nowrap;
+    }
 }

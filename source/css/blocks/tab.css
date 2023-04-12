@@ -1,0 +1,21 @@
+.tab {
+    display: block;
+    padding: 0;
+    border: none;
+    border-bottom: 2px solid transparent;
+
+    font-size: 14px;
+    line-height: 19px;
+    color: #818181;
+
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.tab:hover {
+    color: var(--red-color);
+}
+
+.tab--active {
+    border-color: var(--red-color);
+}
