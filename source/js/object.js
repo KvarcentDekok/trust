@@ -1,3 +1,4 @@
-import {initSliderObject} from "./modules/slider";
+import {initSliderObject, initSliderOffers} from "./modules/slider";
 
 initSliderObject();
+initSliderOffers();

@@ -90,19 +90,10 @@
 }
 
 .apartment__special {
-    padding: 6px 20px;
-    margin: 0;
-
     position: absolute;
     top: 27px;
     left: 29px;
     z-index: 1;
-
-    font-size: 13px;
-    color: #F5F5F5;
-
-    border-radius: 4px;
-    background-color: rgba(30, 30, 30, 0.7);
 }
 
 .apartment__phone-number {

@@ -1,6 +1,7 @@
 .button {
     border: 1px solid var(--red-color);
     padding: 20px;
+    display: block;
 
     text-align: center;
     text-decoration: none;

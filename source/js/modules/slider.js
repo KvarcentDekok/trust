@@ -43,7 +43,7 @@ export function initSliderApartment() {
 }
 
 export function initSliderObject() {
-    const sliderObject = new Swiper('.slider__init', {
+    const sliderObject = new Swiper('#gallery', {
         modules: [Navigation, Scrollbar],
         spaceBetween: 30,
         slidesPerView: 'auto',
@@ -59,7 +59,9 @@ export function initSliderObject() {
             dragClass: 'slider__scrollbar-drag'
         }
     });
+}
 
+export function initSliderOffers() {
     const sliderOffers = new Swiper('#similar-offers', {
         modules: [Navigation, Scrollbar],
         spaceBetween: 30,
