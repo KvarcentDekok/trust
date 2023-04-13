@@ -21,6 +21,10 @@
     width: 50%;
 }
 
+.row__col-10 {
+    width: calc(100% / 6 * 5);
+}
+
 .row__col-12 {
     width: 100%;
 }

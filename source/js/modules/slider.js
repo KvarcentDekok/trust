@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Scrollbar} from 'swiper';
+import Swiper, {Navigation, Scrollbar, Controller} from 'swiper';
 
 export function initSliderMain() {
     const sliderMain = new Swiper('.slider__init', {
@@ -97,4 +97,30 @@ export function initSliderResidentialComplex() {
             dragClass: 'slider__scrollbar-drag'
         }
     });
+}
+
+export function initSliderTimeline() {
+    const sliderYears = new Swiper('#slider-years', {
+        modules: [Controller],
+        spaceBetween: 20,
+        slidesPerView: 'auto',
+        slideToClickedSlide: true,
+        slidesOffsetAfter: 2000,
+        slideActiveClass: 'timeline__year--active',
+        breakpoints: {
+            900: {
+                spaceBetween: 48
+            }
+        }
+    });
+
+    const sliderHistory = new Swiper('#slider-history', {
+        modules: [Controller],
+        spaceBetween: 30,
+        lazy: true,
+        slidesOffsetAfter: 2000,
+    });
+
+    sliderYears.controller.control = sliderHistory;
+    sliderHistory.controller.control = sliderYears;
 }

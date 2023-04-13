@@ -39,6 +39,10 @@
     margin-top: 42px;
 }
 
+.home__indicators {
+    margin-top: 70px;
+}
+
 @media (min-width: 900px) {
     .home {
         background-image: image-set(

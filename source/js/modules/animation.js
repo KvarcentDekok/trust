@@ -1,5 +1,5 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,4 +45,49 @@ export function animationPeculiarities() {
 
     initAnimations(peculiarities, peculiaritiesStartPercent);
     initAnimations(features, featuresStartPercent);
+}
+
+export function animationIndicators() {
+    const elements = document.querySelectorAll('.indicators__wrapper');
+    const tl = gsap.timeline();
+
+    gsap.registerEffect({
+        name: 'counter',
+        extendTimeline: true,
+        defaults: {
+            end: 0,
+            duration: 0.5,
+            ease: 'power1',
+            increment: 1,
+        },
+        effect: (targets, config) => {
+            const tl = gsap.timeline();
+
+            targets[0].innerText = targets[0].innerText.replace(/,/g, '');
+
+            tl.to(targets, {
+                duration: config.duration,
+                innerText: config.end,
+                snap: {innerText: config.increment},
+                modifiers: {
+                    innerText: (innerText) => {
+                        return gsap.utils.snap(config.increment, innerText).toString()
+                            .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                    }
+                },
+                ease: config.ease
+            }, 0);
+
+            return tl;
+        }
+    })
+
+    for (let i = 0; i < elements.length; i++) {
+        const indicator = elements[i].querySelector('.indicators__indicator');
+        const number = indicator.querySelector('.indicators__number');
+        const endValue = indicator.getAttribute('aria-label');
+
+        tl.from(elements[i], {opacity: 0}, '+=0.5');
+        tl.counter(number, {end: endValue}, '-=0.5');
+    }
 }

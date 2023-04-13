@@ -16,6 +16,10 @@
     line-height: 14px;
 }
 
+.breadcrumbs--white .breadcrumbs__item {
+    color: var(--white-color);
+}
+
 .breadcrumbs__item::after {
     position: absolute;
     top: 50%;

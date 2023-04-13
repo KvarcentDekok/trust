@@ -1,0 +1,27 @@
+.timeline {
+    padding-top: 0;
+}
+
+.timeline__year {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 45px;
+    color: #D9D9D9;
+
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+
+.timeline__year--active {
+    width: 200px;
+
+    font-size: 80px;
+    line-height: 80px;
+
+    color: var(--red-color);
+}
