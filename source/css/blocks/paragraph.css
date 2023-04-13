@@ -10,3 +10,11 @@
 .paragraph--small {
     font-size: 12px;
 }
+
+.paragraph--pt {
+    padding-top: 15px;
+}
+
+.paragraph--grey {
+    color: #727272;
+}

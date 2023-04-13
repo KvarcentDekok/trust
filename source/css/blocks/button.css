@@ -93,6 +93,11 @@
     padding-right: 0;
 }
 
+.button--career {
+    max-width: 295px;
+    margin-top: 90px;
+}
+
 @media (min-width: 900px) {
     .button--ml-md-auto {
         margin-left: auto;

@@ -1,0 +1,18 @@
+.tagline {
+    margin: 0;
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+@media (min-width: 900px) {
+    .tagline {
+        width: auto;
+
+        font-size: 50px;
+        line-height: 55px;
+    }
+}
