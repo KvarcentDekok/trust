@@ -116,6 +116,32 @@
     order: 1;
     margin-left: auto;
     margin-right: 16px;
+
+    position: relative;
+}
+
+.header__like::before {
+    width: 16px;
+    height: 16px;
+
+    position: absolute;
+    top: 4px;
+    right: 4px;
+
+    content: attr(data-amount);
+    color: var(--white-color);
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+
+    background-color: var(--red-color);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.header__like:not([data-amount])::before,
+.header__like[data-amount="0"]::before {
+    content: none;
 }
 
 @media (min-width: 900px) {
