@@ -94,7 +94,8 @@
     margin-top: 20px;
 }
 
-.card--p-sm-0 {
+.card--p-sm-0,
+.card--p-0 {
     padding: 0;
 }
 
@@ -144,6 +145,15 @@
 @media (min-width: 900px) {
     .card--p-sm-0 {
         padding: 22px 32px;
+    }
+
+    .card--lightgrey {
+        background-color: #F3F3F3;
+    }
+
+    .card__title--large {
+        font-size: 27px;
+        line-height: 32px;
     }
 }
 

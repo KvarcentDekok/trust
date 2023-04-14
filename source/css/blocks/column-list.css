@@ -1,0 +1,23 @@
+.column-list {
+    --column-gap: 50px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.column-list__item {
+    width: calc(100% - var(--column-gap) / 2);
+    margin-bottom: 16px;
+
+    font-size: 14px;
+    line-height: 22px;
+    color: #1A1A1A;
+}
+
+@media (min-width: 900px) {
+    .column-list {
+        columns: 2;
+    }
+}
