@@ -125,8 +125,8 @@
     height: 16px;
 
     position: absolute;
-    top: 4px;
-    right: 4px;
+    top: -4px;
+    right: -4px;
 
     content: attr(data-amount);
     color: var(--white-color);
