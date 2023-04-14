@@ -33,10 +33,6 @@
     transform: translateX(-100%);
 }
 
-.questionnaire__step--done {
-    background: url("../img/questionnaire-done.webp") no-repeat center right 103px;
-}
-
 .questionnaire__step--active {
     position: initial;
 
@@ -47,6 +43,11 @@
 
 .questionnaire__step--active ~ .questionnaire__step {
     transform: translateX(100%);
+}
+
+.questionnaire__step--done {
+    background: url("../img/questionnaire-done.webp") no-repeat center;
+    background-size: 310px;
 }
 
 .questionnaire__question {
@@ -118,6 +119,7 @@
 
 .questionnaire__step--done .questionnaire__controls {
     grid-column: 1 / 2;
+    grid-row: 4 / 5;
     margin-left: 0;
     margin-right: auto;
 }
@@ -174,6 +176,11 @@
         grid-template-columns: 476px 629px;
         grid-template-rows: 144px 58px;
         row-gap: 55px;
+    }
+
+    .questionnaire__step--done {
+        background: url("../img/questionnaire-done.webp") no-repeat center right 103px;
+        background-size: initial;
     }
 
     .questionnaire__answer-wrapper {
