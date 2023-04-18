@@ -7,10 +7,6 @@
         <div class="row">
           <div class="row__col-12 row__col-md-6">
             <p class="questionnaire__question">Что вы хотите сделать?</p>
-            <p class="paragraph questionnaire__paragraph">
-              «Траст» входит в состав Российской Гильдии Риэлторов.
-              Стандарты качества услуг компании сертифицированы, деятельность застрахована.
-            </p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
@@ -18,7 +14,7 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_1_1" class="visually-hidden questionnaire__input"
-                         name="answer_1">
+                         name="answer_1" data-choice="1">
                   <label for="answer_1_1" class="questionnaire__label">Купить недвижимость</label>
                 </div>
               </div>
@@ -26,7 +22,7 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_1_2" class="visually-hidden questionnaire__input"
-                         name="answer_1">
+                         name="answer_1" data-choice="1">
                   <label for="answer_1_2" class="questionnaire__label">Обменять недвижимость</label>
                 </div>
               </div>
@@ -34,7 +30,7 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_1_3" class="visually-hidden questionnaire__input"
-                         name="answer_1">
+                         name="answer_1" data-choice="2">
                   <label for="answer_1_3" class="questionnaire__label">Продать недвижимость</label>
                 </div>
               </div>
@@ -42,19 +38,15 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_1_4" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_1_4" class="questionnaire__label">Ещё что-то сделать</label>
+                         name="answer_1" data-choice="3">
+                  <label for="answer_1_4" class="questionnaire__label">Получить консультацию</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row row--mt">
-          <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__step-point">Вопрос 1 из 5</p>
-          </div>
-
+        <div class="row row--mt row--right">
           <div class="row__col-12 row__col-md-6">
             <div class="row">
               <div class="row__col-3 row__col-md-6">
@@ -70,7 +62,7 @@
               <div class="row__col-9 row__col-md-6">
                 <button type="button"
                         class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
-                        data-set-step="1" disabled>
+                        disabled data-set-step>
                   Далее
                 </button>
               </div>
@@ -82,11 +74,7 @@
       <li class="questionnaire__step" data-index="1">
         <div class="row">
           <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__question">Что вы хотите сделать?</p>
-            <p class="paragraph questionnaire__paragraph">
-              «Траст» входит в состав Российской Гильдии Риэлторов.
-              Стандарты качества услуг компании сертифицированы, деятельность застрахована.
-            </p>
+            <p class="questionnaire__question">Какую недвижимость вы хотите купить?</p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
@@ -94,47 +82,43 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_2_1" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_2_1" class="questionnaire__label">Купить недвижимость</label>
+                         name="answer_2" data-choice="4">
+                  <label for="answer_2_1" class="questionnaire__label">Квартира</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_2_2" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_2_2" class="questionnaire__label">Обменять недвижимость</label>
+                         name="answer_2" data-choice="5">
+                  <label for="answer_2_2" class="questionnaire__label">Коммерческая недвижимость</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_2_3" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_2_3" class="questionnaire__label">Продать недвижимость</label>
+                         name="answer_2" data-choice="5">
+                  <label for="answer_2_3" class="questionnaire__label">Дом</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_2_4" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_2_4" class="questionnaire__label">Ещё что-то сделать</label>
+                         name="answer_2" data-choice="6">
+                  <label for="answer_2_4" class="questionnaire__label">Участок</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row row--mt">
-          <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__step-point">Вопрос 2 из 5</p>
-          </div>
-
+        <div class="row row--mt row--right">
           <div class="row__col-12 row__col-md-6">
             <div class="row">
               <div class="row__col-3 row__col-md-6">
-                <button type="button" class="questionnaire__back" data-set-step="0">
+                <button type="button" class="questionnaire__back" data-set-step>
                   <svg width="13" height="12" viewBox="0 0 13 12">
                     <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
@@ -146,7 +130,7 @@
               <div class="row__col-9 row__col-md-6">
                 <button type="button"
                         class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
-                        data-set-step="2" disabled>
+                        disabled data-set-step>
                   Далее
                 </button>
               </div>
@@ -158,11 +142,7 @@
       <li class="questionnaire__step" data-index="2">
         <div class="row">
           <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__question">Что вы хотите сделать?</p>
-            <p class="paragraph questionnaire__paragraph">
-              «Траст» входит в состав Российской Гильдии Риэлторов.
-              Стандарты качества услуг компании сертифицированы, деятельность застрахована.
-            </p>
+            <p class="questionnaire__question">Какую недвижимость вы хотите продать?</p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
@@ -170,47 +150,43 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_3_1" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_3_1" class="questionnaire__label">Купить недвижимость</label>
+                         name="answer_3" data-choice="7">
+                  <label for="answer_3_1" class="questionnaire__label">Квартира</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_3_2" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_3_2" class="questionnaire__label">Обменять недвижимость</label>
+                         name="answer_3" data-choice="7">
+                  <label for="answer_3_2" class="questionnaire__label">Коммерческая недвижимость</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_3_3" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_3_3" class="questionnaire__label">Продать недвижимость</label>
+                         name="answer_3" data-choice="7">
+                  <label for="answer_3_3" class="questionnaire__label">Дом</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_3_4" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_3_4" class="questionnaire__label">Ещё что-то сделать</label>
+                         name="answer_3" data-choice="8">
+                  <label for="answer_3_4" class="questionnaire__label">Участок</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row row--mt">
-          <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__step-point">Вопрос 3 из 5</p>
-          </div>
-
+        <div class="row row--mt row--right">
           <div class="row__col-12 row__col-md-6">
             <div class="row">
               <div class="row__col-3 row__col-md-6">
-                <button type="button" class="questionnaire__back" data-set-step="1">
+                <button type="button" class="questionnaire__back" data-set-step>
                   <svg width="13" height="12" viewBox="0 0 13 12">
                     <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
@@ -222,7 +198,7 @@
               <div class="row__col-9 row__col-md-6">
                 <button type="button"
                         class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
-                        data-set-step="3" disabled>
+                        disabled data-set-step>
                   Далее
                 </button>
               </div>
@@ -234,11 +210,7 @@
       <li class="questionnaire__step" data-index="3">
         <div class="row">
           <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__question">Что вы хотите сделать?</p>
-            <p class="paragraph questionnaire__paragraph">
-              «Траст» входит в состав Российской Гильдии Риэлторов.
-              Стандарты качества услуг компании сертифицированы, деятельность застрахована.
-            </p>
+            <p class="questionnaire__question">Консультацию какого специалиста?</p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
@@ -246,47 +218,43 @@
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_4_1" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_4_1" class="questionnaire__label">Купить недвижимость</label>
+                         name="answer_4" data-choice="10">
+                  <label for="answer_4_1" class="questionnaire__label">Риэлтор</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_4_2" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_4_2" class="questionnaire__label">Обменять недвижимость</label>
+                         name="answer_4" data-choice="10">
+                  <label for="answer_4_2" class="questionnaire__label">Ипотечный брокер</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_4_3" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_4_3" class="questionnaire__label">Продать недвижимость</label>
+                         name="answer_4" data-choice="10">
+                  <label for="answer_4_3" class="questionnaire__label">Юрист</label>
                 </div>
               </div>
 
               <div class="row__col-12 row__col-md-6">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_4_4" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_4_4" class="questionnaire__label">Ещё что-то сделать</label>
+                         name="answer_4" data-choice="10">
+                  <label for="answer_4_4" class="questionnaire__label">HR-менеджер</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row row--mt">
-          <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__step-point">Вопрос 4 из 5</p>
-          </div>
-
+        <div class="row row--mt row--right">
           <div class="row__col-12 row__col-md-6">
             <div class="row">
               <div class="row__col-3 row__col-md-6">
-                <button type="button" class="questionnaire__back" data-set-step="2">
+                <button type="button" class="questionnaire__back" data-set-step>
                   <svg width="13" height="12" viewBox="0 0 13 12">
                     <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
@@ -298,7 +266,7 @@
               <div class="row__col-9 row__col-md-6">
                 <button type="button"
                         class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
-                        data-set-step="4" disabled>
+                        disabled data-set-step>
                   Далее
                 </button>
               </div>
@@ -310,59 +278,543 @@
       <li class="questionnaire__step" data-index="4">
         <div class="row">
           <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__question">Что вы хотите сделать?</p>
-            <p class="paragraph questionnaire__paragraph">
-              «Траст» входит в состав Российской Гильдии Риэлторов.
-              Стандарты качества услуг компании сертифицированы, деятельность застрахована.
-            </p>
+            <p class="questionnaire__question">Вторичка или новостройка?</p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
             <div class="row">
-              <div class="row__col-12 row__col-md-6">
+              <div class="row__col-12">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_5_1" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_5_1" class="questionnaire__label">Купить недвижимость</label>
+                         name="answer_5" data-choice="5">
+                  <label for="answer_5_1" class="questionnaire__label">Вторичка</label>
                 </div>
               </div>
 
-              <div class="row__col-12 row__col-md-6">
+              <div class="row__col-12">
                 <div class="questionnaire__answer">
                   <input type="radio" id="answer_5_2" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_5_2" class="questionnaire__label">Обменять недвижимость</label>
-                </div>
-              </div>
-
-              <div class="row__col-12 row__col-md-6">
-                <div class="questionnaire__answer">
-                  <input type="radio" id="answer_5_3" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_5_3" class="questionnaire__label">Продать недвижимость</label>
-                </div>
-              </div>
-
-              <div class="row__col-12 row__col-md-6">
-                <div class="questionnaire__answer">
-                  <input type="radio" id="answer_5_4" class="visually-hidden questionnaire__input"
-                         name="answer_1">
-                  <label for="answer_5_4" class="questionnaire__label">Ещё что-то сделать</label>
+                         name="answer_5" data-choice="5">
+                  <label for="answer_5_2" class="questionnaire__label">Новостройка</label>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row row--mt">
+        <div class="row row--mt row--right">
           <div class="row__col-12 row__col-md-6">
-            <p class="questionnaire__step-point">Вопрос 5 из 5</p>
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step>
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="5">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">В каком районе города вас интересует?</p>
           </div>
 
           <div class="row__col-12 row__col-md-6">
             <div class="row">
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_1" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_1" class="questionnaire__label">Не важно</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_2" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_2" class="questionnaire__label">Область</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_3" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_3" class="questionnaire__label">Коминтерновский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_4" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_4" class="questionnaire__label">Центральный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_5" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_5" class="questionnaire__label">Ленинский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_6" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_6" class="questionnaire__label">Советский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_7" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_7" class="questionnaire__label">Железнодорожный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_6_8" class="visually-hidden questionnaire__input"
+                         name="answer_6" data-choice="9">
+                  <label for="answer_6_8" class="questionnaire__label">Левобережный</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
               <div class="row__col-3 row__col-md-6">
-                <button type="button" class="questionnaire__back" data-set-step="3">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step>
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="6">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">В каком районе города вас интересует?</p>
+          </div>
+
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_1" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_1" class="questionnaire__label">Не важно</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_2" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_2" class="questionnaire__label">Область</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_3" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_3" class="questionnaire__label">Коминтерновский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_4" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_4" class="questionnaire__label">Центральный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_5" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_5" class="questionnaire__label">Ленинский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_6" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_6" class="questionnaire__label">Советский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_7" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_7" class="questionnaire__label">Железнодорожный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="checkbox" id="answer_7_8" class="visually-hidden questionnaire__input"
+                         name="answer_7" data-choice="10">
+                  <label for="answer_7_8" class="questionnaire__label">Левобережный</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step>
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="7">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">В каком районе города ваша недвижимость?</p>
+          </div>
+
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_1" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_1" class="questionnaire__label">Коминтерновский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_2" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_2" class="questionnaire__label">Центральный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_3" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_3" class="questionnaire__label">Ленинский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_4" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_4" class="questionnaire__label">Советский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_5" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_5" class="questionnaire__label">Железнодорожный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_6" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_6" class="questionnaire__label">Левобережный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_8_7" class="visually-hidden questionnaire__input"
+                         name="answer_8" data-choice="9">
+                  <label for="answer_8_7" class="questionnaire__label">Область</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step>
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="8">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">В каком районе города ваша недвижимость?</p>
+          </div>
+
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_1" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_1" class="questionnaire__label">Коминтерновский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_2" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_2" class="questionnaire__label">Центральный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_3" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_3" class="questionnaire__label">Ленинский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_4" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_4" class="questionnaire__label">Советский</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_5" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_5" class="questionnaire__label">Железнодорожный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_6" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_6" class="questionnaire__label">Левобережный</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-3">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_9_7" class="visually-hidden questionnaire__input"
+                         name="answer_9" data-choice="10">
+                  <label for="answer_9_7" class="questionnaire__label">Область</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step>
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="9">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">Сколько комнат?</p>
+          </div>
+
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_1" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_1" class="questionnaire__label">Студия</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_2" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_2" class="questionnaire__label">1</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_3" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_3" class="questionnaire__label">2</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_4" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_4" class="questionnaire__label">3</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_5" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_5" class="questionnaire__label">4 и более</label>
+                </div>
+              </div>
+
+              <div class="row__col-12 row__col-md-4">
+                <div class="questionnaire__answer">
+                  <input type="radio" id="answer_10_6" class="visually-hidden questionnaire__input"
+                         name="answer_10" data-choice="10">
+                  <label for="answer_10_6" class="questionnaire__label">Свободной планировки</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
+                  <svg width="13" height="12" viewBox="0 0 13 12">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                  </svg>
+
+                  <span class="visually-hidden">Назад</span>
+                </button>
+              </div>
+
+              <div class="row__col-9 row__col-md-6">
+                <button type="button"
+                        class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
+                        disabled data-set-step="10">
+                  Далее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="questionnaire__step" data-index="10">
+        <div class="row">
+          <div class="row__col-12 row__col-md-6">
+            <p class="questionnaire__question">Укажите ваш номер телефона</p>
+          </div>
+
+          <div class="row__col-12 row__col-md-6">
+            <div class="form-control form-control--fill">
+              <input type="tel" id="phone" class="form-control__input"
+                     placeholder="Номер телефона">
+              <label for="phone" class="form-control__label">Номер телефона</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row--mt row--right">
+          <div class="row__col-12 row__col-md-6">
+            <div class="row">
+              <div class="row__col-3 row__col-md-6">
+                <button type="button" class="questionnaire__back" data-set-step>
                   <svg width="13" height="12" viewBox="0 0 13 12">
                     <use xlink:href="img/sprite.svg#arrow-left"></use>
                   </svg>
@@ -374,8 +826,8 @@
               <div class="row__col-9 row__col-md-6">
                 <button type="submit"
                         class="button questionnaire__button button--fill button--fluid js-questionnaire-continue"
-                        data-set-step="5" disabled>
-                  Готово
+                        data-set-step="11">
+                  Отправить
                 </button>
               </div>
             </div>
@@ -383,7 +835,7 @@
         </div>
       </li>
 
-      <li class="questionnaire__step questionnaire__step--done" data-index="5">
+      <li class="questionnaire__step questionnaire__step--done" data-index="11">
         <div class="row">
           <div class="row__col-12 row__col-md-4">
             <p class="questionnaire__question">Ваша заявка принята, спасибо</p>

@@ -12,6 +12,10 @@
     margin-top: 40px;
 }
 
+.row--right {
+    justify-content: right;
+}
+
 [class*="row__col"] {
     padding-left: 10px;
     padding-right: 10px;

@@ -3,20 +3,27 @@ const steps = questionnaireForm.querySelectorAll('.questionnaire__step');
 const resetButton = questionnaireForm.querySelector('[type="reset"]');
 const continueButtons = questionnaireForm.querySelectorAll('.js-questionnaire-continue');
 
-function validateStep(step) {
+function handleStep(step) {
     const answerInputs = step.querySelectorAll('.questionnaire__input');
-    const button = step.querySelector('.js-questionnaire-continue');
+    const buttonContinue = step.querySelector('.js-questionnaire-continue');
+    const currentStepIndex = step.dataset.index;
 
     for (let i = 0; i < answerInputs.length; i++) {
         answerInputs[i].addEventListener('change', () => {
-            onAnswerChange(answerInputs[i], button);
+            onAnswerChange(answerInputs[i], buttonContinue, currentStepIndex);
         });
     }
 }
 
-function onAnswerChange(answerInput, button) {
+function onAnswerChange(answerInput, buttonContinue, currentStepIndex) {
+    const selectedStepIndex = answerInput.dataset.choice;
+    const selectedStep = document.querySelector(`[data-index="${selectedStepIndex}"]`);
+    const buttonBack = selectedStep.querySelector('.questionnaire__back');
+
     if (answerInput.checked) {
-        button.disabled = false;
+        buttonContinue.disabled = false;
+        buttonContinue.dataset.setStep = selectedStepIndex;
+        buttonBack.dataset.setStep = currentStepIndex;
     }
 }
 
@@ -24,13 +31,15 @@ function resetForm() {
     questionnaireForm.reset();
 
     for (let i = 0; i < continueButtons.length; i++) {
-        continueButtons[i].disabled = true;
+        if (continueButtons[i].type !== 'submit') {
+            continueButtons[i].disabled = true;
+        }
     }
 }
 
 function questionnaire() {
     for (let i = 0; i < steps.length; i++) {
-        validateStep(steps[i]);
+        handleStep(steps[i]);
     }
 
     resetButton.addEventListener('click', () => {
