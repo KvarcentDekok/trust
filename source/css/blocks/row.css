@@ -17,8 +17,16 @@
     padding-right: 10px;
 }
 
+.row__col-3 {
+    width: 25%;
+}
+
 .row__col-6 {
     width: 50%;
+}
+
+.row__col-9 {
+    width: 75%;
 }
 
 .row__col-10 {
