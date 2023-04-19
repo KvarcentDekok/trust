@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/KvarcentDekok/trust#readme",
   "dependencies": {
+    "@fancyapps/ui": "^5.0.16",
     "accordion-js": "^3.3.4",
     "cleave.js": "^1.6.0",
     "custom-select": "^1.1.15",

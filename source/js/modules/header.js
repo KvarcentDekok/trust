@@ -1,4 +1,4 @@
-const CLASSNAME_EXPANDED = 'header--expanded'
+const CLASSNAME_EXPANDED = 'header--expanded';
 const ToggleText = {
     Expanded: 'Свернуть меню',
     Minimized: 'Развернуть меню'

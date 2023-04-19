@@ -7,6 +7,7 @@ import inputMask from "./modules/input-mask";
 import toggleVisibility from "./modules/toggle-visibility";
 import video from "./modules/video";
 import like from "./modules/like";
+import gallery from "./modules/gallery";
 
 dropdown();
 header();
@@ -17,3 +18,4 @@ inputMask();
 toggleVisibility();
 video();
 like();
+gallery()

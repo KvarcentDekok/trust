@@ -20,7 +20,8 @@ const plugins = [
     'node_modules/swiper/swiper.min.css',
     'node_modules/swiper/modules/scrollbar/scrollbar.min.css',
     'node_modules/accordion-js/dist/accordion.min.css',
-    'node_modules/custom-select/src/css/custom-select.css'
+    'node_modules/custom-select/src/css/custom-select.css',
+    'node_modules/@fancyapps/ui/dist/fancybox/fancybox.css'
 ];
 
 const config = (file) => ({
