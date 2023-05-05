@@ -8,7 +8,6 @@ const server = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const del = require("del");
-const htmlmin = require("gulp-htmlmin");
 const webpackStream = require("webpack-stream");
 const webpackConfig = require("./webpack.config.js");
 const concat = require('gulp-concat');
@@ -53,7 +52,6 @@ gulp.task("css:libs", () => {
 gulp.task("html", () => {
     return gulp.src("source/*.html")
         .pipe(include())
-        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("build"));
 });
 

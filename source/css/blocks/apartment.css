@@ -79,6 +79,7 @@
 
 .apartment__illustration {
     width: calc(100% + var(--apartment-padding) * 2);
+    max-width: initial;
     order: -1;
     margin: calc(var(--apartment-padding) * -1);
 
