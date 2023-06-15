@@ -25,6 +25,14 @@
     font-weight: 600;
 }
 
+.section__subtitle {
+    margin: 0 0 15px;
+
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 600;
+}
+
 .section__paragraph {
     display: none;
 
@@ -81,6 +89,11 @@
 
     .section__title--ml {
         margin-left: auto;
+    }
+
+    .section__subtitle {
+        font-size: 27px;
+        line-height: 32px;
     }
 
     .section__paragraph {

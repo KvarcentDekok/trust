@@ -41,6 +41,12 @@
     width: 100%;
 }
 
+@media (max-width: 900px) {
+    .row__col-0 {
+        display: none;
+    }
+}
+
 @media (min-width: 900px) {
     .row__col-sm-4 {
         width: calc(100% / 3);
