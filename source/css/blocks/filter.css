@@ -174,7 +174,10 @@
     font-weight: normal;
 }
 
-.filter__external-button {
+.filter__external-buttons {
+    display: flex;
+    gap: 16px;
+
     position: absolute;
     top: 100%;
     right: 0;

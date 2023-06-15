@@ -62,3 +62,6 @@
 @import url("blocks/indicators.css");
 @import url("blocks/timeline.css");
 @import url("blocks/column-list.css");
+@import url("blocks/contacts.css");
+@import url("blocks/contact.css");
+@import url("blocks/contacts-toggle.css");

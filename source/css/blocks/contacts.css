@@ -1,0 +1,28 @@
+.contacts {
+    margin: 0 0 40px;
+    padding: 0;
+    width: 454px;
+
+    position: relative;
+    z-index: 1;
+
+    border-radius: 4px;
+    list-style: none;
+}
+
+.contacts__item:not(:last-of-type) {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+@media (max-width: 900px) {
+    .contacts {
+        width: 100%;
+        margin-top: 30px;
+
+        border-radius: 0;
+    }
+
+    .contacts--hidden {
+        display: none;
+    }
+}

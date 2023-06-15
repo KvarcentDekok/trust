@@ -339,10 +339,18 @@
 				</ul>
 
 				<button type="submit" class="button filter__button button--fill">Показать (45)</button>
-				<button type="button" class="button filter__external-button button--linear button--filter"
-				        data-call="modal" aria-controls="more-filters" aria-haspopup="dialog">
-					Ещё фильтры
-				</button>
+
+				<div class="filter__external-buttons">
+					<button type="button" class="button button--linear"
+							data-call="modal" aria-controls="map" aria-haspopup="dialog">
+						Показать на карте
+					</button>
+
+					<button type="button" class="button button--linear button--filter"
+							data-call="modal" aria-controls="more-filters" aria-haspopup="dialog">
+						Ещё фильтры
+					</button>
+				</div>
 			</form>
 		</div>
 	</section>
@@ -1146,10 +1154,29 @@
 			</form>
 		</div>
 	</div>
+
+	<div class="modal" role="dialog" id="map" tabindex="-1" data-call="close" aria-modal="true"
+		 aria-labelledby="map-label">
+		<div class="modal__content">
+			<h2 class="visually-hidden" id="map-label">Предложения</h2>
+
+			<button type="button" class="modal__close" data-call="close">
+				<svg width="33" height="32" viewBox="0 0 33 32">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+
+			<div id="catalog-map" class="map"></div>
+		</div>
+	</div>
 </main>
 
 @@include('fragments/footer.html')
 
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9a55ddef-ac96-421c-9439-96a8d9479388&lang=ru_RU"
+		type="text/javascript"></script>
 <script src="js/general.js"></script>
 <script src="js/catalog.js"></script>
 </body>

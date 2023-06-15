@@ -65,7 +65,8 @@ gulp.task("js", () => {
         './source/js/new-building.js',
         './source/js/agent.js',
         './source/js/company.js',
-        './source/js/career.js'
+        './source/js/career.js',
+        './source/js/contacts.js'
     ])
         .pipe(named())
         .pipe(webpackStream(webpackConfig))

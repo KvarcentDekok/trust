@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Новости | Траст</title>
+</head>
+
+<body>
+@@include('fragments/header.html')
+
+<main class="main">
+    <section class="section section--first">
+        <button type="button" class="contacts-toggle" data-list-text="Смотреть списком" data-map-text="Смотреть на карте">
+            Смотреть списком
+        </button>
+
+        <h1 class="visually-hidden">Офисы и контакты</h1>
+
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66e4b8ac5f1e93cefb001c59a3475589137782641af144b78ecdbb976e556bdb&amp;source=constructor"
+                class="map map--contacts" width="100%" height="100%"></iframe>
+
+        <div class="container">
+            <ul class="contacts contacts--hidden">
+                <li class="contacts__item contact">
+                    <h2 class="contact__title">Офис «Европейский»</h2>
+
+                    <p class="contact__address">Ленинский проспект, 96а</p>
+
+                    <p class="contact__time">09:00 до 18:00</p>
+
+                    <a href="tel:79244438688" class="contact__phone">7 (924) 443-86-88</a>
+
+                    <a href="mailto:lbereg@trastvrn.ru" class="contact__email">lbereg@trastvrn.ru</a>
+                </li>
+
+                <li class="contacts__item contact">
+                    <h2 class="contact__title">Офис «Жемчужина»</h2>
+
+                    <p class="contact__address">Ленинский проспект, 96а</p>
+
+                    <p class="contact__time">09:00 до 18:00</p>
+
+                    <a href="tel:79244438688" class="contact__phone">7 (924) 443-86-88</a>
+
+                    <a href="mailto:lbereg@trastvrn.ru" class="contact__email">lbereg@trastvrn.ru</a>
+                </li>
+
+                <li class="contacts__item contact">
+                    <h2 class="contact__title">Офис «Московский»</h2>
+
+                    <p class="contact__address">Ленинский проспект, 96а</p>
+
+                    <p class="contact__time">09:00 до 18:00</p>
+
+                    <a href="tel:79244438688" class="contact__phone">7 (924) 443-86-88</a>
+
+                    <a href="mailto:lbereg@trastvrn.ru" class="contact__email">lbereg@trastvrn.ru</a>
+                </li>
+
+                <li class="contacts__item contact">
+                    <h2 class="contact__title">Офис «Кружевной»</h2>
+
+                    <p class="contact__address">Ленинский проспект, 96а</p>
+
+                    <p class="contact__time">09:00 до 18:00</p>
+
+                    <a href="tel:79244438688" class="contact__phone">7 (924) 443-86-88</a>
+
+                    <a href="mailto:lbereg@trastvrn.ru" class="contact__email">lbereg@trastvrn.ru</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+@@include('fragments/footer.html')
+
+<script src="js/general.js"></script>
+<script src="js/contacts.js"></script>
+</body>
+</html>

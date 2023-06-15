@@ -1,0 +1,78 @@
+.contact {
+    padding: 25px 30px 30px 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    background-color: var(--white-color);
+}
+
+.contact__title {
+    width: 100%;
+    margin: 0 0 16px;
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.contact__address {
+    width: 50%;
+    margin: 0 0 8px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.contact__time {
+    width: 50%;
+    margin: 0 0 8px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #838383;
+    text-align: right;
+}
+
+.contact__phone {
+    display: block;
+    width: 50%;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--red-color);
+    text-decoration: none;
+}
+
+.contact__phone:hover {
+    text-decoration: underline;
+}
+
+.contact__phone:active {
+    opacity: 0.6;
+}
+
+.contact__email {
+    display: block;
+    width: 50%;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    text-decoration: none;
+    text-align: right;
+}
+
+.contact__email:hover {
+    color: var(--red-color);
+}
+
+.contact__email:active {
+    opacity: 0.6;
+}
