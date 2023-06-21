@@ -3,6 +3,8 @@
 }
 
 .slider__init {
+    height: 100%;
+
     overflow: hidden;
 }
 

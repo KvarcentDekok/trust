@@ -80,14 +80,23 @@
 .apartment__illustration {
     width: calc(100% + var(--apartment-padding) * 2);
     max-width: initial;
+    height: 270px;
     order: -1;
     margin: calc(var(--apartment-padding) * -1);
+
+    position: relative;
 
     overflow: hidden;
 }
 
 .apartment__image {
     width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 .apartment__special {
