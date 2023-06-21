@@ -2,10 +2,14 @@ const phoneButtons = document.querySelectorAll('[data-call="phone-number"]');
 
 function onButtonClick(evt) {
     const phoneNumberLink = document.createElement('a');
+    const phone = evt.target.dataset.phone;
 
-    phoneNumberLink.href = 'tel:+79675648981';
+    phoneNumberLink.href = `tel:${phone
+        .replaceAll(' ', '')
+        .replaceAll('(', '')
+        .replaceAll(')', '')}`;
     phoneNumberLink.classList.add('button', 'apartment__button', 'button--fill');
-    phoneNumberLink.textContent = '+7 (967) 564 89 81';
+    phoneNumberLink.textContent = phone;
     evt.target.replaceWith(phoneNumberLink);
 }
 
