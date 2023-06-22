@@ -14,6 +14,9 @@
     height: 130px;
 
     position: relative;
+
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 .person--large .person__avatar {
@@ -26,7 +29,6 @@
     top: 50%;
     left: 50%;
 
-    border-radius: 4px;
     transform: translate(-50%, -50%);
 }
 
