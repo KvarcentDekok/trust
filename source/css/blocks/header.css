@@ -61,7 +61,7 @@
 .header__button {
     display: none;
     order: 2;
-    margin-left: auto;
+    margin-left: 16px;
 
     text-transform: capitalize;
 }

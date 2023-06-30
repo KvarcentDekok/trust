@@ -124,3 +124,15 @@ export function initSliderTimeline() {
     sliderYears.controller.control = sliderHistory;
     sliderHistory.controller.control = sliderYears;
 }
+
+export function initSliderNewBuilding() {
+    const sliderNewBuilding = new Swiper('#new-building-slider', {
+        modules: [Navigation],
+        lazy: true,
+        navigation: {
+            nextEl: '.slider__control.slider__control--right.new-building-slider__control',
+            prevEl: '.slider__control.slider__control--left.new-building-slider__control',
+            disabledClass: 'slider__control--disabled'
+        },
+    });
+}

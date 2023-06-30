@@ -1,0 +1,19 @@
+.new-building-slider__control.slider__control--left {
+    left: 8px;
+}
+
+.new-building-slider__control.slider__control--right {
+    right: 8px;
+}
+
+.new-building-slider__slide {
+    height: 442px;
+}
+
+.new-building-slider__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
