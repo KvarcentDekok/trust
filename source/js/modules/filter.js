@@ -54,7 +54,11 @@ function filter() {
     for (let i = 0; i < filtersToCount.length; i++) {
         filtersToCount[i].addEventListener('change', () => {
             onChangeFilter(filtersToCount[i]);
-        })
+        });
+
+        if (filtersToCount[i].checked) {
+            onChangeFilter(filtersToCount[i]);
+        }
     }
 
     /* Отображение введённой цены */
