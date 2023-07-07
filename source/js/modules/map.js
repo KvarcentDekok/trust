@@ -49,31 +49,32 @@ export function catalogMap() {
     }*/
 
     async function showMapClickHandler() {
-        const response = await fetch(url);
+        if (!data.features.length) {
+            const response = await fetch(url);
 
-        if (response.ok) {
-            const json = await response.json();
-            const jsonData = JSON.parse(json);
+            if (response.ok) {
+                const json = await response.json();
 
-            data.features = jsonData.map((dataObject) => {
-                return {
-                    "type": "Feature",
-                    "id": dataObject.id,
-                    "geometry": {"type": "Point", "coordinates": dataObject.coordinates},
-                    "properties": {
-                        "balloonContentHeader": `<a target='_blank' href='${dataObject.link}'>${dataObject.name}</a>`,
-                        "balloonContentBody": `${dataObject.price} ₽`,
-                        "balloonContentFooter": dataObject.address,
-                        "clusterCaption": dataObject.name,
-                        "hintContent": dataObject.name
+                data.features = json.map((dataObject) => {
+                    return {
+                        "type": "Feature",
+                        "id": dataObject.id,
+                        "geometry": {"type": "Point", "coordinates": dataObject.coordinates},
+                        "properties": {
+                            "balloonContentHeader": `<a target='_blank' href='${dataObject.link}'>${dataObject.name}</a>`,
+                            "balloonContentBody": `${dataObject.price} ₽`,
+                            "balloonContentFooter": dataObject.address,
+                            "clusterCaption": dataObject.name,
+                            "hintContent": dataObject.name
+                        }
                     }
-                }
-            })
-        } else {
-            alert("Ошибка HTTP: " + response.status);
-        }
+                })
+            } else {
+                alert("Ошибка HTTP: " + response.status);
+            }
 
-        ymaps.ready(init);
+            ymaps.ready(init);
+        }
     }
 
     function init() {
