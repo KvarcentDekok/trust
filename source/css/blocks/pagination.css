@@ -10,6 +10,8 @@
     width: 37px;
     height: 39px;
 
+    position: relative;
+
     font-weight: 600;
     font-size: 14px;
     line-height: 39px;
@@ -36,4 +38,25 @@
 
 .pagination__link--active:hover {
     color: var(--white-color);
+}
+
+.pagination__link--last::before {
+    position: absolute;
+    left: -55%;
+
+    content: ". . .";
+    pointer-events: none;
+}
+
+.pagination__link--last:hover::before,
+.pagination__link--first:hover::before {
+    color: #757575;
+}
+
+.pagination__link--first::before {
+    position: absolute;
+    right: -55%;
+
+    content: ". . .";
+    pointer-events: none;
 }
