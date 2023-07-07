@@ -1,5 +1,12 @@
 export function catalogMap() {
+    const showMapButton = document.querySelector('#show-map');
+    const url = new URL(location.href);
     const data = {
+        "type": "FeatureCollection",
+        "features": []
+    }
+
+    /*const data = {
         "type": "FeatureCollection",
         "features": [
             {
@@ -39,6 +46,34 @@ export function catalogMap() {
                 }
             }
         ]
+    }*/
+
+    async function showMapClickHandler() {
+        const response = await fetch(url);
+
+        if (response.ok) {
+            const json = await response.json();
+            const jsonData = JSON.parse(json);
+
+            data.features = jsonData.map((dataObject) => {
+                return {
+                    "type": "Feature",
+                    "id": dataObject.id,
+                    "geometry": {"type": "Point", "coordinates": dataObject.coordinates},
+                    "properties": {
+                        "balloonContentHeader": `<a target='_blank' href='${dataObject.link}'>${dataObject.name}</a>`,
+                        "balloonContentBody": `${dataObject.price} ₽`,
+                        "balloonContentFooter": dataObject.address,
+                        "clusterCaption": dataObject.name,
+                        "hintContent": dataObject.name
+                    }
+                }
+            })
+        } else {
+            alert("Ошибка HTTP: " + response.status);
+        }
+
+        ymaps.ready(init);
     }
 
     function init() {
@@ -53,11 +88,17 @@ export function catalogMap() {
             clusterDisableClickZoom: true
         });
 
-        objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-        objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
-        map.geoObjects.add(objectManager);
-        objectManager.add(data);
+        if (data.features.length) {
+            objectManager.objects.options.set('preset', 'islands#greenDotIcon');
+            objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+            map.geoObjects.add(objectManager);
+            objectManager.add(data);
+        }
     }
 
-    ymaps.ready(init);
+    url.searchParams.append('map', '1');
+
+    showMapButton.addEventListener('click', () => {
+        showMapClickHandler();
+    });
 }
