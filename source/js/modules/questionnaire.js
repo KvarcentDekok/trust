@@ -13,13 +13,13 @@ function handleStep(step) {
     const currentStepIndex = step.dataset.index;
 
     for (let i = 0; i < answerInputs.length; i++) {
-        answerInputs[i].addEventListener('change', () => {
-            onAnswerChange(answerInputs[i], buttonContinue, currentStepIndex);
-        });
-
         if (answerInputs[i].type === 'tel') {
             answerInputs[i].addEventListener('input', () => {
                 onAnswerInput(answerInputs[i], buttonContinue);
+            });
+        } else {
+            answerInputs[i].addEventListener('change', () => {
+                onAnswerChange(answerInputs[i], buttonContinue, currentStepIndex);
             });
         }
     }
