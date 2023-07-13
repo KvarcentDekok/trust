@@ -7,13 +7,26 @@ const continueButtons = questionnaireForm.querySelectorAll('.js-questionnaire-co
 
 
 function handleStep(step) {
-    const answerInputs = step.querySelectorAll('.questionnaire__input');
+    const answerInputs = step.querySelectorAll('.questionnaire__input, .form-control__input');
     const buttonContinue = step.querySelector('.js-questionnaire-continue');
+    const buttonBack = step.querySelector('.js-questionnaire-back');
     const currentStepIndex = step.dataset.index;
 
     for (let i = 0; i < answerInputs.length; i++) {
         answerInputs[i].addEventListener('change', () => {
             onAnswerChange(answerInputs[i], buttonContinue, currentStepIndex);
+        });
+
+        if (answerInputs[i].type === 'tel') {
+            answerInputs[i].addEventListener('input', () => {
+                onAnswerInput(answerInputs[i], buttonContinue);
+            });
+        }
+    }
+
+    if (buttonBack) {
+        buttonBack.addEventListener('click', () => {
+            onBackClick(answerInputs);
         });
     }
 }
@@ -27,6 +40,16 @@ function onAnswerChange(answerInput, buttonContinue, currentStepIndex) {
         buttonContinue.disabled = false;
         buttonContinue.dataset.setStep = selectedStepIndex;
         buttonBack.dataset.setStep = currentStepIndex;
+    }
+}
+
+function onAnswerInput(answerInput, buttonContinue) {
+    buttonContinue.disabled = !answerInput.checkValidity();
+}
+
+function onBackClick(inputs) {
+    for (let i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
     }
 }
 
@@ -49,7 +72,6 @@ async function onFormSubmit(evt) {
     const response = await fetch(questionnaireForm.action, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json;charset=utf-8',
             'X-CSRF-Token': csrfInput?.value
         },
         body: formData

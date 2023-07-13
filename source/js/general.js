@@ -9,6 +9,7 @@ import video from "./modules/video";
 import like from "./modules/like";
 import gallery from "./modules/gallery";
 import Toastify from "toastify-js";
+import resizeTextarea from "./modules/resize-textarea";
 
 window.toast = (props) => {
     return Toastify(props).showToast();
@@ -24,3 +25,4 @@ toggleVisibility();
 video();
 like();
 gallery();
+resizeTextarea();

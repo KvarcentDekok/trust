@@ -75,6 +75,8 @@ export function catalogMap() {
 
             ymaps.ready(init);
         }
+
+        /*ymaps.ready(init);*/
     }
 
     function init() {

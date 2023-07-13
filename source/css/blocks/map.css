@@ -1,6 +1,18 @@
 .map {
     border: none;
     height: 250px;
+
+    position: relative;
+}
+
+.map::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    content: "Загрузка...";
+
+    transform: translate(-50%, -50%);
 }
 
 .map--mt {
