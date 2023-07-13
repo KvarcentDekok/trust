@@ -1,5 +1,3 @@
-import Toastify from 'toastify-js';
-
 const ERROR_MESSAGE = 'Произошла ошибка при отправке формы';
 
 const questionnaireForm = document.querySelector('.questionnaire');
