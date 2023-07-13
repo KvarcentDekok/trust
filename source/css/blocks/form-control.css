@@ -117,6 +117,7 @@
     background-color: #F5F5F5;
     border-radius: 4px;
     transition: all 200ms linear;
+    resize: none;
 }
 
 .form-control--fill .form-control__input:hover,
@@ -156,5 +157,11 @@
 
     transform: translateY(-50%);
     pointer-events: none;
+}
+
+.form-control--fill textarea.form-control__input:placeholder-shown ~ .form-control__label {
+    top: 18px;
+
+    transform: none;
 }
 

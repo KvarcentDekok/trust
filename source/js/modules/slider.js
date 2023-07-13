@@ -136,3 +136,22 @@ export function initSliderNewBuilding() {
         },
     });
 }
+
+export function initSliderPartners() {
+    const sliderPartners = new Swiper('#partners-slider', {
+        modules: [Navigation],
+        spaceBetween: 30,
+        slidesPerView: 2,
+        lazy: true,
+        navigation: {
+            nextEl: '.slider__control.slider__control--right[data-slider="partners-slider"]',
+            prevEl: '.slider__control.slider__control--left[data-slider="partners-slider"]',
+            disabledClass: 'slider__control--disabled'
+        },
+        breakpoints: {
+            900: {
+                slidesPerView: 4
+            }
+        }
+    });
+}

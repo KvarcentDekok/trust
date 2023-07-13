@@ -18,8 +18,6 @@ function stepper(selector, activeClassName) {
     function setActiveStep(evt, control) {
         const targetStep = document.querySelector(`${selector}[data-index="${control.dataset.setStep}"]`);
 
-        evt.preventDefault();
-
         removeActiveClassName();
         targetStep.classList.add(activeClassName);
     }

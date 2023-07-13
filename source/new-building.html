@@ -226,7 +226,10 @@
 							</dl>
 						</div>
 
-						<a href="#" class="button button--fill button--fluid print-hide">Забронировать</a>
+						<button type="button" class="button button--fill button--fluid print-hide" data-call="modal"
+								aria-controls="book-apartment" aria-haspopup="dialog">
+							Забронировать
+						</button>
 					</article>
 				</div>
 			</div>
@@ -234,6 +237,56 @@
 	</section>
 
 	@@include('fragments/similar-offers.html')
+
+	<div class="modal" role="dialog" id="book-apartment" tabindex="-1" data-call="close" aria-modal="true"
+		 aria-labelledby="book-apartment-label">
+		<div class="modal__content modal__content--small">
+			<h2 class="modal__title" id="book-apartment-label">Забронировать</h2>
+
+			<button type="button" class="modal__close" data-call="close">
+				<svg width="33" height="32" viewBox="0 0 33 32">
+					<use xlink:href="img/sprite.svg#cross"></use>
+				</svg>
+
+				<span class="visually-hidden">Закрыть модальное окно</span>
+			</button>
+
+			<form>
+				<div class="row">
+					<div class="row__col-12">
+						<div class="form-control form-control--fill">
+							<input type="text" id="name" class="form-control__input" placeholder="Имя">
+							<label for="name" class="form-control__label">Имя</label>
+						</div>
+					</div>
+
+					<div class="row__col-12">
+						<div class="form-control form-control--fill">
+							<input type="tel" id="phone" class="form-control__input" placeholder="+7 999 999 99 99">
+							<label for="phone" class="form-control__label">Телефон</label>
+						</div>
+					</div>
+
+					<div class="row__col-12">
+						<div class="form-control form-control--fill">
+							<textarea id="comment" class="form-control__input" placeholder="Комментарий"></textarea>
+							<label for="comment" class="form-control__label">Комментарий</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal__buttons modal__buttons--mt">
+					<button type="button" class="button button--linear" data-call="close">Отмена</button>
+					<button type="submit" class="button modal__button button--fill">Забронировать</button>
+				</div>
+
+				<p class="paragraph paragraph--small paragraph--pt">
+					Нажимая «Забронировать», я даю
+					<a href="#" class="inline-link" target="_blank">согласие на обработку персональных данных</a>
+				</p>
+			</form>
+		</div>
+	</div>
 </main>
 
 @@include('fragments/footer.html')

@@ -40,6 +40,7 @@
     "cleave.js": "^1.6.0",
     "custom-select": "^1.1.15",
     "gsap": "^3.11.5",
-    "swiper": "^9.1.1"
+    "swiper": "^9.1.1",
+    "toastify-js": "^1.12.0"
   }
 }

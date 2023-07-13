@@ -1,7 +1,12 @@
+import Toastify from 'toastify-js';
+
+const ERROR_MESSAGE = 'Произошла ошибка при отправке формы';
+
 const questionnaireForm = document.querySelector('.questionnaire');
 const steps = questionnaireForm.querySelectorAll('.questionnaire__step');
 const resetButton = questionnaireForm.querySelector('[type="reset"]');
 const continueButtons = questionnaireForm.querySelectorAll('.js-questionnaire-continue');
+
 
 function handleStep(step) {
     const answerInputs = step.querySelectorAll('.questionnaire__input');
@@ -37,6 +42,28 @@ function resetForm() {
     }
 }
 
+async function onFormSubmit(evt) {
+    evt.preventDefault();
+
+    const formData = new FormData(questionnaireForm);
+    const csrfInput = questionnaireForm.querySelector('.csrfToken');
+
+    const response = await fetch(questionnaireForm.action, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'X-CSRF-Token': csrfInput?.value
+        },
+        body: formData
+    });
+
+    if (!response.ok) {
+        toast({
+            text: ERROR_MESSAGE
+        });
+    }
+}
+
 function questionnaire() {
     for (let i = 0; i < steps.length; i++) {
         handleStep(steps[i]);
@@ -44,6 +71,10 @@ function questionnaire() {
 
     resetButton.addEventListener('click', () => {
         resetForm();
+    });
+
+    questionnaireForm.addEventListener('submit', (evt) => {
+        onFormSubmit(evt);
     });
 }
 

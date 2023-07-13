@@ -8,6 +8,11 @@ import toggleVisibility from "./modules/toggle-visibility";
 import video from "./modules/video";
 import like from "./modules/like";
 import gallery from "./modules/gallery";
+import Toastify from "toastify-js";
+
+window.toast = (props) => {
+    return Toastify(props).showToast();
+}
 
 dropdown();
 header();
@@ -18,4 +23,4 @@ inputMask();
 toggleVisibility();
 video();
 like();
-gallery()
+gallery();

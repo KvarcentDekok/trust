@@ -2,7 +2,7 @@ import filter from "./modules/filter";
 import stepper from "./modules/stepper";
 import questionnaire from "./modules/questionnaire";
 import accordion from "./modules/accordion";
-import {initSliderMain} from "./modules/slider";
+import {initSliderMain, initSliderPartners} from "./modules/slider";
 import {animationFeatures} from "./modules/animation";
 
 filter();
@@ -11,3 +11,4 @@ questionnaire();
 accordion();
 animationFeatures();
 initSliderMain();
+initSliderPartners();

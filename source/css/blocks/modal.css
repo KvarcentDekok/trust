@@ -38,6 +38,10 @@
     transform: translateY(0);
 }
 
+.modal__content--small {
+    max-width: 450px;
+}
+
 .modal__close {
     display: block;
     width: 33px;
@@ -77,6 +81,10 @@
     display: flex;
     justify-content: right;
     flex-wrap: wrap;
+}
+
+.modal__buttons--mt {
+    margin-top: 20px;
 }
 
 .modal__button {
