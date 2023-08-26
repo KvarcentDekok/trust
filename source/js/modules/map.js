@@ -1,12 +1,12 @@
 export function catalogMap() {
     const showMapButton = document.querySelector('#show-map');
     const url = new URL(location.href);
-    const data = {
+    /*const data = {
         "type": "FeatureCollection",
         "features": []
-    }
+    };*/
 
-    /*const data = {
+    const data = {
         "type": "FeatureCollection",
         "features": [
             {
@@ -46,10 +46,10 @@ export function catalogMap() {
                 }
             }
         ]
-    }*/
+    };
 
     async function showMapClickHandler() {
-        if (!data.features.length) {
+        /*if (!data.features.length) {
             const response = await fetch(url);
 
             if (response.ok) {
@@ -74,9 +74,9 @@ export function catalogMap() {
             }
 
             ymaps.ready(init);
-        }
+        }*/
 
-        /*ymaps.ready(init);*/
+        ymaps.ready(init);
     }
 
     function init() {
